@@ -20,9 +20,14 @@ EXPECTED_PROTOS = 32
 """ONNX Runtime wrapper for the YOLO segmentation model."""
 
 class VisionModel:
-    def __init__(self, session: ort.InferenceSession):
+    # this is my YOLO SEG  model , it isued yo be the only model that detects rice leaf diseases
+    # but now there is an EfficientNetB0 model that handle rice spikes diseases
+    def __init__(self, session: ort.InferenceSession):  # the name preseverd for the future
+        
         self.session = session
+        
         self.input_name = session.get_inputs()[0].name
+        
         self.output_names = [o.name for o in session.get_outputs()]
 
     def run(self, tensor: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
@@ -33,6 +38,7 @@ class VisionModel:
         except Exception as exc:
             
             logger.exception("onnx inference failed")
+            
             raise InferenceError(str(exc)) from exc
         
         return out0, out1
@@ -40,6 +46,7 @@ class VisionModel:
 
 @lru_cache
 def get_model() -> VisionModel:
+    # This is a singleton, so it is safe to cache.
     settings = get_settings()
     path = settings.yolo_model_path
     

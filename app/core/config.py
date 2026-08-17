@@ -9,8 +9,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
-# The six output classes of the YOLOv11-small-seg detector. These strings are also
-# the `disease_name` metadata values in Weaviate -- the CV->RAG chain matches
+# The six output classes of the YOLOv8s-seg detector.[ dieases names ]
 CLASS_NAMES: tuple[str, ...] = (  # these are the x6 class my yolo model detects
     "Bacterial_Leaf_Blight",
     "Brown_Spot",
@@ -20,7 +19,7 @@ CLASS_NAMES: tuple[str, ...] = (  # these are the x6 class my yolo model detects
     "Sheath_Blight",
 )
 
-# Per-class detection thresholds. Lower => weaker detections are allowed through
+# Per-class detection thresholds. Lower :: weaker detections are allowed through
 # for that class. The three low-recall classes drop to 0.15; the rest stay near
 # default. Calibrated starting points from the v4 eval.
 DETECT_THRESHOLDS: dict[str, float] = {
@@ -45,7 +44,15 @@ class Settings(BaseSettings):
 
     # Gemini
     gemini_api_key: str
-    gemini_model: str = "gemini-2.0-flash"
+
+    # Gemini 3 thinks by default and picks its own budget, which measured 10s to 201s on identical work.
+    gemini_model: str = "gemini-3.1-flash-lite"
+    temperature: float = 0.2 # Temperature for the model
+    # Gemini 3 thinks by default and picks its own budget, which measured 10s to
+    # 201s on identical work. Off here: retrieval is deterministic and the
+    # passages are pre-filtered, so the model summarizes rather than reasons.
+ 
+    gemini_thinking_budget: int = 0
 
     # Weaviate
     weaviate_url: str
@@ -53,8 +60,6 @@ class Settings(BaseSettings):
     weaviate_collection: str = "OryzaMindChunk"
 
     # Embeddings
-    # Validated, not just defaulted: changing this without re-embedding all
-    # 2,030 vectors breaks retrieval silently.
     embedding_model: str = "intfloat/e5-large-v2"
     embedding_dim: int = 1024
     embedding_query_prefix: str = "query: "
@@ -63,7 +68,7 @@ class Settings(BaseSettings):
     retrieval_top_k: int = 5
     retrieval_max_top_k: int = 20
 
-    # Vision
+    # Vision  RICE LEAVES DISEASES MODEL 
     yolo_model_path: Path = REPO_ROOT / "ml" / "oryza_mind_vision_yolo_seg_model.onnx"
     # Global floor. 0.15 matches the lowest per-class value; raising it would
     # cancel the recall recovery. Read via confidence_threshold_for().
@@ -72,9 +77,18 @@ class Settings(BaseSettings):
     yolo_mask_threshold: float = 0.5
     yolo_input_size: int = 640
 
+    # Spike classifier  EfficientNetB0, Keras -> ONNX via tf2onnx
+    spike_model_path: Path = REPO_ROOT / "ml" / "Rice_Spike_Model.onnx"
+    spike_input_size: int = 640
+    # Single sigmoid output: p is P(unhealthy). Above the threshold => UNHEALTHY.
+    spike_threshold: float = 0.5 # this is a binary CNN classifier
+    # Below this margin from the threshold the call is reported as uncertain
+    # rather than dressed up as a decision.
+    spike_uncertain_margin: float = 0.10
+
     # HTTP
     cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:5173"])
-
+    # CORS Handling here  to avoid headless browser errors
     @field_validator("embedding_model")
     @classmethod
     def _embedding_model_must_match_collection(cls, v: str) -> str:
@@ -105,11 +119,15 @@ class Settings(BaseSettings):
     @field_validator("cors_origins", mode="before")
     @classmethod
     def _split_origins(cls, v: object) -> object:
+        
         if isinstance(v, str):
+            
             return [o.strip() for o in v.split(",") if o.strip()]
+        
         return v
 
 
 @lru_cache
 def get_settings() -> Settings:
+    
     return Settings()  # type: ignore[call-arg]
