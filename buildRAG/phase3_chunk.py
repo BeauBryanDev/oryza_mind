@@ -5,7 +5,7 @@ import re
 from collections import Counter
 from pathlib import Path
 """
-Phase 3 — chunking, per spec §7.1, emitting the §8 metadata schema.
+Chuncking
 
 Sections are already the semantic unit (Phase 1 recovered the IRRI numbered
 structure), so this stage bounds their length and attaches metadata. Median

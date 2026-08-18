@@ -1,5 +1,4 @@
 
-
 import json
 import re
 import statistics
@@ -11,7 +10,7 @@ from langdetect import DetectorFactory, detect
 
 DetectorFactory.seed = 0  # deterministic language detection
 """
-Phase 0 — per-document audit of the rice disease PDF corpus.
+Phase 0 —  documents audits of the rice disease PDF corpus.
 
 Reports, per document: text-layer health, column layout, table-candidate
 pages, figures/captions, verified front-matter identity, and language.

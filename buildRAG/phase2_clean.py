@@ -7,7 +7,8 @@ from collections import Counter
 from pathlib import Path
 
 import pymupdf
-"""Phase 2 — cleaning.
+"""
+Phase 2 — cleaning.
 
 Everything here is driven by artifacts actually observed in this corpus, per
 spec §6: no preemptive fix dictionaries, and nothing carried over from the
