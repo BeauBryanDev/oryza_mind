@@ -109,9 +109,10 @@ def _retrieve_panicle(label: SpikeLabel) -> list[RetrievedChunk]:
 
 
 def _describe(result: SpikeResult) -> tuple[str, str]:
+    
     verdict = (
         
-        f"{result.unhealthy_count} of {result.total_count} panicle(s) classified UNHEALTHY"
+        f"{result.unhealthy_count} of {result.total_count} panicles classified UNHEALTHY"
         if result.unhealthy_count
         
         else f"all {result.total_count} panicle(s) classified HEALTHY"

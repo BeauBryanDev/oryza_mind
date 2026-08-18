@@ -19,12 +19,6 @@ logger = logging.getLogger(__name__)
 """
 OryzaMind Agent[Gemini] answer chain: retrieve, then generate.
 
-Deterministic rather than tool-calling. Two reasons, one practical and one
-safety. Practical: Gemini 3 requires a thought_signature echoed back on every
-function call, which langchain-google-genai 2.1.x does not carry, and the
-versions that do require langchain-core >=1.0 -- the AgentExecutor idiom this
-project pins away from. Safety: vision already knows the disease, so there is
-nothing for a model to decide. Retrieval always runs and cannot be skipped.
 """
 RETRIEVAL_TOP_K = 6
 # Per class when several are detected, so a 3-disease leaf stays near the

@@ -35,6 +35,7 @@ class AgentState:
     def target_diseases(self) -> list[str]:
         """Every class to retrieve for. Falls back to the dominant one."""
         if self.diseases:
+            
             return self.diseases
         
         return [self.disease_name] if self.disease_name else []
@@ -48,7 +49,7 @@ class AgentState:
     def is_low_confidence(self) -> bool:
         """Below this the identification is reported as uncertain, not asserted."""
         return self.confidence is not None and self.confidence < 0.50
-    # TODO: I might have to  mess with  this confidence in order to boost detections at low  .... 
+    # TODO: I might have to  mess with  this confidence threshold in order to boost detections at least  .... 
     def fail(self, message: str) -> "AgentState":
         
         self.stage = PipelineStage.ERROR

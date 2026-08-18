@@ -36,8 +36,8 @@ class RedactionFilter(logging.Filter):
                 
         return True
 
+
     @staticmethod
-    
     def _scrub(text: str) -> str:
         
         for pattern in _REDACT_PATTERNS:

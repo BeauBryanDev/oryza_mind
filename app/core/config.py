@@ -115,6 +115,7 @@ class Settings(BaseSettings):
             self.yolo_confidence_threshold,
             DETECT_THRESHOLDS.get(class_name, self.yolo_confidence_threshold),
         )
+        
 
     @field_validator("cors_origins", mode="before")
     @classmethod
