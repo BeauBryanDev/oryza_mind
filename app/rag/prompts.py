@@ -1,7 +1,6 @@
-"""System prompts and context formatting for the RAG answer layer."""
 
 from __future__ import annotations
-
+"""System prompts and context formatting for the RAG answer layer."""
 from app.rag.retriever import RetrievedChunk
 
 SYSTEM_PROMPT = """
