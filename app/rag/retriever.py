@@ -1,5 +1,4 @@
 
-
 from __future__ import annotations
 
 import enum
@@ -53,7 +52,7 @@ class RetrievalIntent(enum.Enum):
 
 
 @dataclass(frozen=True)
-class RetrievedChunk:
+class RetrievedChunk:  # Reinforce realible chunk metadata
     chunk_id: str
     text: str
     source_document: str
@@ -116,6 +115,7 @@ def _build_filter(
         applied.append(f"document_type != {SCREENING_DOCUMENT_TYPE}")
 
     if disease_name is not None:
+        
         clauses.append(Filter.by_property("disease_name").equal(disease_name))
         applied.append(f"disease_name == {disease_name}")
 
@@ -174,8 +174,10 @@ def retrieve(
     chunks: list[RetrievedChunk] = []
     
     for obj in response.objects:
+        
         props = obj.properties
         distance = obj.metadata.distance if obj.metadata else None
+        
         chunk = RetrievedChunk(
             chunk_id=props.get("chunk_id", ""),
             text=props.get("text", ""),
