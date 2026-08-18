@@ -1,4 +1,3 @@
-"""Per-image inference. Owns the model call, nothing about diagnosis or chat."""
 
 from __future__ import annotations
 
