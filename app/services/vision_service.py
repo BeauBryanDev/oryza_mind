@@ -17,7 +17,7 @@ from app.utils.segmentation import affected_ratio, union_mask
 
 logger = logging.getLogger(__name__)
 
-
+# it does not handle rice spikes, it handles onyl rice leaves
 @dataclass
 class ImageAnalysis:
     """VisionResult plus the arrays the caller needs to aggregate across images."""
@@ -26,7 +26,7 @@ class ImageAnalysis:
     masks: list[np.ndarray]
     class_ids: np.ndarray
     image_bgr: np.ndarray
-
+    # Post processing
     @property
     def total_px(self) -> int:
         h, w = self.image_bgr.shape[:2]
