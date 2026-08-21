@@ -10,7 +10,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 # The six output classes of the YOLOv8s-seg detector.[ dieases names ]
-CLASS_NAMES: tuple[str, ...] = (  # these are the x6 class my yolo model detects
+CLASS_NAMES: tuple[str, ...] = (  # these are the x6 class my yolo-seg model detects
     "Bacterial_Leaf_Blight",
     "Brown_Spot",
     "Leaf_Blast",
@@ -22,15 +22,15 @@ CLASS_NAMES: tuple[str, ...] = (  # these are the x6 class my yolo model detects
 # Per-class detection thresholds. Lower :: weaker detections are allowed through
 # for that class. The three low-recall classes drop to 0.15; the rest stay near
 # default. Calibrated starting points from the v4 eval.
-DETECT_THRESHOLDS: dict[str, float] = {
+DETECT_THRESHOLDS: dict[str, float] = { #  intended becuase model did not got good metrics
     "Bacterial_Leaf_Blight": 0.25,
     "Brown_Spot": 0.15,
     "Leaf_Blast": 0.15,
     "Narrow_Brown": 0.15,
     "Rice_Tungro": 0.30,
     "Sheath_Blight": 0.30,
-}
-
+}  # it was a bleeding dificult dataset training day , hence even though
+#  metrics were not good, I made inference test and I liked the results
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
@@ -45,7 +45,7 @@ class Settings(BaseSettings):
     # Gemini
     gemini_api_key: str
 
-    # Gemini 3 thinks by default and picks its own budget, which measured 10s to 201s on identical work.
+    # Gemini 3 thinks by default and picks its own budget
     gemini_model: str = "gemini-3.1-flash-lite"
     temperature: float = 0.2 # Temperature for the model
     # Gemini 3 thinks by default and picks its own budget, which measured 10s to
@@ -77,7 +77,7 @@ class Settings(BaseSettings):
     yolo_mask_threshold: float = 0.5
     yolo_input_size: int = 640
 
-    # Spike classifier  EfficientNetB0, Keras -> ONNX via tf2onnx
+    # Spike classifier  EfficientNetB0,  TF/Keras -> ONNX via tf2onnx
     spike_model_path: Path = REPO_ROOT / "ml" / "Rice_Spike_Model.onnx"
     spike_input_size: int = 640
     # Single sigmoid output: p is P(unhealthy). Above the threshold => UNHEALTHY.
@@ -92,8 +92,7 @@ class Settings(BaseSettings):
     @field_validator("embedding_model")
     @classmethod
     def _embedding_model_must_match_collection(cls, v: str) -> str:
-        # The bare name is unambiguous and common in .env files, but it does not
-        # resolve on HuggingFace. Normalize rather than reject.
+ 
         if v == "e5-large-v2":
             v = "intfloat/e5-large-v2"
         if v != "intfloat/e5-large-v2":

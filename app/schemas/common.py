@@ -6,7 +6,6 @@ import enum
 from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
 
-
 class CamelModel(BaseModel):
     """Serializes to camelCase for the TS client, accepts snake_case in Python."""
     # This is a pydantic feature, not a bug. The default is to use snake_case
@@ -58,7 +57,7 @@ def severity_from_area(affected_ratio: float) -> SeverityLevel:
     return SeverityLevel.CRITICAL
 
 
-# Display only. The canonical class string stays the identifier everywhere else.
+# Display only. The Scientist's name is a free-form string.
 SCIENTIFIC_NAMES: dict[str, str] = {
     "Bacterial_Leaf_Blight": "Xanthomonas oryzae pv. oryzae",
     "Brown_Spot": "Bipolaris oryzae",

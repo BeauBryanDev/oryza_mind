@@ -7,8 +7,9 @@ from pydantic import Field
 
 from app.schemas.common import CamelModel, SeverityLevel
 
-# my YOLO SEG  model , it isued yo be the only model that detects rice leaf diseases
-
+# My YOLO SEG  model here 
+# II will use MongoDB to store the data in v2 
+# Hence it is nor ORM nor SQLAlchemy
 class DiseaseFinding(CamelModel):
     """One disease found across the submitted photos."""
 
@@ -39,12 +40,12 @@ class SegmentationResult(CamelModel):
 class AnalysisResult(CamelModel):
     # Every disease found, most severe first. Empty means nothing detected, hence healthy. 
     # The first disease is the primary finding, the most severe. The others are less severe.
-    # Note that a healthy result is not an error: it is a valid outcome of the pipeline. 
-    # which is a valid healthy result rather than an error.
-    diseases: list[DiseaseFinding] = Field(default_factory=list)
+    # Noted that a healthy result is not an error: it is a valid outcome of the pipeline. 
+    # which is a valid healthy result rather than an error. A user can upload good leaf photos
+    diseases: list[DiseaseFinding] = Field(default_factory=list) # Or a rotten  beatup leaf image
     # The finding that dominates by affected area. Null when nothing was found.
     # Convenience for chat context, not a claim that others are less real.
-    primary_disease: DiseaseFinding | None = None
+    primary_disease: DiseaseFinding | None = None # Be carefull with vision confidence 
     # Union of all lesions over all pixels, across every image.
     overall_affected_ratio: float = Field(default=0.0, ge=0.0, le=1.0)
     overall_severity: SeverityLevel = SeverityLevel.LOW

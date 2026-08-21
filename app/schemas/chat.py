@@ -34,7 +34,7 @@ class ChatRequest(CamelModel):
 
 class Citation(CamelModel):
     """Provenance for a retrieved chunk, so an answer can be traced to a page."""
-    # citatiosn came form my RAG  
+    # citatiosn came form my RAG and it came from IRRI , so I made it a string
     chunk_id: str
     document_title: str
     organization: str | None = None

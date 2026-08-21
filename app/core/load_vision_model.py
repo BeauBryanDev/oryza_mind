@@ -20,8 +20,8 @@ EXPECTED_PROTOS = 32
 """ONNX Runtime wrapper for the YOLO segmentation model."""
 
 class VisionModel:
-    # this is my YOLO SEG  model , it isued yo be the only model that detects rice leaf diseases
-    # but now there is an EfficientNetB0 model that handle rice spikes diseases
+    # this is my YOLO SEG  model , it isued yo be the only single model  
+    # but now there is an EfficientNetB0 model that handle rice spikes health 
     def __init__(self, session: ort.InferenceSession):  # the name preseverd for the future
         
         self.session = session

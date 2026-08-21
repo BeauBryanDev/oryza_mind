@@ -16,7 +16,10 @@ class SpikeLabel(str, enum.Enum):
 
 class SpikePrediction(CamelModel):
     """One panicle image's verdict."""
-    # My EfficientNetB0 model is a binary classifier that predicts whether a rice spike is healthy or unhealthy. The model outputs a sigmoid score, which is interpreted as the probability of being unhealthy. The label is determined by comparing the score to a threshold (default 0.5). If the score is close to the threshold (within a margin), the prediction is marked as uncertain.
+    # My EfficientNetB0 model is a binary classifier 
+    # that predicts whether a rice spike is healthy or unhealthy. 
+    ##The model outputs a sigmoid score, which is interpreted as the probability of being unhealthy. 
+    # # The label is determined by comparing the score to a threshold (default 0.5). 
     image_index: int
     filename: str | None = None
     label: SpikeLabel

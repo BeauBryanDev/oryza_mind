@@ -7,7 +7,9 @@ from app.core.config import CLASS_NAMES
 from app.schemas.common import CamelModel
 
 #  Even thought this file says vision, it only serves for the seg yolo model,
-# the EfficientNetB0  model is handled in spikes module over ./app/schemas/spike.py. The reason is that the EfficientNetB0 model is a binary classifier that predicts whether a rice spike is healthy or unhealthy, while the YOLO segmentation model detects and segments rice leaf diseases. The two models serve different purposes and are used in different parts of the application.
+# the EfficientNetB0  model is handled in spikes module over ./app/schemas/spike.py. 
+# The reason is that the EfficientNetB0 model is a binary classifier that predicts whether a rice spike is healthy or unhealthy, while the YOLO segmentation model detects and segments rice leaf diseases. The two models serve different purposes and are used in different parts of the application.
+#TODO: FIGURE OUT HOW TO SERVE THIS ON TS IN FRONTEND 
 class BoundingBox(CamelModel):
     """Pixel coordinates in the original image, not letterboxed space."""
 
