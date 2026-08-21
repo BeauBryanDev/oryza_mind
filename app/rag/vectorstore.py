@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 def get_encoder() -> "SentenceTransformer":
     """Load e5-large-v2 once per process. Imported lazily; it pulls in torch."""
     from sentence_transformers import SentenceTransformer
-
+    #  this is the reason ti takes long time at frist start up
     settings = get_settings()
     logger.info("loading embedding model %s", settings.embedding_model)
     model = SentenceTransformer(settings.embedding_model)
@@ -64,7 +64,8 @@ def embed_query(query: str, settings: Settings | None = None) -> list[float]:
 
 
 def embed_queries(queries: list[str], settings: Settings | None = None) -> list[list[float]]:
-    """Encode several queries in one forward pass.
+    """
+    Encode several queries in one forward pass.
 
     Same prefix and normalization as embed_query -- SAFETY RULE 1 applies
     identically. One batched call rather than N: the encoder is CPU-bound and
@@ -79,6 +80,7 @@ def embed_queries(queries: list[str], settings: Settings | None = None) -> list[
         raise ValueError("cannot embed an empty query")
 
     prefixed = [f"{settings.embedding_query_prefix}{t}" for t in texts]
+    
     vectors = get_encoder().encode(
         prefixed,
         normalize_embeddings=True,

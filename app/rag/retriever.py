@@ -15,7 +15,7 @@ Retrieval against the live OryzaMindChunk collection.
 """
 logger = logging.getLogger(__name__)
 
-# Excluded alongside the per-chunk flag: that flag could be missed on a future
+# Excluded alongside the per-chunk flag: 
 # ingest, this is per-source.
 SCREENING_DOCUMENT_TYPE = "screening_manual"
 
@@ -41,7 +41,8 @@ RETURN_PROPERTIES = [
 
 
 class RetrievalIntent(enum.Enum):
-    """TREATMENT and REFERENCE both exclude inoculation protocols.
+    """
+    TREATMENT and REFERENCE both exclude inoculation protocols.
 
     UNFILTERED is for corpus diagnostics only, never a user-facing answer.
     """
@@ -53,8 +54,8 @@ class RetrievalIntent(enum.Enum):
 
 @dataclass(frozen=True)
 class RetrievedChunk:  # Reinforce realible chunk metadata
-    chunk_id: str
-    text: str
+    chunk_id: str  ## All chunks came from reliable sources IRRI 
+    text: str      #### and University of Arkansas and LSU AgCenter
     source_document: str
     document_title: str | None
     organization: str | None
@@ -74,6 +75,7 @@ class RetrievedChunk:  # Reinforce realible chunk metadata
 
     @property
     def citation(self) -> str:
+        
         org = self.organization or "unknown source"
         title = self.document_title or self.source_document
         
@@ -86,6 +88,7 @@ class RetrievedChunk:  # Reinforce realible chunk metadata
 
 @dataclass(frozen=True)
 class RetrievalResult:
+    
     chunks: list[RetrievedChunk]
     query: str
     disease_name: str | None
@@ -137,7 +140,8 @@ def retrieve(
     top_k: int | None = None,
     query_vector: list[float] | None = None,
 ) -> RetrievalResult:
-    """Vector search with the safety filters applied.
+    """
+    Vector search with the safety filters applied.
 
     query: raw text; embed_query adds the `query: ` prefix, do not add it here.
     disease_name: a canonical class, or None to search the whole corpus. Always
