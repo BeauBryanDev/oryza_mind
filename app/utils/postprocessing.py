@@ -6,7 +6,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from app.core.config import CLASS_NAMES, Settings
-from app.utils.mns import batched_nms
+from app.utils.nms import batched_nms
 from app.utils.preprocessing import LetterboxInfo, scale_boxes
 """Raw model output to filtered detections."""
 
@@ -57,8 +57,9 @@ def parse_output(
     # deliberately allowed weaker detections.
     thresholds = np.array(  # (NUM_CLASSES,) it was a difficult dataset traning day
         [settings.confidence_threshold_for(CLASS_NAMES[i]) for i in range(NUM_CLASSES)],
-        dtype=np.float32,
-    )
+        dtype=np.float32, # Actually the dataset was bleeding dificulties
+        # By the way I made the maths manually and this is the fun part
+    ) #  per-class threshold, not one global value
     keep = scores >= thresholds[class_ids]
     
     if not keep.any():

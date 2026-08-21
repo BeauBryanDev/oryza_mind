@@ -1,13 +1,15 @@
-"""Non-Maximum Suppression. Named mns.py to match the existing module layout."""
 
 from __future__ import annotations
 
 import numpy as np
-
+"""Non-Maximum Suppression. """
 from app.utils.iou import iou_xyxy
 
 
-def nms(boxes: np.ndarray, scores: np.ndarray, iou_threshold: float) -> list[int]:
+def nms(boxes: np.ndarray, 
+        scores: np.ndarray, 
+        iou_threshold: float
+        ) -> list[int]:
     """Greedy NMS over a single class. Returns kept indices, best score first."""
     if boxes.size == 0:
         return []
@@ -40,6 +42,7 @@ def batched_nms(
     keep: list[int] = []
     
     for cid in np.unique(class_ids):
+        #  get the indices of the boxes with this class
         idx = np.flatnonzero(class_ids == cid)
         kept = nms(boxes[idx], scores[idx], iou_threshold)
         keep.extend(idx[k] for k in kept)

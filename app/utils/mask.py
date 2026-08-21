@@ -1,6 +1,5 @@
-"""Mask rendering, encoding and serialization."""
-
 from __future__ import annotations
+"""Mask rendering, encoding and serialization."""
 
 import base64
 
@@ -97,7 +96,7 @@ def to_png_data_uri(image_bgr: np.ndarray, max_width: int = 1024) -> str:
 
 
 def mask_area_px(mask: np.ndarray) -> int:
-    
+    #  number of non-zero pixels
     return int(np.count_nonzero(mask))
 
 
@@ -105,7 +104,7 @@ def encode_mask_rle(mask: np.ndarray) -> dict:
     """Run-length encoding, for storing masks without the pixels."""
     flat = mask.ravel(order="F").astype(np.uint8)
     
-    changes = np.flatnonzero(np.diff(flat)) + 1
+    changes = np.flatnonzero(np.diff(flat)) + 1 #  indices of changes
     bounds = np.concatenate(([0], changes, [flat.size]))
     counts = np.diff(bounds).tolist()
     

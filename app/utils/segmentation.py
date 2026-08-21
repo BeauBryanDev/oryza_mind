@@ -1,4 +1,3 @@
-"""Mask prototypes plus coefficients to per-instance binary masks."""
 
 from __future__ import annotations
 
@@ -7,7 +6,7 @@ import numpy as np
 
 from app.utils.postprocessing import RawDetections
 from app.utils.preprocessing import LetterboxInfo
-
+"""Mask prototypes plus coefficients to per-instance binary masks."""
 
 def _sigmoid(x: np.ndarray) -> np.ndarray:
     
@@ -20,7 +19,8 @@ def build_masks(
     info: LetterboxInfo,
     mask_threshold: float = 0.5,
 ) -> list[np.ndarray]:
-    """One boolean mask per detection, at original image resolution.
+    """
+    One boolean mask per detection, at original image resolution.
 
     protos is output1, shape (1, 32, 160, 160).
     """
@@ -39,10 +39,11 @@ def build_masks(
     pad_x = info.pad_x / (640 / size)
     pad_y = info.pad_y / (640 / size)
     x0, y0 = int(round(pad_x)), int(round(pad_y))
-    x1, y1 = size - x0, size - y0
-    masks = masks[:, max(y0, 0) : max(y1, y0 + 1), max(x0, 0) : max(x1, x0 + 1)]
+    x1, y1 = size - x0, size - y0 # Critical part, if it does not match training image
+    masks = masks[:, max(y0, 0) : max(y1, y0 + 1), max(x0, 0) : max(x1, x0 + 1)] # we failed to crop the masks
 
     out: list[np.ndarray] = []
+    
     for i, m in enumerate(masks):
         full = cv2.resize(
             m, (info.orig_w, info.orig_h), interpolation=cv2.INTER_LINEAR
