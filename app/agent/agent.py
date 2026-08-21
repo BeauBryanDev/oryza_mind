@@ -35,13 +35,10 @@ def get_llm() -> ChatGoogleGenerativeAI:
         model=settings.gemini_model,
         google_api_key=settings.gemini_api_key,
         # Low but not zero: agronomic advice should be stable across identical
-        # questions, and creative phrasing is not a virtue here.
+        # questions, and creative phrasing is not good here
         temperature=settings.temperature, 
         thinking_budget=settings.gemini_thinking_budget,
-    ) # I  think Claude capped Gemini intended within too much constraints. 
-    # Now she talks very timid and shy unconfident.
-    # I  gotton see what is going on with LLMs.
-#  TODO: Gemini should answer more confidence , I must double check the prompts.
+    )  
 
 def _to_messages(history: list[ChatTurn]) -> list:
     
@@ -112,11 +109,13 @@ def run_agent(
     history: list[ChatTurn] | None = None,
     format_rule: str | None = None,
 ) -> tuple[str, list[RetrievedChunk]]:
-    """Answer one turn. Returns the reply and the chunks it was grounded on.
+    """
+    Answer one turn. Returns the reply and the chunks it was grounded on.
 
     format_rule constrains the output shape for one caller only. /analyze uses it
     to get plain lines; chat passes nothing and keeps markdown.
     """
+    #TODO: THIS IS TAKING LONG TIME, I MUST SEE WHY IS DELAYED
     chunks = _retrieve_for(message, state)
     state.retrieved = chunks
 
@@ -131,7 +130,8 @@ def run_agent(
         ]
         if part # part is not None
     )
-    messages = [SystemMessage(content=system), *_to_messages(history or []), HumanMessage(content=message)]
+    messages = [SystemMessage(content=system), *_to_messages(history or []), 
+                HumanMessage(content=message)]
 
     try:
         response = get_llm().invoke(messages)

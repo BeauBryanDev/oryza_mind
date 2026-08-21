@@ -115,7 +115,7 @@ def _describe(result: SpikeResult) -> tuple[str, str]:
         f"{result.unhealthy_count} of {result.total_count} panicles classified UNHEALTHY"
         if result.unhealthy_count
         
-        else f"all {result.total_count} panicle(s) classified HEALTHY"
+        else f"Good news! All {result.total_count} panicle(s) classified HEALTHY"
     )
     lines = []
     

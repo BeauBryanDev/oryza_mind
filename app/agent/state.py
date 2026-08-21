@@ -48,7 +48,7 @@ class AgentState:
     @property
     def is_low_confidence(self) -> bool:
         """Below this the identification is reported as uncertain, not asserted."""
-        return self.confidence is not None and self.confidence < 0.50
+        return self.confidence is not None and self.confidence < 0.45
     # TODO: I might have to  mess with  this confidence threshold in order to boost detections at least  .... 
     def fail(self, message: str) -> "AgentState":
         
