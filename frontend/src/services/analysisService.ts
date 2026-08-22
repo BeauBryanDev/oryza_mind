@@ -30,6 +30,7 @@ export async function fetchHealth(): Promise<HealthResponse | null> {
   try {
     const { data } = await api.get<HealthResponse>('/health', { timeout: 5000 });
     return data;
+    // No fallback verdict.
   } catch {
     return null;
   }
