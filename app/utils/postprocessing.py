@@ -60,7 +60,7 @@ def parse_output(
         dtype=np.float32, # Actually the dataset was bleeding dificulties
         # By the way I made the maths manually and this is the fun part
     ) #  per-class threshold, not one global value
-    keep = scores >= thresholds[class_ids]
+    keep = scores >= 1.05*thresholds[class_ids]
     
     if not keep.any():
         
@@ -72,7 +72,7 @@ def parse_output(
             np.empty(0, dtype=np.int64),
             np.empty((0, NUM_MASK_COEFFS), dtype=np.float32),
         )
-    # The model outputs a single box per class, so we can use the same code for
+    # The model outputs a single box per class, so it can use the same code for
     # both the YOLOv8 and EfficientNetB0 models.
     boxes = xywh_to_xyxy(boxes_xywh[keep])
     scores, class_ids, coeffs = scores[keep], class_ids[keep], coeffs[keep]

@@ -105,7 +105,8 @@ class Settings(BaseSettings):
         return v
 
     def confidence_threshold_for(self, class_name: str) -> float:
-        """Effective detection threshold for one class.
+        """
+        Effective detection threshold for one class.
 
         The per-class value wins, but never drops below the global floor. Keeps
         the two settings from silently contradicting each other.
