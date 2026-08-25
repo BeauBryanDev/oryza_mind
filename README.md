@@ -74,6 +74,54 @@ OryzaMind is purpose-built to recognize and prescribe treatments for **6 major r
 4.  **Agent Synthesis:** **Gemini 3.5** digests the raw clinical chunks, aligns them with the user's querying language (EN/ES), and outputs a highly authoritative, structured remedy profile.
 
 ---
+## Full pipeline
+
+```
+                         HTTP
+                          │
+                          ▼
+                 ┌────────────────┐
+                 │ analysis.py    │
+                 │    Router      │
+                 └───────┬────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │ Analysis Service │
+                └────────┬─────────┘
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+              ▼                     ▼
+      ┌───────────────┐      ┌──────────────┐
+      │ VisionService │      │ OryzaMind    │
+      └───────┬───────┘      │    Agent     │
+              │              └──────┬───────┘
+              ▼                     │
+        YOLO ONNX                   │
+        ONNXRuntime                 │
+              │                     │
+              ▼                     ▼
+      Postprocessing             RAG Tool
+      NMS + IoU                     │
+      Segmentation                  ▼
+              │                  Weaviate
+              │                     │
+              └──────────┐          │
+                         ▼          ▼
+                       ┌──────────────┐
+                       │    Gemini    │
+                       └──────┬───────┘
+                              │
+                              ▼
+                   Agricultural Diagnosis
+                              │
+                              ▼
+                         FastAPI JSON
+                              │
+                              ▼
+                         React Frontend
+```
 
 ##  Installation & Setup
 
