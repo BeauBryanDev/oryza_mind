@@ -136,7 +136,7 @@ OryzaMind is purpose-built to recognize and prescribe treatments for **6 major r
 ### Backend Setup
 ```bash
 # Clone the repository
-git clone https://github.com
+git clone https://BeauBryanDev/oryza-mind/github.com
 cd oryzamind/backend
 
 # Create virtual environment
