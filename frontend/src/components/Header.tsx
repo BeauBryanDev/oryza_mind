@@ -24,8 +24,8 @@ export default function Header() {
           <span className="corner-tl" /><span className="corner-tr" /><span className="corner-bl" /><span className="corner-br" />
           <Logo />
           <div className="ml-1">
-            <h1 className="font-display text-2xl neon-text-green tracking-widest leading-none">{APP_BRAND}</h1>
-            <p className="font-hud text-sm text-rg-muted tracking-[0.3em] mt-1">AI AGENT FOR RICE DISEASE DETECTION</p>
+            <h1 className="font-display text-xl neon-text-green tracking-widest leading-none">{APP_BRAND}</h1>
+            <p className="font-hud text-xs text-rg-muted tracking-[0.25em] mt-1">AI AGENT FOR RICE DISEASE DETECTION</p>
           </div>
 
           <div className="flex-1" />

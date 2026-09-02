@@ -17,16 +17,16 @@
   /* Extra-small breakpoint for very narrow phones (375px = iPhone SE) */
   --breakpoint-xs: 375px;
 
-  /* Absolute type scale. Adjusted to follow a readable, professional HUD scale
-     where typography maintains structure and proportions. */
-  --text-xs: 0.95rem;   /* ~16px */
-  --text-sm: 1.1rem;    /* ~19px */
-  --text-base: 1.25rem; /* ~21px */
-  --text-lg: 1.4rem;    /* ~24px */
-  --text-xl: 1.3rem;    /* ~22px */
-  --text-2xl: 1.6rem;   /* ~27px */
-  --text-3xl: 2.0rem;   /* ~34px */
-  --text-4xl: 2.6rem;   /* ~44px */
+  /* Standard Tailwind type scale — do not inflate these; text size is
+     managed at the component level with responsive prefixes (sm:, lg:). */
+  --text-xs:   0.75rem;  /* 12px */
+  --text-sm:   0.875rem; /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg:   1.125rem; /* 18px */
+  --text-xl:   1.25rem;  /* 20px */
+  --text-2xl:  1.5rem;   /* 24px */
+  --text-3xl:  1.875rem; /* 30px */
+  --text-4xl:  2.25rem;  /* 36px */
 }
 
 html,
@@ -38,10 +38,16 @@ body,
   background: #07150C;
 }
 
-/* Drives rem-based SPACING only. Text sizes are absolute px in @theme above,
-   so changing this no longer affects type. */
+/* Base font-size. Rem-based spacing scales with this.
+   Mobile override below shrinks it further so panels fit on small screens. */
 html {
-  font-size: 17px;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -134,7 +140,7 @@ body::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.85rem 1.25rem;
+  padding: 0.65rem 1rem;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.12em;
   color: #07150C;

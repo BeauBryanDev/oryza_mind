@@ -22,7 +22,7 @@ export default function SpikeUploadPanel() {
         <span className="w-7 h-7 rounded-md border border-rg-border flex items-center justify-center">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="2"><path d="M12 22V8"/><path d="M12 8c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg>
         </span>
-        <h2 className="font-display neon-text-green tracking-widest text-lg">2. RICE SPIKE DETECTION</h2>
+        <h2 className="font-display neon-text-green tracking-widest text-base">2. RICE SPIKE DETECTION</h2>
       </header>
 
       <div
@@ -43,20 +43,20 @@ export default function SpikeUploadPanel() {
         aria-label="Drag and drop rice spike image area"
         className={`relative cursor-pointer rounded-xl border-2 border-dashed transition-all
           ${dragOver ? 'border-rg-accent bg-rg-accent/5' : 'border-rg-neon/40 hover:border-rg-neon/70 hover:bg-rg-neon/[0.03]'}
-          p-6 flex flex-col items-center justify-center text-center min-h-[180px]`}
+          p-4 flex flex-col items-center justify-center text-center min-h-[140px] sm:min-h-[170px]`}
       >
-        <div className="relative w-20 h-20 mb-3">
+        <div className="relative w-14 h-14 sm:w-18 sm:h-18 mb-2">
           <div className="absolute inset-0 border border-rg-neon/50 rotate-45 rounded-md" />
-          <div className="absolute inset-3 border border-rg-neon/30 rotate-45 rounded-md" />
+          <div className="absolute inset-2 border border-rg-neon/30 rotate-45 rounded-md" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="1.5" className="drop-shadow-[0_0_10px_rgba(140,255,77,0.7)]">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="1.5" className="drop-shadow-[0_0_10px_rgba(140,255,77,0.7)]">
               <path d="M12 21V9"/><path d="M12 9c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6z"/><path d="M12 15c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6z"/>
             </svg>
           </div>
         </div>
-        <div className="font-display neon-text-green tracking-[0.2em] text-lg">DRAG AND DROP</div>
-        <div className="font-hud text-rg-muted tracking-[0.2em] text-xs mt-1">YOUR SPIKE PHOTOS HERE</div><p>this is only for spike detection</p>
-        <div className="mt-4 chip">UP TO {MAX_SPIKE_IMAGES} IMAGES</div>
+        <div className="font-display neon-text-green tracking-[0.2em] text-sm">DRAG AND DROP</div>
+        <div className="font-hud text-rg-muted tracking-[0.2em] text-xs mt-0.5">YOUR SPIKE PHOTOS HERE</div><p className="text-xs text-rg-muted mt-0.5">this is only for spike detection</p>
+        <div className="mt-3 chip">UP TO {MAX_SPIKE_IMAGES} IMAGES</div>
 
         <input
           ref={inputRef}
@@ -76,7 +76,7 @@ export default function SpikeUploadPanel() {
 
       {images.length > 0 && (
         <div>
-          <div className="font-hud text-sm text-rg-muted tracking-[0.25em] mb-2">
+          <div className="font-hud text-xs text-rg-muted tracking-[0.25em] mb-2">
             SELECTED SPIKES ({images.length}/{MAX_SPIKE_IMAGES})
           </div>
           <div className="grid grid-cols-3 gap-2">
@@ -102,7 +102,7 @@ export default function SpikeUploadPanel() {
           management plan render in the results panel, like the leaf flow. */}
       {result && (
         <div className="flex flex-col gap-2 fade-in">
-          <div className="font-hud text-sm text-rg-muted tracking-[0.25em]">
+          <div className="font-hud text-xs text-rg-muted tracking-[0.25em]">
             RESULT — {result.modelLabel}
           </div>
           {/* Red for unhealthy, green for healthy. rg-accent is the HUD's
@@ -120,7 +120,7 @@ export default function SpikeUploadPanel() {
                 {p.filename ?? `IMAGE ${p.imageIndex + 1}`}
               </span>
               <span
-                className="font-display tracking-[0.15em] text-sm whitespace-nowrap"
+                className="font-display tracking-[0.15em] text-xs whitespace-nowrap"
                 style={{ color: p.label === 'UNHEALTHY' ? UNHEALTHY : HEALTHY }}
               >
                 {p.label} {(p.confidence * 100).toFixed(0)}%
@@ -135,13 +135,13 @@ export default function SpikeUploadPanel() {
       )}
 
       <button
-        className="neon-btn w-full py-3"
+        className="neon-btn w-full py-2.5"
         onClick={run}
         disabled={images.length === 0 || running}
         aria-label="Check rice spikes"
       >
         <div className="flex flex-col items-center gap-0.5">
-          <span className="text-base">{running ? 'CHECKING...' : 'CHECK SPIKES'}</span>
+          <span className="text-sm">{running ? 'CHECKING...' : 'CHECK SPIKES'}</span>
           <span className="text-xs tracking-[0.3em] font-hud opacity-80">{SPIKE_MODEL_LABEL}</span>
         </div>
       </button>

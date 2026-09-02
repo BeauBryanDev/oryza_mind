@@ -26,7 +26,7 @@ export default function Home() {
     // dvh locks the root to exactly the viewport height so the page cannot
     // grow — panels must scroll internally instead of pushing the page down.
     <div className="relative z-10 h-dvh flex flex-col overflow-hidden">
-      <div className="w-full flex-1 min-h-0 flex flex-col gap-3 lg:gap-4 px-3 sm:px-6 lg:px-14 xl:px-20 py-3 lg:py-6 pb-24 lg:pb-6 overflow-hidden">
+      <div className="w-full flex-1 min-h-0 flex flex-col gap-2 lg:gap-4 px-2 sm:px-4 lg:px-14 xl:px-20 py-2 lg:py-6 pb-20 lg:pb-6 overflow-hidden">
         <Header />
 
         {/* ── Desktop: 3-column grid filling the viewport ── */}
@@ -53,7 +53,6 @@ export default function Home() {
 
         {/* Mobile: single-panel view driven by bottom nav ── */}
         <main className="lg:hidden flex-1 min-h-0 overflow-hidden">
-          {/*TODO: I increse text size, but it is spoiling the mobile verison viewport screen */}
           {/* HOME → Chat */}
           {mobileTab === 'chat' && (
             <div className="h-full">
@@ -63,7 +62,7 @@ export default function Home() {
 
           {/* SCAN → Upload panels */}
           {mobileTab === 'scan' && (
-            <div className="h-full overflow-y-auto rg-scroll flex flex-col gap-3 pb-4">
+            <div className="h-full overflow-y-auto rg-scroll flex flex-col gap-2 pb-4">
               <UploadPanel />
               <SpikeUploadPanel />
             </div>
@@ -71,7 +70,7 @@ export default function Home() {
 
           {/* HISTORY → Analysis results */}
           {mobileTab === 'history' && (
-            <div className="h-full overflow-y-auto rg-scroll flex flex-col gap-3 pb-4">
+            <div className="h-full overflow-y-auto rg-scroll flex flex-col gap-2 pb-4">
               <DashboardPanel />
             </div>
           )}
@@ -79,14 +78,14 @@ export default function Home() {
           {/* GUIDE → Disease field guide */}
           {mobileTab === 'guide' && (
             <div className="h-full overflow-y-auto rg-scroll pb-4">
-              <div className="hud-panel p-5 flex flex-col gap-4">
-                <h2 className="font-display neon-text-green tracking-widest text-lg">FIELD GUIDE</h2>
+              <div className="hud-panel p-4 flex flex-col gap-3">
+                <h2 className="font-display neon-text-green tracking-widest text-base">FIELD GUIDE</h2>
                 <div className="h-px bg-gradient-to-r from-transparent via-rg-neon/40 to-transparent" />
-                <p className="text-rg-muted font-hud tracking-wide text-sm leading-relaxed">
+                <p className="text-rg-muted font-hud tracking-wide text-xs leading-relaxed">
                   Ask the chat assistant about any rice disease — its symptoms, treatment, or
                   prevention. Answers are drawn from agronomic references and cite their source.
                 </p>
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2">
                   {[
                     { name: 'Rice Blast',        tag: 'Magnaporthe oryzae',    color: 'neon-text-green' },
                     { name: 'Brown Spot',         tag: 'Bipolaris oryzae',      color: 'neon-text' },
@@ -97,13 +96,13 @@ export default function Home() {
                     <button
                       key={d.name}
                       onClick={() => setBottomNav('home')}
-                      className="hud-panel px-4 py-3 flex items-center justify-between text-left hover:border-rg-neon/60 transition"
+                      className="hud-panel px-3 py-2.5 flex items-center justify-between text-left hover:border-rg-neon/60 transition"
                     >
                       <div>
-                        <div className={`font-display text-sm tracking-widest ${d.color}`}>{d.name}</div>
+                        <div className={`font-display text-xs tracking-widest ${d.color}`}>{d.name}</div>
                         <div className="font-hud text-xs text-rg-muted tracking-wide mt-0.5 italic">{d.tag}</div>
                       </div>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-rg-muted shrink-0">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-rg-muted shrink-0">
                         <path d="M9 18l6-6-6-6" />
                       </svg>
                     </button>
@@ -119,16 +118,16 @@ export default function Home() {
           {/* SETTINGS → System status */}
           {mobileTab === 'settings' && (
             <div className="h-full overflow-y-auto rg-scroll pb-4">
-              <div className="hud-panel p-5 flex flex-col gap-4">
-                <h2 className="font-display neon-text-green tracking-widest text-lg">SETTINGS</h2>
+              <div className="hud-panel p-4 flex flex-col gap-3">
+                <h2 className="font-display neon-text-green tracking-widest text-base">SETTINGS</h2>
                 <div className="h-px bg-gradient-to-r from-transparent via-rg-neon/40 to-transparent" />
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2">
                   {[
                     { label: 'BACKEND STATUS', desc: 'AI inference server connection' },
                     { label: 'KNOWLEDGE BASE',  desc: 'Agronomic reference database' },
                     { label: 'SPIKE MODEL',     desc: 'Panicle detection model' },
                   ].map((s) => (
-                    <div key={s.label} className="hud-panel px-4 py-3 flex items-center justify-between">
+                    <div key={s.label} className="hud-panel px-3 py-2.5 flex items-center justify-between">
                       <div>
                         <div className="font-display text-xs tracking-widest neon-text-green">{s.label}</div>
                         <div className="font-hud text-xs text-rg-muted tracking-wide mt-0.5">{s.desc}</div>

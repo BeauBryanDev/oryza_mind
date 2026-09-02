@@ -16,7 +16,10 @@ export default function MobileBottomNav() {
 
   return (
 
-    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-30 border-t border-rg-border bg-rg-bg/95 backdrop-blur-md">
+    <nav
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-30 border-t border-rg-border bg-rg-bg/95 backdrop-blur-md"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
+    >
       <ul className="grid grid-cols-5">
         {ITEMS.map((it) => {
           const active = bottomNav === it.key;
@@ -27,17 +30,17 @@ export default function MobileBottomNav() {
               <button
                 onClick={() => setBottomNav(it.key)}
                 aria-label={it.label}
-                className={`w-full py-2.5 flex flex-col items-center gap-1 transition
+                className={`w-full py-2 flex flex-col items-center gap-0.5 transition
                   ${active ? 'neon-text-green' : 'text-rg-muted hover:text-rg-neon'}`}
               >
-                <span className={`w-8 h-8 rounded-md flex items-center justify-center
+                <span className={`w-7 h-7 rounded-md flex items-center justify-center
                   ${isScan && active ? 'border border-rg-accent shadow-[0_0_16px_rgba(199,240,0,0.5)]' : ''}
                   ${active && !isScan ? 'border border-rg-neon/50' : ''}`}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     {it.icon}
                   </svg>
                 </span>
-                <span className="font-hud text-xs tracking-[0.2em]">{it.label}</span>
+                <span className="font-hud text-[10px] tracking-[0.15em]">{it.label}</span>
               </button>
             </li>
           );

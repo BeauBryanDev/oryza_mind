@@ -26,7 +26,7 @@ export default function UploadPanel() {
         <span className="w-7 h-7 rounded-md border border-rg-border flex items-center justify-center">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="2"><path d="M4 16l4-4 4 4 8-8"/><path d="M14 4h6v6"/></svg>
         </span>
-        <h2 className="font-display neon-text-green tracking-widest text-lg">1. RICE LEAVE DETECTION</h2>
+        <h2 className="font-display neon-text-green tracking-widest text-base">1. RICE LEAVE DETECTION</h2>
       </header>
 
       {/* Drop zone */}
@@ -44,20 +44,20 @@ export default function UploadPanel() {
         aria-label="Drag and drop image area"
         className={`relative cursor-pointer rounded-xl border-2 border-dashed transition-all
           ${dragOver ? 'border-rg-accent bg-rg-accent/5' : 'border-rg-neon/40 hover:border-rg-neon/70 hover:bg-rg-neon/[0.03]'}
-          p-6 flex flex-col items-center justify-center text-center min-h-[220px]`}
+          p-4 flex flex-col items-center justify-center text-center min-h-[160px] sm:min-h-[200px]`}
       >
-        <div className="relative w-24 h-24 mb-3">
+        <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-2">
           <div className="absolute inset-0 border border-rg-neon/50 rotate-45 rounded-md" />
-          <div className="absolute inset-3 border border-rg-neon/30 rotate-45 rounded-md" />
+          <div className="absolute inset-2 border border-rg-neon/30 rotate-45 rounded-md" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="1.5" className="drop-shadow-[0_0_10px_rgba(140,255,77,0.7)]">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="1.5" className="drop-shadow-[0_0_10px_rgba(140,255,77,0.7)]">
               <path d="M12 15V3"/><path d="M7 8l5-5 5 5"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/>
             </svg>
           </div>
         </div>
-        <div className="font-display neon-text-green tracking-[0.2em] text-lg">DRAG AND DROP</div>
-        <div className="font-hud text-rg-muted tracking-[0.2em] text-xs mt-1">YOUR LEAF PHOTOS HERE</div><p>this is only for leaf detection</p>
-        <div className="mt-4 chip">UP TO {MAX_IMAGES} IMAGES</div>
+        <div className="font-display neon-text-green tracking-[0.2em] text-sm">DRAG AND DROP</div>
+        <div className="font-hud text-rg-muted tracking-[0.2em] text-xs mt-0.5">YOUR LEAF PHOTOS HERE</div><p className="text-xs text-rg-muted mt-0.5">this is only for leaf detection</p>
+        <div className="mt-3 chip">UP TO {MAX_IMAGES} IMAGES</div>
 
         <input
           ref={inputRef}
@@ -103,17 +103,17 @@ export default function UploadPanel() {
 
       <div className="sticky bottom-0 bg-rg-panel/95 backdrop-blur-sm pt-3 pb-1 mt-auto z-10 border-t border-rg-border/20">
         <button
-          className="neon-btn w-full py-4 relative"
+          className="neon-btn w-full py-3 relative"
           onClick={run}
           disabled={images.length === 0 || isRunning}
           aria-label="Analyze images"
         >
           <div className="flex flex-col items-center gap-0.5">
-            <span className="flex items-center gap-2 text-lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="4"/></svg>
+            <span className="flex items-center gap-2 text-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="4"/></svg>
               {isRunning ? 'ANALYZING...' : 'ANALYZE'}
             </span>
-            <span className="text-sm tracking-[0.3em] font-hud opacity-80">YOLO SEGMENTATION</span>
+            <span className="text-xs tracking-[0.3em] font-hud opacity-80">YOLO SEGMENTATION</span>
           </div>
         </button>
       </div>
