@@ -55,7 +55,7 @@ HEALTHY_QUERIES = (
 
 def _retrieve_panicle(label: SpikeLabel) -> list[RetrievedChunk]:
     """
-    Fan out over panicle queries and merge by chunk_id.
+    Search the knowledge base for this turn.
 
     TREATMENT intent throughout, so the inoculation filter stays on. The 2025
     manual's panicle inoculation procedures rank well on exactly this
@@ -70,7 +70,7 @@ def _retrieve_panicle(label: SpikeLabel) -> list[RetrievedChunk]:
     vectors = embed_queries(list(queries))
     # TODO:  IT  is taking so long painfully time to answr, 
     # it is not my panicle model, it is the  RAG retieval + Agent to answer.
-    # I got to see how ti fix this bleeding issue. 
+    # I got to see how t0 fix this bleeding issue. 
     def _one(pair: tuple[str, list[float]]) -> list[RetrievedChunk]:
         query, vector = pair
         try:
@@ -137,6 +137,7 @@ def run_spike_agent(result: SpikeResult) -> tuple[str, list[RetrievedChunk], boo
     ungrounded answer carries no citations and no dosages by construction.
     """
     chunks = _retrieve_panicle(result.overall_label)
+    
     grounded = bool(chunks)
 
     verdict, per_image = _describe(result)
@@ -153,6 +154,7 @@ def run_spike_agent(result: SpikeResult) -> tuple[str, list[RetrievedChunk], boo
     system_parts = [SPIKE_SYSTEM_PROMPT, RECOMMENDATION_FORMAT]
     
     if not grounded:
+        
         logger.warning("spike: no chunks retrieved, answering from model knowledge")
         system_parts.append(SPIKE_NO_CONTEXT_FALLBACK)
 
@@ -169,7 +171,7 @@ def run_spike_agent(result: SpikeResult) -> tuple[str, list[RetrievedChunk], boo
         logger.exception("spike generation failed")
         raise AgentError(str(exc)) from exc
 
-    answer = (response.content or "").strip()
+    answer = (response.text or "").strip()
     
     if not answer:
         raise AgentError("The agent returned an empty response.")

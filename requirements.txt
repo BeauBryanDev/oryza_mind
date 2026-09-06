@@ -10,13 +10,14 @@ uvicorn[standard]>=0.35
 python-multipart>=0.0.20       
 pydantic>=2.9
 pydantic-settings>=2.5
-python-dotenv>=1.0              # pydantic-settings env_file support
+python-dotenv>=1.0  # pydantic-settings env_file support
 
 # Agent (Gemini via LangChain)
-
-langchain>=0.3,<1.0
-langchain-core>=0.3,<1.0
-langchain-google-genai>=2.1,<3.0
+# >=3.0 of the Gemini client echoes Gemini 3's thought_signature, which tool
+# calling needs. It requires langchain-core 1.x; the chain idiom is unchanged.
+langchain>=1.0,<2.0
+langchain-core>=1.0,<2.0
+langchain-google-genai>=4.4,<5.0
 
 # Retrieval
 # >=4.22: earlier versions serialize a bool filter into protobuf's value_int
@@ -43,10 +44,10 @@ pillow>=10.4
 # Dev / test
 pytest>=8.3
 pytest-asyncio>=0.24
-httpx>=0.27                      # fastapi.testclient.TestClient runs on httpx
+httpx>=0.27    # fastapi.testclient.TestClient runs on httpx
 
 
-#
+# PENDING FOR ORYZA MIND V3
 # motor>=3.6
 # pymongo>=4.9
 #

@@ -11,7 +11,7 @@ export default function MarkdownMessage({ content }: { content: string }) {
           
           p: ({ children }) => <p className="leading-relaxed">{children}</p>,
           strong: ({ children }) => (
-            <strong className="neon-text-green font-semibold">{children}</strong>
+            <strong className="text-rg-muted font-bold">{children}</strong>
           ),
           em: ({ children }) => <em className="italic text-rg-muted">{children}</em>,
           ul: ({ children }) => <ul className="list-disc pl-5 space-y-1">{children}</ul>,
@@ -37,7 +37,7 @@ export default function MarkdownMessage({ content }: { content: string }) {
             </code>
           ),
           blockquote: ({ children }) => (
-            <blockquote className="border-l-2 border-rg-neon/50 pl-3 text-rg-muted">
+            <blockquote className="border-l-2 border-rg-neon/100 pl-3 text-rg-muted">
               {children}
             </blockquote>
           ),

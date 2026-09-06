@@ -4,7 +4,7 @@ from __future__ import annotations
 import logging
 from functools import lru_cache
 
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from app.agent.prompts import vision_context
@@ -14,17 +14,30 @@ from app.core.exceptions import AgentError
 from app.rag.prompts import SYSTEM_PROMPT, format_context
 from app.rag.retriever import RetrievalIntent, RetrievedChunk, retrieve
 from app.schemas.chat import ChatTurn, Role
+from app.tools.products_tool import ( format_for_model, 
+                                     search_agrochemical_products, 
+                                     search_products_tool )
+from app.tools.weather_tool import get_crop_weather
+
 
 logger = logging.getLogger(__name__)
 """
 OryzaMind Agent[Gemini] answer chain: retrieve, then generate.
 
 """
-RETRIEVAL_TOP_K = 6
+RETRIEVAL_TOP_K = 5
 # Per class when several are detected, so a 3-disease leaf stays near the
 # single-disease context size instead of tripling it.
-PER_DISEASE_TOP_K = 4
-# Acutally I do not see more than two dieases in a single leaf images 
+PER_DISEASE_TOP_K = 2
+# YOLo vision model was never perfect, so I will use the same number of results
+MAX_TOOL_ROUNDS = 3
+TOOLS = [search_products_tool, get_crop_weather ]
+# Dispatch by tool name to the plain function, so the loop keeps the rows as
+# dicts for the response while the model gets the JSON string.
+TOOL_FUNCS = {
+    search_products_tool.name: search_agrochemical_products,
+    get_crop_weather.name: get_crop_weather.func,  # .func is the raw callable, not the StructuredTool wrapper
+}
 
 @lru_cache
 def get_llm() -> ChatGoogleGenerativeAI:
@@ -71,6 +84,7 @@ def _retrieve_for(message: str,
     intent keeps the inoculation filter on.
     """
     targets: list[str | None] = list(state.target_diseases) or [None]
+    
     per_disease = PER_DISEASE_TOP_K if len(targets) > 1 else RETRIEVAL_TOP_K
 
     merged: dict[str, RetrievedChunk] = {}
@@ -116,6 +130,9 @@ def run_agent(
     to get plain lines; chat passes nothing and keeps markdown.
     """
     #TODO: THIS IS TAKING LONG TIME, I MUST SEE WHY IS DELAYED
+    # Most likley it is the conection to the Weaviate Cluster for VectorDB store 
+    # I will deal with it later and bear with the latency for now on the model
+    # I wil not mess with embeddings, it is makeing hard time to debug. 
     chunks = _retrieve_for(message, state)
     state.retrieved = chunks
 
@@ -130,25 +147,104 @@ def run_agent(
         ]
         if part # part is not None
     )
-    messages = [SystemMessage(content=system), *_to_messages(history or []), 
+    messages = [SystemMessage(content=system), *_to_messages(history or []),
                 HumanMessage(content=message)]
 
-    try:
-        response = get_llm().invoke(messages)
-        
-    except Exception as exc:
-        
-        logger.exception("generation failed")
-        
-        raise AgentError(str(exc)) from exc
+    # Consent floor, enforced in code not prompt: the product tool can only run
+    # in reply to something the assistant already said, so the first turn can
+    # offer a lookup but never perform one.
+    allow_tools = any(t.role is Role.ASSISTANT for t in history or [])
+    response = _generate_with_tools(messages, state, allow_tools)
 
-    reply = (response.content or "").strip()
-    
+    # langchain-core 1.x returns content as a list of blocks; text joins the text ones.
+    reply = (response.text or "").strip()
+
     if not reply:
-        
+
         raise AgentError("The agent returned an empty response.")
 
     state.answer = reply
-    logger.info("answered from %d retrieved chunk(s)", len(chunks))
-    
+    logger.info("answered from %d retrieved chunk(s), %d product(s)", len(chunks), len(state.products))
+
     return reply, chunks
+
+
+def _generate_with_tools(messages: list, 
+                         state: AgentState, 
+                         allow_tools: bool = True
+                         ) -> AIMessage:
+    """
+    Run the model, executing tool calls until it answers in prose.
+
+    Literature retrieval already happened before this loop and is not a tool:
+    the model may decide to look up products, it may not decide to skip the
+    corpus. Tool results are appended as ToolMessages; the AIMessage carrying
+    the call is kept verbatim so Gemini's thought_signature travels back with it.
+    """
+    llm = get_llm().bind_tools(TOOLS) if allow_tools else get_llm()
+    seen_ids = {p["id"] for p in state.products}
+
+    for _ in range(MAX_TOOL_ROUNDS + 1):
+        try:
+            response = llm.invoke(messages)
+            
+        except Exception as exc:
+            
+            logger.exception("generation failed")
+            raise AgentError(str(exc)) from exc
+
+        if not response.tool_calls:
+            return response
+
+        messages.append(response)
+        
+        for call in response.tool_calls:
+            
+            func = TOOL_FUNCS.get(call["name"])
+            
+            if func is None:
+                
+                content = f"Unknown tool {call['name']}."
+                
+            else:
+                try:
+                    result = func(**call["args"])
+                    
+                except Exception:
+                    logger.exception("tool %s failed", call["name"])
+                    result = None
+                    content = "The tool is unavailable right now."
+
+                if result is None:
+                    pass  # content already set above
+                
+                elif call["name"] == get_crop_weather.name:
+                    # Weather tool returns a plain string summary — send it directly.
+                    content = result
+                    logger.info("tool %s %s -> weather data returned", 
+                                call["name"], call["args"]
+                                )
+                else:
+                    # Products tool returns list[dict] — track ids and format.
+                    rows = result
+                    for row in rows:
+                        
+                        if row["id"] not in seen_ids:
+                            
+                            seen_ids.add(row["id"])
+                            state.products.append(row)
+                            
+                    content = format_for_model(rows)
+                    
+            messages.append(ToolMessage(content=content, 
+                                        tool_call_id=call["id"]))
+
+    # Out of rounds: answer from what was gathered, with tools withheld.
+    try:
+        
+        return get_llm().invoke(messages)
+    
+    except Exception as exc:
+        
+        logger.exception("generation failed after tool rounds")
+        raise AgentError(str(exc)) from exc

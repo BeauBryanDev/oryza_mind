@@ -114,7 +114,7 @@ def _build_filter(
         applied.append("is_inoculation_protocol == False")
         clauses.append( # do not says users how to inoculate rice plants, it is not a treatment
             Filter.by_property("document_type").not_equal(SCREENING_DOCUMENT_TYPE)
-        )
+        ) # Inoculation protocol is not a treatment it is bad for rice plants
         applied.append(f"document_type != {SCREENING_DOCUMENT_TYPE}")
 
     if disease_name is not None:
@@ -205,6 +205,7 @@ def retrieve(
 
         # If this ever fires, the server-side filter failed. Drop and log loudly.
         if intent is not RetrievalIntent.UNFILTERED and chunk.is_inoculation_protocol:
+            
             logger.error(
                 "inoculation chunk %s passed the %s filter; dropped client-side",
                 chunk.chunk_id,
