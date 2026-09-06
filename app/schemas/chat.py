@@ -25,10 +25,9 @@ class ChatHistory(CamelModel):
 
 
 class ChatRequest(CamelModel):
+    
     message: str = Field(min_length=1, max_length=4000)
     history: list[ChatTurn] = Field(default_factory=list)
-    # Prior analysis, so the agent can answer about the current leaf without
-    # re-running vision. Null on a cold chat.
     analysis: AnalysisResult | None = None
 
 
@@ -42,9 +41,28 @@ class Citation(CamelModel):
     source_url: str | None = None
 
 
+class ProductHit(CamelModel):
+    """
+    A catalogue product the agent looked up at the user's request.
+
+    No prices: the catalogue stores them, but this app informs, it does not sell.
+    """
+    id: str
+    source: str
+    name: str
+    category: str | None = None
+    active_ingredient: str | None = None
+    product_url: str | None = None
+    technical_sheet_url: str | None = None
+    safety_sheet_url: str | None = None
+
+
 class ChatResponse(CamelModel):
     reply: str
     suggestions: list[str] | None = None
     # Extra to the TS type, which ignores unknown fields. Lets the UI show
     # sources later without a backend change.
     citations: list[Citation] = Field(default_factory=list)
+    # Products returned by the search tool this turn, so the UI can render
+    # cards with sheet links instead of parsing them out of the prose.
+    products: list[ProductHit] = Field(default_factory=list)

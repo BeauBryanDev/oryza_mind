@@ -38,7 +38,7 @@ export default function PromptBox() {
         }}
         rows={1}
         disabled={isSending}
-        placeholder="Ask about the diagnosis, treatment, prevention or your crop..."
+        placeholder="Describe your crop or ask about a disease, treatment or prevention..."
         aria-label="Write a message"
         className="flex-1 bg-transparent resize-none outline-none text-base text-rg-text placeholder:text-rg-muted/70 py-2 max-h-40 rg-scroll"
       />

@@ -13,8 +13,8 @@ export function useChat() {
 
     async (text: string) => {
 
-      if (!result) return;
-
+      // No analysis is fine: the backend answers from the corpus without a
+      // class filter and asks for a photo when it needs one.
       const trimmed = text.trim();
       // Don't send empty messages.
       if (!trimmed || chat.isSending) return;

@@ -8,7 +8,7 @@ from app.agent.agent import run_agent
 from app.agent.state import AgentState
 from app.core.exceptions import AgentError
 from app.schemas.analysis import AnalysisResult
-from app.schemas.chat import ChatRequest, ChatResponse, Citation
+from app.schemas.chat import ChatRequest, ChatResponse, Citation, ProductHit
 from app.rag.retriever import RetrievedChunk
 from app.schemas.common import PipelineStage
 """Chat turns against the agent, with the current analysis as context."""
@@ -27,7 +27,8 @@ def _state_from(analysis: AnalysisResult | None,
                 session_id: str
                 ) -> AgentState:
     
-    state = AgentState(session_id=session_id, stage=PipelineStage.ANALYZING)
+    state = AgentState(session_id=session_id, 
+                       stage=PipelineStage.ANALYZING)
     
     if analysis and analysis.primary_disease:
         
@@ -81,4 +82,5 @@ def chat(request: ChatRequest,
         reply=reply,
         suggestions=FALLBACK_SUGGESTIONS if request.analysis else None,
         citations=_citations(chunks),
+        products=[ProductHit.model_validate(p) for p in state.products],
     )
