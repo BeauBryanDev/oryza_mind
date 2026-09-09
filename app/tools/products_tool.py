@@ -15,6 +15,7 @@ from app.core.config import REPO_ROOT
 
 logger = logging.getLogger(__name__)
 
+# Recommend chemical  poducts to  treat rice paddy
 PRODUCTS_PATH = REPO_ROOT / "RAG" / "agrochemical_products.json"
 MAX_HITS = 5
 
@@ -27,7 +28,6 @@ TOOL_DESCRIPTION = (
     "information, or explicitly asks which products to buy. Never call it on "
     "your own initiative. Only name products it returns; never invent one."
 )
-
 
 class SearchProductsInput(BaseModel):
     
