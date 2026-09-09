@@ -1,0 +1,54 @@
+{
+  "dataset": "consumption",
+  "title": "Consumo de arroz (Kg/persona)",
+  "unit": "kg per person per year",
+  "segments": [
+    "URBANO",
+    "RURAL",
+    "TOTAL"
+  ],
+  "latest_year": 2025,
+  "by_year": {
+    "2019": {
+      "URBANO": 40.04,
+      "RURAL": 52.26,
+      "TOTAL": 42.9
+    },
+    "2020": {
+      "URBANO": 44.2,
+      "RURAL": 52.0,
+      "TOTAL": 46.02
+    },
+    "2021": {
+      "URBANO": 41.34,
+      "RURAL": 48.88,
+      "TOTAL": 43.16
+    },
+    "2022": {
+      "URBANO": 43.0,
+      "RURAL": 50.0,
+      "TOTAL": 45.0
+    },
+    "2023": {
+      "URBANO": 44.0,
+      "RURAL": 51.0,
+      "TOTAL": 46.0
+    },
+    "2024": {
+      "URBANO": 43.08,
+      "RURAL": 52.23,
+      "TOTAL": 45.22
+    },
+    "2025": {
+      "URBANO": 39.22,
+      "RURAL": 49.08,
+      "TOTAL": 41.52
+    }
+  },
+  "note": "FUENTE: Cálculos elaborados por la División de Investigaciones Económicas con base en la Encuesta Nacional de Calidad de Vida- ECV del Departamento Administrativo Nacional de Estadística - DANE.",
+  "source": "FEDEARROZ - Fondo Nacional del Arroz",
+  "source_url": "https://www.fedearroz.com.co/es/fondo-nacional-del-arroz/",
+  "source_file": "Consumo de arroz (Kgpersona).xlsx",
+  "currency": "COP",
+  "converted_at": "2026-09-09T20:12:42+00:00"
+}

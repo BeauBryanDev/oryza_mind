@@ -1,0 +1,116 @@
+{
+  "dataset": "area",
+  "title": "ÁREA SEMBRADA DE ARROZ MECANIZADO (HECTÁREAS)  SEGÚN ZONA ARROCERA, TOTAL AÑO",
+  "unit": "hectares",
+  "crop_system": "arroz mecanizado",
+  "zones": [
+    "BAJO CAUCA",
+    "CENTRO",
+    "COSTA NORTE",
+    "LLANOS",
+    "SANTANDERES",
+    "TOTAL NACIONAL"
+  ],
+  "latest_year": 2025,
+  "by_year": {
+    "2025": {
+      "BAJO CAUCA": 59989.0,
+      "CENTRO": 131619.0,
+      "COSTA NORTE": 12338.0,
+      "LLANOS": 321228.0,
+      "SANTANDERES": 38796.0,
+      "TOTAL NACIONAL": 563970.0
+    },
+    "2024": {
+      "BAJO CAUCA": 76264.0,
+      "CENTRO": 143852.0,
+      "COSTA NORTE": 24911.0,
+      "LLANOS": 344281.0,
+      "SANTANDERES": 41762.0,
+      "TOTAL NACIONAL": 631071.0
+    },
+    "2023": {
+      "BAJO CAUCA": 65787.0,
+      "CENTRO": 144059.0,
+      "COSTA NORTE": 23199.0,
+      "LLANOS": 316064.0,
+      "SANTANDERES": 40744.0,
+      "TOTAL NACIONAL": 589853.0
+    },
+    "2022": {
+      "BAJO CAUCA": 63691.0,
+      "CENTRO": 128101.0,
+      "COSTA NORTE": 20469.0,
+      "LLANOS": 283885.0,
+      "SANTANDERES": 38769.0,
+      "TOTAL NACIONAL": 534915.0
+    },
+    "2021": {
+      "BAJO CAUCA": 81167.0,
+      "CENTRO": 127573.0,
+      "COSTA NORTE": 20419.0,
+      "LLANOS": 279576.0,
+      "SANTANDERES": 35901.0,
+      "TOTAL NACIONAL": 544635.0
+    },
+    "2020": {
+      "BAJO CAUCA": 95038.0,
+      "CENTRO": 153610.0,
+      "COSTA NORTE": 26832.0,
+      "LLANOS": 280234.0,
+      "SANTANDERES": 40700.0,
+      "TOTAL NACIONAL": 596415.0
+    },
+    "2019": {
+      "BAJO CAUCA": 87053.0,
+      "CENTRO": 136429.0,
+      "COSTA NORTE": 23056.0,
+      "LLANOS": 253112.0,
+      "SANTANDERES": 39903.0,
+      "TOTAL NACIONAL": 539553.0
+    }
+  },
+  "zone_departments": {
+    "Bajo Cauca": [
+      "Antioquia",
+      "Bolívar",
+      "Chocó",
+      "Córdoba",
+      "Sucre"
+    ],
+    "Centro": [
+      "Caquetá",
+      "Cauca",
+      "Cundinamarca",
+      "Huila",
+      "Nariño",
+      "Tolima",
+      "Valle del Cauca"
+    ],
+    "Costa Norte": [
+      "Atlántico",
+      "Cesar",
+      "La Guajira",
+      "Magdalena",
+      "el municipio de Yondó en Antioquia"
+    ],
+    "Llanos": [
+      "Arauca",
+      "Casanare",
+      "Guaviare",
+      "Meta",
+      "Vichada",
+      "el municipio de Paratebueno en Cundinamarca"
+    ],
+    "Santanderes": [
+      "Norte de Santander",
+      "Santander"
+    ]
+  },
+  "note": "FUENTE: DANE - Fedearroz - FNA\n\nNOTA: los departamentos definidos por zona arrocera son:\nZona Bajo Cauca: Antioquia, Bolívar, Chocó, Córdoba y Sucre.\nZona Centro: Caquetá, Cauca, Cundinamarca, Huila, Nariño, Tolima y Valle del Cauca.\nZona Costa Norte: Atlántico, Cesar, La Guajira, Magdalena y el municipio de Yondó en Antioquia.\nZona Llanos: Arauca, Casanare, Guaviare, Meta, Vichada y el municipio de Paratebueno en Cundinamarca.\nZona Santanderes: Norte de Santander y Santander.",
+  "source": "FEDEARROZ - Fondo Nacional del Arroz",
+  "source_url": "https://www.fedearroz.com.co/es/fondo-nacional-del-arroz/",
+  "source_file": "ÁREA SEMBRADA DE ARROZ MECANIZADO (HECTÁREAS)  SEGÚN ZONA ARROCERA, TOTAL AÑO.xlsx",
+  "currency": "COP",
+  "converted_at": "2026-09-09T20:12:42+00:00"
+}

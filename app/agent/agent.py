@@ -204,7 +204,7 @@ def run_agent(
 
 
 def _generate_with_tools(messages: list, 
-                         state: AgentState, 
+                         state: AgentState,  # the agent state carried through one turn
                          allow_tools: bool = True
                          ) -> AIMessage:
     """
