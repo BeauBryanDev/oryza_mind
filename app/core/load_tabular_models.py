@@ -16,16 +16,19 @@ logger = logging.getLogger(__name__)
 # Column order the estimators were fit on. Inputs are numpy rows, not DataFrames.
 FERTILIZER_FEATURES = ("moist", "soilT", "EC", "airT", "airH", "Fase_Tanam")
 CROP_FEATURES = ("N", "P", "K", "temperature", "humidity", "ph", "rainfall")
-PLANT_HEALTH_FEATURES  =['Soil_Moisture', 'Ambient_Temperature',
-       'Soil_Temperature', 'Humidity', 'Light_Intensity', 'Soil_pH',
-       'Nitrogen_Level', 'Phosphorus_Level', 'Potassium_Level',
-       'Chlorophyll_Content', 'Electrochemical_Signal']
+PLANT_HEALTH_FEATURES = (
+    "Soil_Moisture", "Ambient_Temperature", "Soil_Temperature", "Humidity",
+    "Light_Intensity", "Soil_pH", "Nitrogen_Level", "Phosphorus_Level",
+    "Potassium_Level", "Chlorophyll_Content", "Electrochemical_Signal",
+)
 
 FERTILIZER_LABELS = ("Flushing Air", "KCl", "NPK 15-10-12", "SP-36", "Urea", "ZA")
 CROP_CLASS_COUNT = 22
 RICE_CLASS = 20
-PLANT_HEALTH_CLASS_COUNT = 11
-PLANT_HEALTH_TARGET_CLASS = 3
+PLANT_HEALTH_CLASS_COUNT = 3
+# 1 is worse than 2: LabelEncoder sorted the names alphabetically, so the index
+# is not a severity scale. Always read the label through the class map.
+PLANT_HEALTH_LABELS = ("Healthy", "High Stress", "Moderate Stress")
 
 
 def _load(path):
@@ -93,6 +96,38 @@ def get_crop_classes() -> dict[int, str]:
     return classes
 
 
+@lru_cache
+def get_plant_health_model():
+    model = _load(get_settings().plant_health_model_path)
+
+    if model.n_features_in_ != len(PLANT_HEALTH_FEATURES):
+        raise ModelNotLoadedError(f"plant health model expects {model.n_features_in_} features, want 11")
+    
+    if len(model.classes_) != PLANT_HEALTH_CLASS_COUNT:
+        raise ModelNotLoadedError(f"plant health model has {len(model.classes_)} classes, want {PLANT_HEALTH_CLASS_COUNT}")
+
+    return model
+
+
+@lru_cache
+def get_plant_health_classes() -> dict[int, str]:
+    """int class -> status name, from the LabelEncoder mapping saved next to the model."""
+    path = get_settings().plant_health_class_path
+
+    if not path.exists():
+        raise ModelNotLoadedError(f"plant health class map not found at {path}")
+    
+    with path.open(encoding="utf-8") as fh:
+        raw = json.load(fh)
+
+    classes = {int(k): str(v) for k, v in raw.items()}
+
+    if tuple(classes[i] for i in sorted(classes)) != PLANT_HEALTH_LABELS:
+        raise ModelNotLoadedError(f"plant health classes {classes} differ from the known labels")
+
+    return classes
+
+
 def quiet_predict(method, row):
     """Run predict/predict_proba on a numpy row without the feature-names warning.
 
@@ -118,9 +153,21 @@ def is_crop_model_available() -> bool:
     try:
         get_crop_model()
         get_crop_classes()
-        
+
         return True
-    
+
     except Exception:
-        
+
+        return False
+
+
+def is_plant_health_model_available() -> bool:
+    try:
+        get_plant_health_model()
+        get_plant_health_classes()
+
+        return True
+
+    except Exception:
+
         return False

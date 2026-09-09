@@ -9,6 +9,9 @@ from starlette.concurrency import run_in_threadpool
 from app import __version__
 # load vision model, spike model and weaviate client
 from app.core.load_spike_model import is_spike_model_available
+from app.core.load_tabular_models import ( is_crop_model_available,
+                                          is_fertilizer_model_available,
+                                          is_plant_health_model_available )
 from app.core.load_vision_model import is_model_available
 from app.rag.vectorstore import get_client
 from app.schemas.common import HealthResponse
@@ -34,6 +37,9 @@ async def health() -> HealthResponse:
     model_loaded = await run_in_threadpool(is_model_available)
     spike_model_loaded = await run_in_threadpool(is_spike_model_available)
     weaviate_ready = await run_in_threadpool(_weaviate_ready)
+    fertilizer_model_loaded = await run_in_threadpool(is_fertilizer_model_available)
+    crop_model_loaded = await run_in_threadpool(is_crop_model_available)
+    plant_health_model_loaded = await run_in_threadpool(is_plant_health_model_available)
 
     return HealthResponse(
         status="ok" if (model_loaded and weaviate_ready) else "degraded",
@@ -41,4 +47,7 @@ async def health() -> HealthResponse:
         model_loaded=model_loaded,
         weaviate_ready=weaviate_ready,
         spike_model_loaded=spike_model_loaded,
+        fertilizer_model_loaded=fertilizer_model_loaded,
+        crop_model_loaded=crop_model_loaded,
+        plant_health_model_loaded=plant_health_model_loaded,
     )

@@ -1,7 +1,7 @@
 # OryzaMind backend dependencies.
 #
 
-#     python3 -m venv oryza && oryza/bin/pip install -r requirements.txt
+# python3 -m venv oryza && oryza/bin/pip install -r requirements.txt
 #
 
 # HTTP layer
@@ -53,7 +53,9 @@ pytest-asyncio>=0.24
 httpx>=0.27    # fastapi.testclient.TestClient runs on httpx
 
 
-# PENDING FOR ORYZA MIND V3
+# PENDING FOR ORYZA MIND V3 coonect to real databases
+#
+# mongoengine>=0.29
 # motor>=3.6
 # pymongo>=4.9
 #

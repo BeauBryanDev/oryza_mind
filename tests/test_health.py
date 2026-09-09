@@ -12,6 +12,8 @@ def client(monkeypatch):
     monkeypatch.setattr(health_router, "is_model_available", lambda: True)
     monkeypatch.setattr(health_router, "is_spike_model_available", lambda: True)
     monkeypatch.setattr(health_router, "_weaviate_ready", lambda: True)
+    monkeypatch.setattr(health_router, "is_fertilizer_model_available", lambda: True)
+    monkeypatch.setattr(health_router, "is_crop_model_available", lambda: True)
     with TestClient(app) as c:
         yield c
 
@@ -32,4 +34,13 @@ def test_spike_model_is_reported_in_camel_case_without_gating_status(client, mon
     monkeypatch.setattr(health_router, "is_spike_model_available", lambda: False)
     body = client.get("/health").json()
     assert body["spikeModelLoaded"] is False
+    assert body["status"] == "ok"
+
+
+def test_tabular_models_are_reported_without_gating_status(client, monkeypatch):
+    monkeypatch.setattr(health_router, "is_fertilizer_model_available", lambda: False)
+    monkeypatch.setattr(health_router, "is_crop_model_available", lambda: False)
+    body = client.get("/health").json()
+    assert body["fertilizerModelLoaded"] is False
+    assert body["cropModelLoaded"] is False
     assert body["status"] == "ok"

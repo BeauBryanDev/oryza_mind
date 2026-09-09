@@ -81,3 +81,7 @@ class HealthResponse(CamelModel):
     # Optional so an older client that does not know about the spike model keeps
     # parsing this payload unchanged.
     spike_model_loaded: bool = False
+    # Tabular tools. Added capabilities, never gate status.
+    fertilizer_model_loaded: bool = False
+    crop_model_loaded: bool = False
+    plant_health_model_loaded: bool = False

@@ -53,6 +53,14 @@ class Settings(BaseSettings):
     # passages are pre-filtered, so the model summarizes rather than reasons.
  
     gemini_thinking_budget: int = 0
+    # Save money and time. I do not need Gemini to think. The client default timeout=None
+    #  this is not rocket science, but it hangs forever, so a bound is needed.
+
+    gemini_timeout: float = 25.0
+    # attempts, not extra tries: langchain maps this straight to
+    # HttpRetryOptions(attempts=N), so 1 means a single try with no retry.
+    # Google dropping the connection mid-call is real and worth one more go.
+    gemini_max_retries: int = 2
 
     # Weaviate
     weaviate_url: str
@@ -90,10 +98,21 @@ class Settings(BaseSettings):
     fertilizer_model_path: Path = REPO_ROOT / "ml" / "decision_tree_fertilizer.joblib"
     crop_model_path: Path = REPO_ROOT / "ml" / "crop_recomendation_model.pkl"
     crop_class_path: Path = REPO_ROOT / "ml" / "crop_class.json"
-    plant_health_model_path: Path = REPO_ROOT / "ml" / "plan_health_model.joblib"
-    plant_health_class_path: Path = REPO_ROOT / "ml" / "plant_health_class.json"
+    plant_health_model_path: Path = REPO_ROOT / "ml" / "plant_health_model.joblib"
+    plant_health_class_path: Path = REPO_ROOT / "ml" / "plant_health_classes.json"
     # Below this top probability the soil profile is reported as ambiguous.
     crop_uncertain_threshold: float = 0.5
+
+    # Market data. Two independent price sources, deliberately not merged:
+    # FAOSTAT is annual USD/tonne for 43 countries, FEDEARROZ is monthly
+    # COP/tonne for Colombia only and runs about two years fresher.
+    faostat_prices_path: Path = REPO_ROOT / "RAG" / "rice_producer_prices.json"
+    # FEDEARROZ / Fondo Nacional del Arroz, converted from xlsx by
+    # scripts/convert_fedearroz.py. All values COP.
+    fedearroz_prices_path: Path = REPO_ROOT / "RAG" / "fedearroz_prices.json"
+    fedearroz_costs_path: Path = REPO_ROOT / "RAG" / "fedearroz_costs.json"
+    fedearroz_area_path: Path = REPO_ROOT / "RAG" / "fedearroz_area.json"
+    fedearroz_consumption_path: Path = REPO_ROOT / "RAG" / "fedearroz_consumption.json"
 
     # HTTP
     cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:5173"])
@@ -104,6 +123,7 @@ class Settings(BaseSettings):
  
         if v == "e5-large-v2":
             v = "intfloat/e5-large-v2"
+            
         if v != "intfloat/e5-large-v2":
             raise ValueError(
                 f"embedding_model is {v!r}, but the live OryzaMindChunk collection "
@@ -111,6 +131,7 @@ class Settings(BaseSettings):
                 "model would produce meaningless similarity scores with no error. "
                 "Re-embed all 2,030 chunks before changing this."
             )
+            
         return v
 
     def confidence_threshold_for(self, class_name: str) -> float:
