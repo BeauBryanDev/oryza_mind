@@ -86,9 +86,18 @@ class Settings(BaseSettings):
     # rather than dressed up as a decision.
     spike_uncertain_margin: float = 0.10
 
+    # Tabular tools, sklearn artifacts. Both are LLM-decided tools, not chain steps.
+    fertilizer_model_path: Path = REPO_ROOT / "ml" / "decision_tree_fertilizer.joblib"
+    crop_model_path: Path = REPO_ROOT / "ml" / "crop_recomendation_model.pkl"
+    crop_class_path: Path = REPO_ROOT / "ml" / "crop_class.json"
+    plant_health_model_path: Path = REPO_ROOT / "ml" / "plan_health_model.joblib"
+    plant_health_class_path: Path = REPO_ROOT / "ml" / "plant_health_class.json"
+    # Below this top probability the soil profile is reported as ambiguous.
+    crop_uncertain_threshold: float = 0.5
+
     # HTTP
     cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:5173"])
-    # CORS Handling here  to avoid headless browser errors
+    # CORS Handling here  to avoid headless browser errors  // it s to be changed on production
     @field_validator("embedding_model")
     @classmethod
     def _embedding_model_must_match_collection(cls, v: str) -> str:

@@ -41,6 +41,12 @@ numpy>=1.26
 # INTER_LINEAR does not, and that difference flips the class on large photos.
 pillow>=10.4
 
+# Tabular tools (fertilizer decision tree, crop random forest). Both artifacts
+# were trained on sklearn 1.6.1; tree pickles are stable across minors. Inputs
+# are numpy rows in documented column order, so pandas is  not needed.
+scikit-learn>=1.6
+joblib>=1.4
+
 # Dev / test
 pytest>=8.3
 pytest-asyncio>=0.24
