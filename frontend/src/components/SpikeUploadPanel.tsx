@@ -22,7 +22,7 @@ export default function SpikeUploadPanel() {
         <span className="w-7 h-7 rounded-md border border-rg-border flex items-center justify-center">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="2"><path d="M12 22V8"/><path d="M12 8c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg>
         </span>
-        <h2 className="font-display neon-text-green tracking-widest text-base">2. RICE SPIKE DETECTION</h2>
+        <h2 className="font-display neon-text-green tracking-widest text-base">RICE SPIKE DETECTION</h2>
       </header>
 
       <div
@@ -55,7 +55,7 @@ export default function SpikeUploadPanel() {
           </div>
         </div>
         <div className="font-display neon-text-green tracking-[0.2em] text-sm">DRAG AND DROP</div>
-        <div className="font-hud text-rg-muted tracking-[0.2em] text-xs mt-0.5">YOUR SPIKE PHOTOS HERE</div><p className="text-xs text-rg-muted mt-0.5">this is only for spike detection</p>
+        <div className="font-hud text-rg-muted tracking-[0.4em] text-xs mt-0.5">YOUR SPIKE PHOTOS HERE</div><p className="text-xs text-rg-muted mt-0.5">this is only for spike detection</p>
         <div className="mt-3 chip">UP TO {MAX_SPIKE_IMAGES} IMAGES</div>
 
         <input

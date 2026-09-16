@@ -36,7 +36,7 @@ export default function ChatPanel() {
         <span className="w-7 h-7 rounded-md border border-rg-border flex items-center justify-center">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </span>
-        <h2 className="font-display neon-text-green tracking-widest text-base">2. CHAT WITH ORYZA-MIND</h2>
+        <h2 className="font-display neon-text-green tracking-widest text-base"> CHAT WITH ORYZA-MIND</h2>
       </header>
 
       <div className="h-px bg-gradient-to-r from-transparent via-rg-neon/40 to-transparent mb-3" />

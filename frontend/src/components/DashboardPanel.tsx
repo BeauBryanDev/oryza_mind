@@ -10,7 +10,7 @@ import RecommendationsPanel from './RecommendationsPanel';
 import riceLeafIcon from '../assets/rice_leaf_icon.svg';
 
 export default function DashboardPanel() {
-
+ 
   const { result, stage, error } = useAnalysisStore();
   const spike = useSpikeStore((s) => s.result);
   const primary = result?.primaryDisease ?? null;
@@ -24,7 +24,7 @@ export default function DashboardPanel() {
         <span className="w-7 h-7 rounded-md border border-rg-border flex items-center justify-center">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
         </span>
-        <h2 className="font-display neon-text-green tracking-widest text-base">3. ANALYSIS RESULTS</h2>
+        <h2 className="font-display neon-text-green tracking-widest text-base">ANALYSIS RESULTS</h2>
       </header>
 
       {!result && !spike && stage === 'IDLE' && <EmptyState />}
@@ -136,7 +136,7 @@ function EmptyState() {
       </div>
       <div className="font-display neon-text-green tracking-widest text-sm">AWAITING ANALYSIS</div>
       <p className="text-xs text-rg-muted max-w-[260px] leading-relaxed">
-        Upload up to 3 rice leaf photos and press <span className="neon-text">ANALYZE</span> for a
+        Upload a rice leaf photos and press <span className="neon-text">ANALYZE</span> for a
         full diagnosis.
       </p>
       <div className="grid grid-cols-2 gap-2 w-full mt-2">

@@ -26,7 +26,7 @@ export default function UploadPanel() {
         <span className="w-7 h-7 rounded-md border border-rg-border flex items-center justify-center">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8CFF4D" strokeWidth="2"><path d="M4 16l4-4 4 4 8-8"/><path d="M14 4h6v6"/></svg>
         </span>
-        <h2 className="font-display neon-text-green tracking-widest text-base">1. RICE LEAVE DETECTION</h2>
+        <h2 className="font-display neon-text-green tracking-widest text-base">RICE LEAVE DETECTION</h2>
       </header>
 
       {/* Drop zone */}
