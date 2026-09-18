@@ -4,8 +4,17 @@ export const MAX_IMAGES = 3;
 export const MAX_FILE_SIZE_MB = 8;
 export const ACCEPTED_FORMATS = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
 
-export const API_BASE_URL =
-  (import.meta.env?.VITE_API_BASE_URL as string | undefined) ?? 'http://localhost:8005';
+// Vite inlines this at build time, so a missing value ships silently. In a
+// production build that means a bundle pointing at nothing, discovered only
+// when a farmer uploads a photo -- so fail at load instead.
+const envBaseUrl = import.meta.env.VITE_API_BASE_URL as string | undefined;
+
+if (import.meta.env.PROD && !envBaseUrl) {
+  throw new Error('VITE_API_BASE_URL is not set. Set it in the Vercel project env vars and redeploy.');
+}
+
+// Dev falls back to the vite server proxy, which maps /api to the local backend.
+export const API_BASE_URL = envBaseUrl ?? '/api';
 
 export const APP_NAME = 'OryzaMind';
 // Display form for the header wordmark.

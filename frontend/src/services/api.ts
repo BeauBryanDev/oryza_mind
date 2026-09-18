@@ -4,7 +4,10 @@ import { API_BASE_URL } from '../utils/constants'; // backend port is 8005
 
 export const api = axios.create({
     //  axios.create()  is a factory function that returns a new instance of axios
-  baseURL: API_BASE_URL,  // CORS is handled by the reverse proxy fastapi
+  // Prod calls the https EC2 subdomain directly, so CORS_ORIGINS on the backend
+  // must name the vercel origin. Dev leaves the var unset and hits /api, which
+  // vite.config.ts proxies to localhost:8005.
+  baseURL: API_BASE_URL,
   timeout: 30000,
   headers: { Accept: 'application/json' },
 });

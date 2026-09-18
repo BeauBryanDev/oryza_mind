@@ -16,4 +16,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  // The backend mounts its routes at the root (/analyze, /chat, /spike,
+  // /health), so the /api prefix is stripped here and again in vercel.json.
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8005",
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api/, ""),
+      },
+    },
+  },
 });
