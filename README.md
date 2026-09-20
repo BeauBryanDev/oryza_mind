@@ -1,15 +1,13 @@
 
 # OryzaMind 🌾
 
-![Deploy](https://github.com/BeauBryanDev/oryza_mind/actions/workflows/deploy.yml/badge.svg)
 
 ![Status](https://img.shields.io/badge/status-production-brightgreen)
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-automated-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 
-This project is available at <a href="[https://oryza.tensorgeek.com/](https://oryza.tensorgeek.com/)" target="_blank">Oryza-Mind</a>.
+This project is available at [https://oryza.tensorgeek.com/](oryza.tensorgeek.com/)
 
-![Deploy](https://github.com/BeauBryanDev/oryza_mind/actions/workflows/deploy.yml/badge.svg)
 ![Status](https://img.shields.io/badge/status-production-brightgreen)
 ![Stack](https://img.shields.io/badge/stack-FastAPI%20%7C%20ONNX%20%7C%20React-blue)
 
