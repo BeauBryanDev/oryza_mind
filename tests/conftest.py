@@ -10,6 +10,8 @@ import pytest
 os.environ.setdefault("GEMINI_API_KEY", "test-key")
 os.environ.setdefault("WEAVIATE_URL", "http://localhost:8080")
 os.environ.setdefault("WEAVIATE_API_KEY", "test-key")
+# Keeps the startup warm-up from downloading e5 in the offline suite.
+os.environ.setdefault("WARMUP_ENCODER", "false")
 
 from app.core.config import get_settings
 

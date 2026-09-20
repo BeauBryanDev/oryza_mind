@@ -41,6 +41,9 @@ class Settings(BaseSettings):
 
     environment: str = "development"
     log_level: str = "INFO"
+    # Load e5 on a background thread at startup so the first request does not
+    # pay ~40s and hit nginx's proxy_read_timeout. Off for tests and the ETL.
+    warmup_encoder: bool = True
 
     # Gemini
     gemini_api_key: str

@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import logging
+import threading
+import time
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
@@ -12,11 +14,21 @@ from app import __version__
 from app.core.config import get_settings
 from app.core.exceptions import OryzaError
 from app.core.logging import setup_logging
-from app.rag.vectorstore import close_client
+from app.rag.vectorstore import close_client, embed_query
 from app.routers import analysis_router, chat_router, health_router, spike_router
 """FastAPI application main entry file. Served at the root on port 8005."""
 
 logger = logging.getLogger(__name__)
+
+
+def _warm_encoder() -> None:
+    """Load e5 and run one forward pass off the request path. Never fatal."""
+    started = time.perf_counter()
+    try:
+        embed_query("warmup")
+        logger.info("encoder warm in %.1fs", time.perf_counter() - started)
+    except Exception:
+        logger.warning("encoder warmup failed; it will load on first use", exc_info=True)
 
 
 @asynccontextmanager
@@ -27,6 +39,10 @@ async def lifespan(app: FastAPI):
     # The ONNX session and the e5 encoder load lazily on first use. Left that
     # way deliberately: eager loading would add ~30s to startup and make an
     # unreachable Weaviate a boot failure rather than a degraded /health.
+    # The encoder is warmed on a background thread instead, so the first
+    # visitor does not pay the load and nginx cannot time out waiting for it.
+    if settings.warmup_encoder:
+        threading.Thread(target=_warm_encoder, name="encoder-warmup", daemon=True).start()
     try:
         yield
         

@@ -52,8 +52,8 @@ TOOLS = [search_products_tool, get_crop_weather, recommend_fertilizer_tool, reco
 # dicts for the response while the model gets the JSON string.
 TOOL_FUNCS = {
     search_products_tool.name: search_agrochemical_products,
-    get_crop_weather.name: get_crop_weather.func,  # .func is the raw callable, not the StructuredTool wrapper
-    recommend_fertilizer_tool.name: recommend_rice_fertilizer,
+    get_crop_weather.name: get_crop_weather.func,  # .func is the raw callable, 
+    recommend_fertilizer_tool.name: recommend_rice_fertilizer,  # not the StructuredTool wrapper
     recommend_crop_tool.name: recommend_crop,
     check_plant_health_tool.name: check_plant_health_status,
     get_rice_price_tool.name: get_rice_price,
