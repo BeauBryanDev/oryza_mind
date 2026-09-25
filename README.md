@@ -429,6 +429,14 @@ material requires re-embedding and re-ingesting all chunks.
 Please accompany a pull request with the technical rationale, and with the measurement supporting it where a claim
 is empirical.
 
+## Model
+
+The trained YOLOv11 segmentation weights .onnx are published
+openly on Hugging Face: **[beaunix/oryza-mind](https://huggingface.co/beaunix/oryza-mind)**
+
+Built on top of [Ultralytics YOLO](https://github.com/ultralytics/ultralytics).
+Thank you Ultralytics fro your Amazing YOLO Models.
+
 ## License
 
 MIT.
