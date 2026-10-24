@@ -63,7 +63,8 @@ def embed_query(query: str, settings: Settings | None = None) -> list[float]:
     return vector.tolist()
 
 
-def embed_queries(queries: list[str], settings: Settings | None = None) -> list[list[float]]:
+def embed_queries(queries: list[str], 
+settings: Settings | None = None) -> list[list[float]]:
     """
     Encode several queries in one forward pass.
 

@@ -20,7 +20,8 @@ async def chat(
     session_id: str | None = Header(default=None, alias="X-Session-Id"),
 ) -> ChatResponse:
     
-    logger.info("chat: %d chars, analysis=%s", len(request.message), request.analysis is not None)
+    logger.info("chat: %d chars, analysis=%s", len(request.message), 
+                request.analysis is not None)
     # The agent chain is synchronous, and so is the embedding call inside its
     # retrieval tool.
     return await run_in_threadpool(chat_service, request, session_id)

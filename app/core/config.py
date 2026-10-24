@@ -65,6 +65,13 @@ class Settings(BaseSettings):
     # Google dropping the connection mid-call is real and worth one more go.
     gemini_max_retries: int = 2
 
+    # Spanish chat is rewritten into an English search query before retrieval,
+    # because e5 and the corpus are English. Bounded and single-try: a failed
+    # rewrite falls back to the raw message. Off restores plain retrieval.
+    query_rewrite_enabled: bool = True
+    # The Gemini API rejects any deadline under 10s with a 400.
+    query_rewrite_timeout: float = 10.0
+
     # Weaviate
     weaviate_url: str
     weaviate_api_key: str

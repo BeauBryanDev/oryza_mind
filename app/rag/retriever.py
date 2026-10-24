@@ -19,6 +19,10 @@ logger = logging.getLogger(__name__)
 # ingest, this is per-source.
 SCREENING_DOCUMENT_TYPE = "screening_manual"
 
+# Captions and leaked reference lists carry nothing a farmer can act on, and
+# being short or name-dense they crowd real passages out of the top k.
+EXCLUDED_CHUNK_TYPES = ("figure_caption", "bibliography")
+
 RETURN_PROPERTIES = [
     "chunk_id",
     "text",
@@ -116,6 +120,9 @@ def _build_filter(
             Filter.by_property("document_type").not_equal(SCREENING_DOCUMENT_TYPE)
         ) # Inoculation protocol is not a treatment it is bad for rice plants
         applied.append(f"document_type != {SCREENING_DOCUMENT_TYPE}")
+        for chunk_type in EXCLUDED_CHUNK_TYPES:
+            clauses.append(Filter.by_property("chunk_type").not_equal(chunk_type))
+            applied.append(f"chunk_type != {chunk_type}")
 
     if disease_name is not None:
         

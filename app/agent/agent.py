@@ -9,6 +9,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, Tool
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from app.agent.prompts import vision_context
+from app.agent.query_rewrite import retrieval_queries
 from app.agent.state import AgentState
 from app.core.config import get_settings
 from app.core.exceptions import AgentError
@@ -45,9 +46,13 @@ RETRIEVAL_TOP_K = 5 # Had better to check thisnumber fits or not for retrieval
 PER_DISEASE_TOP_K = 2
 # YOLo vision model was never perfect, so I will use the same number of results
 MAX_TOOL_ROUNDS = 3
-TOOLS = [search_products_tool, get_crop_weather, recommend_fertilizer_tool, recommend_crop_tool,
-         check_plant_health_tool, get_rice_price_tool, colombia_rice_price_tool,
-         rice_production_costs_tool, rice_planted_area_tool, rice_consumption_tool]
+TOOLS = [search_products_tool, get_crop_weather, 
+         recommend_fertilizer_tool, recommend_crop_tool,
+         check_plant_health_tool, get_rice_price_tool,
+         colombia_rice_price_tool,
+         rice_production_costs_tool, 
+         rice_planted_area_tool,
+         rice_consumption_tool]
 # Dispatch by tool name to the plain function, so the loop keeps the rows as
 # dicts for the response while the model gets the JSON string.
 TOOL_FUNCS = {
@@ -117,16 +122,19 @@ def _retrieve_for(message: str,
     intent keeps the inoculation filter on.
     """
     targets: list[str | None] = list(state.target_diseases) or [None]
-    
+
     per_disease = PER_DISEASE_TOP_K if len(targets) > 1 else RETRIEVAL_TOP_K
+    # Spanish only: an English search query per target, anchored to the vision
+    # class when there is one. The answer below still sees the original message.
+    queries = retrieval_queries(message, targets)
 
     merged: dict[str, RetrievedChunk] = {}
-    
-    for target in targets:
-        
+
+    for target, query in zip(targets, queries):
+
         try:
             result = retrieve(
-                query=message,
+                query=query,
                 disease_name=target,
                 intent=RetrievalIntent.TREATMENT,
                 top_k=per_disease,

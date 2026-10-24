@@ -40,3 +40,28 @@ def vision_context(state: AgentState) -> str:
         )
 
     return "\n".join(l for l in lines if l)
+
+
+# Query rewrite for Spanish chat. Retrieval only: the answer still sees the
+# farmer's own words.
+
+# No photo: vision has said nothing, so the query carries only what the farmer
+# wrote. Local names the farmer used may be standardised, never added.
+REWRITE_LITERAL_PROMPT = (
+    "Translate a rice farmer's message into one English search query for a library "
+    "of English rice literature. Translate literally and faithfully. Describe symptoms "
+    "exactly as the farmer describes them. If the farmer names a disease, pest or weed, "
+    "give its standard English or scientific name (anublo de la vaina = sheath blight, "
+    "piricularia = rice blast, sogata = Tagosodes orizicolus, liendre de puerco = "
+    "Echinochloa colona). NEVER name a disease, virus, bacterium or pest the farmer did "
+    "not name, even if the symptoms suggest one. Do not answer. Output only the query, "
+    "one line."
+)
+
+# Photo: the disease comes from vision, so the rewrite is anchored to it.
+REWRITE_PHOTO_PROMPT = (
+    "A vision model diagnosed the farmer's rice photo as: {disease}. Rewrite the "
+    "farmer's message into one English search query about {disease}. Use that disease "
+    "name and no other disease. Keep the farmer's actual question (symptoms, control, "
+    "timing, products, fertilizer). Do not answer. Output only the query, one line."
+)
