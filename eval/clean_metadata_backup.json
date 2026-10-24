@@ -1,0 +1,545 @@
+{
+  "fungus-chapter-2-foliar-diseases-pdf:91:2": {
+    "uuid": "af567eb5-e253-4ce9-93d4-cd444c71515a",
+    "before": {
+      "chunk_type": "treatment_record",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "is_inoculation_protocol": true,
+      "chunk_type": "narrative"
+    }
+  },
+  "fungus-chapter-2-foliar-diseases-pdf:91:1": {
+    "uuid": "ce902f5a-0d18-47ea-b98f-b8bd3e029028",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "is_inoculation_protocol": true
+    }
+  },
+  "fungus-chapter-2-foliar-diseases-pdf:88:4": {
+    "uuid": "f52262ae-cab2-4670-ae00-e91d5400921e",
+    "before": {
+      "chunk_type": "treatment_record",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "is_inoculation_protocol": true,
+      "chunk_type": "narrative"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:11:1": {
+    "uuid": "a3ee7b27-3c51-42ec-a3db-27a8746bec5f",
+    "before": {
+      "chunk_type": "treatment_record",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "is_inoculation_protocol": true,
+      "chunk_type": "narrative"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:12:1": {
+    "uuid": "3e4c63de-8edf-4f9b-8f4d-4c621de3afa5",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "is_inoculation_protocol": true
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:1": {
+    "uuid": "93d15a00-ae38-48d5-9476-6f74e7803713",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:3": {
+    "uuid": "7d2df76f-421d-4d03-8b17-564984a95b22",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:4": {
+    "uuid": "f5c5f930-ea42-447b-aa03-dd7d1dbdc5d4",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:5": {
+    "uuid": "db156c78-6a08-4866-b75d-4953748025e6",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:6": {
+    "uuid": "2cbd0b37-fa94-4ca6-a21d-5c45f00430d9",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:7": {
+    "uuid": "7c584609-1fd0-4a35-a4df-79a910d0c1e0",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:8": {
+    "uuid": "d4415911-d392-4f3b-b603-9aad0f10ef89",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:10": {
+    "uuid": "0b5e9d52-7738-4270-b54d-58bbbc84f212",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:11": {
+    "uuid": "afe6c79a-5227-43a2-b011-b78622e32c44",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:12": {
+    "uuid": "05e2640f-4d60-46dc-91c6-b410ba6bfca1",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:13": {
+    "uuid": "7d79086b-5297-4f96-8dda-9d5e56782a9b",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:15": {
+    "uuid": "8269a28c-1e23-4f4d-bae6-6b49325f25af",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:16": {
+    "uuid": "663cd8c0-63b7-42d6-af0f-fae2088edd2d",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:17": {
+    "uuid": "976afded-ae15-40fa-8b4d-29caa8b71117",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:18": {
+    "uuid": "0aac4bb9-22fd-4d34-8ac9-0504b5561444",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:19": {
+    "uuid": "1d10e504-5ec4-47e8-9da2-2fde97f2a5d8",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:20": {
+    "uuid": "aa09c024-69a2-4ac4-946e-92e065812444",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-1-chapter-3-pdf:43:0": {
+    "uuid": "5d4a3129-be68-4714-b212-568ed58a40cf",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-1-pdf:9:1": {
+    "uuid": "6e972cbc-7ac9-46b4-a190-af1f677fcd11",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:0": {
+    "uuid": "c33821ce-8c6f-487f-b64e-924ec4d31ebf",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:1": {
+    "uuid": "67f5d54d-a6d8-48ba-b9b2-7168a8c9439f",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:2": {
+    "uuid": "7ea73475-3d6c-4664-898c-2860aa90ee1b",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:3": {
+    "uuid": "1c97946e-a792-4a02-95f4-ef7504b69a10",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:4": {
+    "uuid": "efbd2758-7d46-4ad9-beb7-07a47ad1282b",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:5": {
+    "uuid": "3ae34c4d-d532-4960-80fa-fcff86c7feb2",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:6": {
+    "uuid": "49e2a098-1465-492e-b646-3c2fbd8f7593",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-i-sec2-shifty-enemies-final-pdf:16:3": {
+    "uuid": "ff2b5616-4619-45a2-b320-2f1d4b62660f",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-i-sec2-shifty-enemies-final-pdf:16:4": {
+    "uuid": "ce5e9153-52d7-4f9a-9e60-e9cd910252c8",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:1": {
+    "uuid": "fa236c8c-eaef-4aff-a0e0-cc28c0010ec4",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:2": {
+    "uuid": "9b0bc1d6-2030-4e8b-8b8c-02869860d037",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:3": {
+    "uuid": "c1bae2c1-ae37-4f15-8dd5-f23d63af2296",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:4": {
+    "uuid": "8e58289f-4fd8-4c3a-8aaa-ea15326b3548",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:5": {
+    "uuid": "2d50a16f-d8a0-4dbb-a8b4-179f9fcead47",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:6": {
+    "uuid": "056a5c06-4a1a-408f-8567-786d1cae40aa",
+    "before": {
+      "chunk_type": "treatment_record",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:7": {
+    "uuid": "bae49229-936f-4398-a416-edc1100a50f4",
+    "before": {
+      "chunk_type": "treatment_record",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:8": {
+    "uuid": "6a34e365-7988-47b7-8a9c-71640856673d",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:9": {
+    "uuid": "b838ea7f-0737-4dcd-a376-1aca46c62386",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:10": {
+    "uuid": "70e215ac-f24a-4a02-87ab-cdedf4303177",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:11": {
+    "uuid": "1f1d9556-3273-47a8-bb0a-dfc260ab7430",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:12": {
+    "uuid": "2b81b5ba-4b8c-444f-905d-5ebaefd9f35e",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:13": {
+    "uuid": "d04e308f-7885-48c1-8680-7499273ed887",
+    "before": {
+      "chunk_type": "treatment_record",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "rbsd-srbsd-final-pdf:10:14": {
+    "uuid": "0974eb29-ddb9-48fa-941e-7fa1b653af57",
+    "before": {
+      "chunk_type": "treatment_record",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:2": {
+    "uuid": "54b24e40-a00d-40f7-9342-60e9948c256e",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:9": {
+    "uuid": "7d248ae1-7052-4d92-9bb1-2abfff10655d",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:14": {
+    "uuid": "cd605434-89dd-454a-8dfa-c97182baf2d0",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-5-ch-4-pdf:9:21": {
+    "uuid": "1a50683c-f6f2-4aa6-896e-39ab2de9d9ab",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-ii-section-2-chapter-2-pdf:49:7": {
+    "uuid": "734aee7c-5a2c-4a7a-bb13-e3d38e7deb70",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-i-sec2-shifty-enemies-final-pdf:16:5": {
+    "uuid": "952dc195-7e6d-45cd-aec8-85c225861968",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  },
+  "part-iii-section-4-pdf:13:0": {
+    "uuid": "d7d5ae5f-9406-49cd-bb15-5406b9607a22",
+    "before": {
+      "chunk_type": "narrative",
+      "is_inoculation_protocol": false
+    },
+    "after": {
+      "chunk_type": "bibliography"
+    }
+  }
+}

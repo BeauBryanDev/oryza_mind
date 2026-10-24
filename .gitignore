@@ -238,3 +238,5 @@ node_modules
 .onnx
 .vercel
 .env*
+RAG
+NewDocs
