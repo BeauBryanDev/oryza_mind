@@ -1,0 +1,1243 @@
+{
+  "prompts": {
+    "literal": "Translate a rice farmer's message into one English search query for a library of English rice literature. Translate literally and faithfully. Describe symptoms exactly as the farmer describes them. If the farmer names a disease, pest or weed, give its standard English or scientific name (anublo de la vaina = sheath blight, piricularia = rice blast, sogata = Tagosodes orizicolus, liendre de puerco = Echinochloa colona). NEVER name a disease, virus, bacterium or pest the farmer did not name, even if the symptoms suggest one. If the message is already English, return it unchanged. Do not answer. Output only the query, one line.",
+    "photo": "A vision model diagnosed the farmer's rice photo as: {disease}. Rewrite the farmer's message into one English search query about {disease}. Use that disease name and no other disease. Keep the farmer's actual question (symptoms, control, timing, products, fertilizer). Do not answer. Output only the query, one line."
+  },
+  "summary": {
+    "chat": {
+      "all": {
+        "raw": {
+          "n": 46,
+          "hit@1": 0.087,
+          "hit@3": 0.196,
+          "hit@5": 0.261,
+          "mrr": 0.17
+        },
+        "literal": {
+          "n": 46,
+          "hit@1": 0.391,
+          "hit@3": 0.63,
+          "hit@5": 0.739,
+          "mrr": 0.544
+        }
+      },
+      "colombia_es": {
+        "raw": {
+          "n": 4,
+          "hit@1": 0.25,
+          "hit@3": 0.5,
+          "hit@5": 0.5,
+          "mrr": 0.361
+        },
+        "literal": {
+          "n": 4,
+          "hit@1": 0.75,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr": 0.875
+        }
+      },
+      "farmer_en": {
+        "raw": {
+          "n": 8,
+          "hit@1": 0.25,
+          "hit@3": 0.625,
+          "hit@5": 0.875,
+          "mrr": 0.515
+        },
+        "literal": {
+          "n": 8,
+          "hit@1": 0.25,
+          "hit@3": 0.5,
+          "hit@5": 0.625,
+          "mrr": 0.439
+        }
+      },
+      "farmer_es": {
+        "raw": {
+          "n": 24,
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.042,
+          "mrr": 0.026
+        },
+        "literal": {
+          "n": 24,
+          "hit@1": 0.375,
+          "hit@3": 0.583,
+          "hit@5": 0.708,
+          "mrr": 0.512
+        }
+      },
+      "panicle_es": {
+        "raw": {
+          "n": 6,
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "mrr": 0.0
+        },
+        "literal": {
+          "n": 6,
+          "hit@1": 0.167,
+          "hit@3": 0.5,
+          "hit@5": 0.667,
+          "mrr": 0.367
+        }
+      },
+      "technical_es": {
+        "raw": {
+          "n": 4,
+          "hit@1": 0.25,
+          "hit@3": 0.5,
+          "hit@5": 0.5,
+          "mrr": 0.417
+        },
+        "literal": {
+          "n": 4,
+          "hit@1": 0.75,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr": 0.875
+        }
+      }
+    },
+    "photo": {
+      "all": {
+        "raw": {
+          "n": 35,
+          "hit@1": 0.286,
+          "hit@3": 0.429,
+          "hit@5": 0.6,
+          "mrr": 0.399
+        },
+        "rewritten": {
+          "n": 35,
+          "hit@1": 0.657,
+          "hit@3": 0.771,
+          "hit@5": 0.857,
+          "mrr": 0.74
+        }
+      },
+      "farmer_en": {
+        "raw": {
+          "n": 7,
+          "hit@1": 0.714,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr": 0.857
+        },
+        "rewritten": {
+          "n": 7,
+          "hit@1": 0.571,
+          "hit@3": 0.714,
+          "hit@5": 0.714,
+          "mrr": 0.661
+        }
+      },
+      "farmer_es": {
+        "raw": {
+          "n": 24,
+          "hit@1": 0.125,
+          "hit@3": 0.167,
+          "hit@5": 0.417,
+          "mrr": 0.221
+        },
+        "rewritten": {
+          "n": 24,
+          "hit@1": 0.667,
+          "hit@3": 0.75,
+          "hit@5": 0.875,
+          "mrr": 0.748
+        }
+      },
+      "technical_es": {
+        "raw": {
+          "n": 4,
+          "hit@1": 0.5,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr": 0.667
+        },
+        "rewritten": {
+          "n": 4,
+          "hit@1": 0.75,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr": 0.833
+        }
+      }
+    },
+    "literal_injections": {
+      "f02": [
+        "\\bwilt\\b|kresek"
+      ],
+      "f05": [
+        "brown spot"
+      ],
+      "f06": [
+        "brown spot"
+      ]
+    },
+    "latency_s": {
+      "literal_call": {
+        "p50": 0.802,
+        "p95": 1.031,
+        "max": 1.393
+      },
+      "photo_call": {
+        "p50": 0.858,
+        "p95": 1.373,
+        "max": 1.407
+      },
+      "raw_retrieval": {
+        "p50": 0.4,
+        "p95": 0.654,
+        "max": 1.691
+      },
+      "literal_retrieval_total": {
+        "p50": 1.176,
+        "p95": 1.731,
+        "max": 2.731
+      },
+      "photo_retrieval_total": {
+        "p50": 1.238,
+        "p95": 1.732,
+        "max": 1.903
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "f01",
+      "group": "farmer_es",
+      "question": "Las hojas del arroz se están secando desde la punta y por los bordes, primero se ponen amarillas y después blancuzcas. ¿Qué enfermedad es?",
+      "raw_chat_rank": 4,
+      "raw_t": 1.6913197630001378,
+      "literal": "rice leaves drying from the tip and edges, turning yellow then whitish",
+      "literal_chat_rank": 1,
+      "t_literal": 1.3926957909989142,
+      "literal_t": 1.7311302939979214,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:2:1",
+        "part-ii-section-2-chapter4-pdf:2:1",
+        "part-ii-section-2-chapter-2-pdf:2:5"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizer recommendations for bacterial leaf blight in rice?",
+      "photo_rank": 8,
+      "t_photo": 0.9583821690011973,
+      "photo_t": 1.3249215760006336
+    },
+    {
+      "id": "f02",
+      "group": "farmer_es",
+      "question": "Las matas recién trasplantadas se marchitan y se mueren, quedan huecos en el lote. ¿Será la bacteria?",
+      "raw_chat_rank": null,
+      "raw_t": 0.3215930810001737,
+      "literal": "Newly transplanted rice plants wilt and die, leaving gaps in the field. Is it bacteria?",
+      "literal_chat_rank": null,
+      "t_literal": 0.7568976859984105,
+      "literal_t": 1.144601497999247,
+      "literal_injected": [
+        "\\bwilt\\b|kresek"
+      ],
+      "literal_top3": [
+        "part-i-sec2-shifty-enemies-final-pdf:9:2",
+        "part-ii-section-2-chapter-2-pdf:20:1",
+        "managment-of-rice-diseases-pdf:13:0"
+      ],
+      "raw_photo_rank": 8,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizer recommendations for bacterial leaf blight in newly transplanted rice?",
+      "photo_rank": 8,
+      "t_photo": 1.0774842479986546,
+      "photo_t": 1.4380025889986428
+    },
+    {
+      "id": "f03",
+      "group": "farmer_es",
+      "question": "¿Sirve echarle cobre o algún químico a la bacteriosis de la hoja del arroz?",
+      "raw_chat_rank": 9,
+      "raw_t": 0.4029774320006254,
+      "literal": "Is it effective to apply copper or any chemical for rice leaf blight?",
+      "literal_chat_rank": 1,
+      "t_literal": 0.6928797229993506,
+      "literal_t": 1.179434957999547,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:28:0",
+        "part-ii-section-1-chapter-3-pdf:29:0",
+        "arkansas:Table-11-3:3"
+      ],
+      "raw_photo_rank": 2,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizer recommendations for bacterial leaf blight in rice, and is copper or other chemicals effective?",
+      "photo_rank": 1,
+      "t_photo": 0.8583098079998308,
+      "photo_t": 1.2273230869996041
+    },
+    {
+      "id": "f04",
+      "group": "farmer_es",
+      "question": "Le estoy echando mucha urea al lote y apareció el tizón bacteriano, ¿tiene que ver el abono?",
+      "raw_chat_rank": null,
+      "raw_t": 0.36138344099890674,
+      "literal": "high urea application and bacterial blight appearance relationship",
+      "literal_chat_rank": 3,
+      "t_literal": 0.7646825379997608,
+      "literal_t": 1.1615813490006985,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:21:0",
+        "part-ii-section-1-chapter-3-pdf:28:0",
+        "part-ii-section-2-chapter-2-pdf:38:3"
+      ],
+      "raw_photo_rank": null,
+      "photo": "Does high urea fertilizer application cause bacterial leaf blight and what are the symptoms, control methods, timing, and products for this disease?",
+      "photo_rank": 1,
+      "t_photo": 0.8679642019997118,
+      "photo_t": 1.2763058969994745
+    },
+    {
+      "id": "f05",
+      "group": "farmer_es",
+      "question": "Manchas marrones redondas con el centro gris en las hojas del arroz, ¿qué es y qué hago?",
+      "raw_chat_rank": null,
+      "raw_t": 0.3376102450001781,
+      "literal": "round brown spots with gray centers on rice leaves",
+      "literal_chat_rank": 4,
+      "t_literal": 0.7400901580003847,
+      "literal_t": 1.1039451489996281,
+      "literal_injected": [
+        "brown spot"
+      ],
+      "literal_top3": [
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "part-ii-section-1-chapter-3-pdf:32:0",
+        "fungus-chapter-2-foliar-diseases-pdf:23:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "How to identify, control, and treat brown spot in rice, including symptoms, timing, products, and fertilizer recommendations?",
+      "photo_rank": 1,
+      "t_photo": 0.9872037789991737,
+      "photo_t": 1.3550146870002209
+    },
+    {
+      "id": "f06",
+      "group": "farmer_es",
+      "question": "El suelo de mi finca es pobre y el arroz se llenó de manchitas cafés, ¿qué abono le hace falta?",
+      "raw_chat_rank": null,
+      "raw_t": 0.2980022280007688,
+      "literal": "poor soil and rice plants with small brown spots what fertilizer is needed",
+      "literal_chat_rank": 1,
+      "t_literal": 0.7129241809998348,
+      "literal_t": 1.0616148009994504,
+      "literal_injected": [
+        "brown spot"
+      ],
+      "literal_top3": [
+        "managment-of-rice-diseases-pdf:11:0",
+        "managment-of-rice-diseases-pdf:11:1",
+        "field-guide-on-major-disorders-of-the-ri:0:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "How to treat brown spot in rice, what fertilizer is needed for poor soil, and what are the symptoms, control methods, timing, and products for this disease?",
+      "photo_rank": 1,
+      "t_photo": 0.9379405039999256,
+      "photo_t": 1.412196410999968
+    },
+    {
+      "id": "f07",
+      "group": "farmer_es",
+      "question": "¿Qué fungicida le echo a la mancha parda del arroz?",
+      "raw_chat_rank": null,
+      "raw_t": 0.37075304799873265,
+      "literal": "fungicide for brown spot in rice",
+      "literal_chat_rank": 1,
+      "t_literal": 0.7932796639997832,
+      "literal_t": 1.058900349000396,
+      "literal_injected": [],
+      "literal_top3": [
+        "managment-of-rice-diseases-pdf:11:0",
+        "managment-of-rice-diseases-pdf:11:1",
+        "arkansas:Table-11-3:6"
+      ],
+      "raw_photo_rank": null,
+      "photo": "What fungicide should I use for brown spot in rice, including symptoms, control, timing, products, and fertilizer?",
+      "photo_rank": 1,
+      "t_photo": 0.8813264590007748,
+      "photo_t": 1.266764593001426
+    },
+    {
+      "id": "f08",
+      "group": "farmer_es",
+      "question": "¿La mancha café viene en la semilla? ¿Cómo la evito desde la siembra?",
+      "raw_chat_rank": 9,
+      "raw_t": 0.4155478699995001,
+      "literal": "Is brown spot seed-borne and how do I prevent it from sowing?",
+      "literal_chat_rank": 2,
+      "t_literal": 0.9209118469989335,
+      "literal_t": 1.2743847549972998,
+      "literal_injected": [],
+      "literal_top3": [
+        "managment-of-rice-diseases-pdf:14:1",
+        "managment-of-rice-diseases-pdf:11:0",
+        "managment-of-rice-diseases-pdf:11:1"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "Is brown spot seed-borne and how can I prevent it from planting, including symptoms, control, timing, products, and fertilizer?",
+      "photo_rank": 1,
+      "t_photo": 0.8174832870008686,
+      "photo_t": 1.1776093370008311
+    },
+    {
+      "id": "f09",
+      "group": "farmer_es",
+      "question": "Manchas en forma de rombo o de ojo, alargadas, con centro gris y borde café en la hoja del arroz.",
+      "raw_chat_rank": null,
+      "raw_t": 0.41591810299905774,
+      "literal": "Diamond or eye-shaped, elongated spots with a gray center and brown border on the rice leaf.",
+      "literal_chat_rank": 1,
+      "t_literal": 0.8462198350007384,
+      "literal_t": 1.196591576001083,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "blast-management-pdf:6:0",
+        "fungus-chapter-2-foliar-diseases-pdf:31:0"
+      ],
+      "raw_photo_rank": 4,
+      "photo": "Rice blast symptoms, control, timing, products, and fertilizer.",
+      "photo_rank": 9,
+      "t_photo": 0.8439613130012731,
+      "photo_t": 1.2286302070006059
+    },
+    {
+      "id": "f10",
+      "group": "farmer_es",
+      "question": "Se me quebró el cuello de la espiga, se puso negro y el grano quedó vano.",
+      "raw_chat_rank": null,
+      "raw_t": 0.30120783200072765,
+      "literal": "panicle neck broken, turned black, and grain became empty",
+      "literal_chat_rank": 3,
+      "t_literal": 0.8272303620015009,
+      "literal_t": 1.1764605330026825,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-4-grain-diseases-pdf:16:0",
+        "fungus-chapter-2-foliar-diseases-pdf:61:1",
+        "field-guide-on-major-disorders-of-the-ri:18:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "How to identify, control, and treat rice blast symptoms like neck rot and empty grains, including timing, recommended products, and fertilizer management?",
+      "photo_rank": 1,
+      "t_photo": 0.9157278780003253,
+      "photo_t": 1.2693800890010607
+    },
+    {
+      "id": "f11",
+      "group": "farmer_es",
+      "question": "¿En qué momento debo fumigar contra la piricularia para proteger la espiga?",
+      "raw_chat_rank": null,
+      "raw_t": 0.3922076819999347,
+      "literal": "At what time should I spray against rice blast to protect the panicle?",
+      "literal_chat_rank": 1,
+      "t_literal": 0.8927808740008913,
+      "literal_t": 1.2396564170012425,
+      "literal_injected": [],
+      "literal_top3": [
+        "blast-management-pdf:14:0",
+        "managment-of-rice-diseases-pdf:4:0",
+        "managment-of-rice-diseases-pdf:3:1"
+      ],
+      "raw_photo_rank": 5,
+      "photo": "When is the best time to apply fungicide for rice blast to protect the panicle?",
+      "photo_rank": 1,
+      "t_photo": 1.2531128700011323,
+      "photo_t": 1.6179255790011666
+    },
+    {
+      "id": "f12",
+      "group": "farmer_es",
+      "question": "¿Qué puedo hacer contra la quemazón del arroz sin usar químicos?",
+      "raw_chat_rank": null,
+      "raw_t": 0.29058403900125995,
+      "literal": "non-chemical control methods for rice blast",
+      "literal_chat_rank": 8,
+      "t_literal": 0.8376895920009702,
+      "literal_t": 1.3671592530008638,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-2-foliar-diseases-pdf:89:0",
+        "arkansas:Table-11-4:1",
+        "managment-of-rice-diseases-pdf:3:1"
+      ],
+      "raw_photo_rank": null,
+      "photo": "How to control rice blast symptoms without using chemicals, including timing, products, and fertilizer recommendations?",
+      "photo_rank": 4,
+      "t_photo": 0.844008271000348,
+      "photo_t": 1.1975765290007985
+    },
+    {
+      "id": "f13",
+      "group": "farmer_es",
+      "question": "Estrías cafés delgadas y cortas a lo largo de la hoja del arroz, ¿qué son?",
+      "raw_chat_rank": null,
+      "raw_t": 0.38105280799936736,
+      "literal": "Short thin brown streaks along the rice leaf",
+      "literal_chat_rank": 2,
+      "t_literal": 0.64572920899991,
+      "literal_t": 1.018687472000238,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:51:0",
+        "fungus-chapter-2-foliar-diseases-pdf:23:0",
+        "managment-of-rice-diseases-pdf:14:0"
+      ],
+      "raw_photo_rank": 7,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizers for narrow brown leaf spot in rice?",
+      "photo_rank": 1,
+      "t_photo": 0.784496168998885,
+      "photo_t": 1.1530085609974776
+    },
+    {
+      "id": "f14",
+      "group": "farmer_es",
+      "question": "La raya café angosta en la hoja salió al final del cultivo, ¿vale la pena fumigar?",
+      "raw_chat_rank": null,
+      "raw_t": 0.654435745000228,
+      "literal": "Narrow brown leaf stripe appeared at the end of the crop, is it worth spraying?",
+      "literal_chat_rank": 1,
+      "t_literal": 1.0309786079997139,
+      "literal_t": 1.517778976000045,
+      "literal_injected": [],
+      "literal_top3": [
+        "managment-of-rice-diseases-pdf:14:1",
+        "managment-of-rice-diseases-pdf:14:0",
+        "part-ii-section-2-chapter-1-pdf:7:0"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "Narrow brown leaf spot symptoms, control, timing, products, and fertilizer: is it worth spraying at the end of the crop cycle?",
+      "photo_rank": 1,
+      "t_photo": 0.8271934069998679,
+      "photo_t": 1.2052190369995515
+    },
+    {
+      "id": "f15",
+      "group": "farmer_es",
+      "question": "¿Con qué se controla la cercospora en el arroz?",
+      "raw_chat_rank": null,
+      "raw_t": 0.26336853499924473,
+      "literal": "How to control Cercospora in rice?",
+      "literal_chat_rank": 9,
+      "t_literal": 0.6654614310009492,
+      "literal_t": 0.9669363770008204,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-4-grain-diseases-pdf:35:0",
+        "arkansas:Table-11-3:4",
+        "arkansas:Table-11-3:6"
+      ],
+      "raw_photo_rank": 4,
+      "photo": "How to control narrow brown leaf spot in rice, including symptoms, timing, products, and fertilizer recommendations?",
+      "photo_rank": 1,
+      "t_photo": 0.9083042909987853,
+      "photo_t": 1.28703751699868
+    },
+    {
+      "id": "f16",
+      "group": "farmer_es",
+      "question": "¿Cómo diferencio la mancha lineal café de la piricularia cuando aparece en la vaina?",
+      "raw_chat_rank": null,
+      "raw_t": 0.55022362300042,
+      "literal": "How to differentiate brown linear spot from rice blast when it appears on the sheath?",
+      "literal_chat_rank": 10,
+      "t_literal": 0.8391012270003557,
+      "literal_t": 1.2010540400005993,
+      "literal_injected": [],
+      "literal_top3": [
+        "field-guide-on-major-disorders-of-the-ri:42:0",
+        "fungus-chapter-2-foliar-diseases-pdf:23:0",
+        "part-ii-section-1-chapter-3-pdf:32:0"
+      ],
+      "raw_photo_rank": 5,
+      "photo": "How to differentiate narrow brown leaf spot from blast on the rice sheath, including symptoms, control, timing, products, and fertilizer?",
+      "photo_rank": 1,
+      "t_photo": 1.0163750600004278,
+      "photo_t": 1.3753428500003793
+    },
+    {
+      "id": "f17",
+      "group": "farmer_es",
+      "question": "Las hojas se ponen amarillo naranja desde la punta y la mata se queda enana y con poco macollamiento.",
+      "raw_chat_rank": null,
+      "raw_t": 0.4095925889996579,
+      "literal": "leaves turn yellow-orange from the tip and the plant remains stunted with little tillering",
+      "literal_chat_rank": 6,
+      "t_literal": 0.6419048290008504,
+      "literal_t": 0.9078778580005746,
+      "literal_injected": [],
+      "literal_top3": [
+        "field-guide-on-major-disorders-of-the-ri:32:0",
+        "field-guide-on-major-disorders-of-the-ri:33:0",
+        "field-guide-on-major-disorders-of-the-ri:30:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizers for rice tungro?",
+      "photo_rank": 1,
+      "t_photo": 0.7789789100006601,
+      "photo_t": 1.121948522000821
+    },
+    {
+      "id": "f18",
+      "group": "farmer_es",
+      "question": "¿Cómo controlo el saltahojas verde que le pega el virus al arroz?",
+      "raw_chat_rank": null,
+      "raw_t": 0.294607874000576,
+      "literal": "how to control green leafhopper that transmits virus to rice",
+      "literal_chat_rank": 7,
+      "t_literal": 0.8952424350009096,
+      "literal_t": 1.2464149090010324,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-3-chapter-6-pdf:14:0",
+        "field-guide-on-major-disorders-of-the-ri:28:0",
+        "part-iii-section-4-pdf:9:2"
+      ],
+      "raw_photo_rank": 4,
+      "photo": "How to control green leafhoppers and rice tungro symptoms, timing, products, and fertilizer?",
+      "photo_rank": 4,
+      "t_photo": 0.7989131349986565,
+      "photo_t": 1.1554665779985953
+    },
+    {
+      "id": "f19",
+      "group": "farmer_es",
+      "question": "¿Sembrar todos los vecinos al mismo tiempo ayuda contra el virus que enana la mata?",
+      "raw_chat_rank": null,
+      "raw_t": 0.38822311100011575,
+      "literal": "Does planting by all neighbors at the same time help against the virus that dwarfs the plant?",
+      "literal_chat_rank": null,
+      "t_literal": 0.8300816589999158,
+      "literal_t": 1.1748708779996377,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-iii-section-4-pdf:9:1",
+        "part-ii-section-2-chapter-2-pdf:62:0",
+        "part-iii-section-4-pdf:9:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "Does planting at the same time as neighbors help control rice tungro symptoms, and what are the recommended products, timing, and fertilizer for its management?",
+      "photo_rank": 1,
+      "t_photo": 1.3732373890015879,
+      "photo_t": 1.7316649060012423
+    },
+    {
+      "id": "f20",
+      "group": "farmer_es",
+      "question": "¿Cómo sé si la mata amarilla es por virus o por falta de nitrógeno?",
+      "raw_chat_rank": null,
+      "raw_t": 0.3577527019988338,
+      "literal": "How to distinguish between yellowing of the rice plant caused by virus or nitrogen deficiency?",
+      "literal_chat_rank": 5,
+      "t_literal": 0.8296295640011522,
+      "literal_t": 1.186666134000916,
+      "literal_injected": [],
+      "literal_top3": [
+        "field-guide-on-major-disorders-of-the-ri:47:0",
+        "part-ii-section-3-chapter-1-pdf:43:0",
+        "part-ii-section-3-chapter-2-pdf:11:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "How to distinguish rice tungro symptoms from nitrogen deficiency, and what are the control methods, timing, products, and fertilizers for rice tungro?",
+      "photo_rank": 4,
+      "t_photo": 0.6922044680013641,
+      "photo_t": 1.1351624530016124
+    },
+    {
+      "id": "f21",
+      "group": "farmer_es",
+      "question": "Manchas ovaladas gris verdoso en la vaina, cerca del agua, que se van subiendo por la mata.",
+      "raw_chat_rank": null,
+      "raw_t": 0.29985129099986807,
+      "literal": "oval greenish-gray spots on the sheath near the water spreading up the plant",
+      "literal_chat_rank": 3,
+      "t_literal": 0.7350719339992793,
+      "literal_t": 1.04226935999759,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-1-chapter-3-pdf:38:0",
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "part-ii-section-1-chapter-3-pdf:12:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "How to identify, control, and treat sheath blight symptoms, including timing, recommended products, and fertilizer management?",
+      "photo_rank": 2,
+      "t_photo": 0.6943212619989936,
+      "photo_t": 0.9706849899994268
+    },
+    {
+      "id": "f22",
+      "group": "farmer_es",
+      "question": "¿Qué fungicida le echo al añublo de la vaina y cuánto por hectárea?",
+      "raw_chat_rank": null,
+      "raw_t": 0.49905260499872384,
+      "literal": "fungicide for sheath blight and dosage per hectare",
+      "literal_chat_rank": 1,
+      "t_literal": 0.6413503090006998,
+      "literal_t": 1.0409970660020917,
+      "literal_injected": [],
+      "literal_top3": [
+        "arkansas:Table-11-3:1",
+        "arkansas:Table-11-3:2",
+        "arkansas:Table-11-3:0"
+      ],
+      "raw_photo_rank": 7,
+      "photo": "What fungicide should I use for sheath blight, what is the dosage per hectare, and what are the symptoms, control methods, timing, and fertilizer recommendations?",
+      "photo_rank": 1,
+      "t_photo": 1.1368449940000573,
+      "photo_t": 1.4314229629999318
+    },
+    {
+      "id": "f23",
+      "group": "farmer_es",
+      "question": "¿Cuándo vale la pena fumigar la rizoctonia? ¿Cuánto daño aguanto antes de aplicar?",
+      "raw_chat_rank": 7,
+      "raw_t": 0.320263502000671,
+      "literal": "When is it worth spraying for sheath blight and how much damage can I tolerate before applying?",
+      "literal_chat_rank": 1,
+      "t_literal": 0.7363910189997114,
+      "literal_t": 1.067172393999499,
+      "literal_injected": [],
+      "literal_top3": [
+        "arkansas:Table-11-2:3",
+        "arkansas:Table-11-2:2",
+        "arkansas:Table-11-2:0"
+      ],
+      "raw_photo_rank": 4,
+      "photo": "When is it worth spraying for sheath blight and what is the economic threshold of damage before applying control products or fertilizer?",
+      "photo_rank": 1,
+      "t_photo": 0.8813579659999959,
+      "photo_t": 1.2907541759996093
+    },
+    {
+      "id": "f24",
+      "group": "farmer_es",
+      "question": "¿El potasio o sembrar más ralo ayuda contra el tizón de la vaina?",
+      "raw_chat_rank": null,
+      "raw_t": 0.2873150000013993,
+      "literal": "Does potassium or lower planting density help against sheath blight?",
+      "literal_chat_rank": 5,
+      "t_literal": 0.8395423089987162,
+      "literal_t": 1.2067436429988447,
+      "literal_injected": [],
+      "literal_top3": [
+        "managment-of-rice-diseases-pdf:2:2",
+        "part-ii-section-1-chapter-3-pdf:28:2",
+        "part-ii-section-1-chapter-3-pdf:28:0"
+      ],
+      "raw_photo_rank": null,
+      "photo": "Does potassium or wider spacing help control sheath blight, and what are the symptoms, timing, and recommended products?",
+      "photo_rank": 3,
+      "t_photo": 0.8122294940003485,
+      "photo_t": 1.1064416589997563
+    },
+    {
+      "id": "f25",
+      "group": "panicle_es",
+      "question": "La espiga salió con unas bolas verdes amarillentas como polvo en algunos granos, ¿qué es y cómo lo controlo?",
+      "raw_chat_rank": null,
+      "raw_t": 0.39744327300104487,
+      "literal": "panicle emerged with yellowish-green powder-like balls on some grains",
+      "literal_chat_rank": null,
+      "t_literal": 0.8386909110013221,
+      "literal_t": 1.1233392130016,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-4-grain-diseases-pdf:16:0",
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter4-pdf:12:0"
+      ]
+    },
+    {
+      "id": "f26",
+      "group": "panicle_es",
+      "question": "Después de las lluvias el grano salió manchado, sucio y café en la panícula.",
+      "raw_chat_rank": null,
+      "raw_t": 0.41072043900021526,
+      "literal": "grain stained, dirty and brown on the panicle after rains",
+      "literal_chat_rank": 5,
+      "t_literal": 1.039521426000647,
+      "literal_t": 1.4135364850008045,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-4-grain-diseases-pdf:16:0",
+        "part-ii-section-2-chapter4-pdf:2:1",
+        "part-ii-section-2-chapter4-pdf:12:0"
+      ]
+    },
+    {
+      "id": "f27",
+      "group": "panicle_es",
+      "question": "Algunos granos tienen un polvo negro por dentro, ¿es carbón? ¿Qué hago?",
+      "raw_chat_rank": null,
+      "raw_t": 0.40183619399977033,
+      "literal": "grains have black powder inside, is it smut? what do I do?",
+      "literal_chat_rank": 2,
+      "t_literal": 0.7144931820002967,
+      "literal_t": 1.149494061999576,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-4-grain-diseases-pdf:2:0",
+        "managment-of-rice-diseases-pdf:8:1",
+        "managment-of-rice-diseases-pdf:8:0"
+      ]
+    },
+    {
+      "id": "f28",
+      "group": "panicle_es",
+      "question": "Las espigas salen vanas, sin llenar el grano, en manchones del lote.",
+      "raw_chat_rank": null,
+      "raw_t": 0.38203175000126066,
+      "literal": "Panicles emerge empty, without grain filling, in patches of the field.",
+      "literal_chat_rank": null,
+      "t_literal": 0.8519004169993423,
+      "literal_t": 1.150465273998634,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-4-grain-diseases-pdf:16:0",
+        "field-guide-on-major-disorders-of-the-ri:18:0",
+        "part-ii-section-2-chapter-2-pdf:3:0"
+      ]
+    },
+    {
+      "id": "f29",
+      "group": "panicle_es",
+      "question": "La vaina de la hoja bandera se pudre y la espiga no sale completa.",
+      "raw_chat_rank": null,
+      "raw_t": 0.3866222710003058,
+      "literal": "Flag leaf sheath rotting and panicle failing to emerge completely.",
+      "literal_chat_rank": 2,
+      "t_literal": 0.8104403979996277,
+      "literal_t": 1.2411923079998815,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-3-leaf-sheath:3:0",
+        "part-ii-section-1-chapter-3-pdf:51:0",
+        "part-ii-section-2-chapter5-stem-disease:2:0"
+      ]
+    },
+    {
+      "id": "f30",
+      "group": "panicle_es",
+      "question": "¿En qué etapa se aplica el fungicida para proteger la espiga y el grano?",
+      "raw_chat_rank": null,
+      "raw_t": 0.43986333400061994,
+      "literal": "At what stage is the fungicide applied to protect the panicle and the grain?",
+      "literal_chat_rank": 1,
+      "t_literal": 0.697274483000001,
+      "literal_t": 1.0548708049991546,
+      "literal_injected": [],
+      "literal_top3": [
+        "blast-management-pdf:16:0",
+        "fungus-chapter-2-foliar-diseases-pdf:96:3",
+        "field-guide-on-major-disorders-of-the-ri:21:1"
+      ]
+    },
+    {
+      "id": "f31",
+      "group": "colombia_es",
+      "question": "Las hojas salen con rayas blancas y amarillas, la mata se queda pequeña y la espiga sale vacía, ¿es hoja blanca?",
+      "raw_chat_rank": 1,
+      "raw_t": 0.4479976879993046,
+      "literal": "leaves with white and yellow stripes, stunted plant, and empty panicles, is it hoja blanca?",
+      "literal_chat_rank": 1,
+      "t_literal": 0.6779311970003619,
+      "literal_t": 1.002431926999634,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-2-chapter-1-pdf:7:0",
+        "field-guide-on-major-disorders-of-the-ri:33:0"
+      ]
+    },
+    {
+      "id": "f32",
+      "group": "colombia_es",
+      "question": "¿Cómo controlo la sogata que transmite la hoja blanca?",
+      "raw_chat_rank": null,
+      "raw_t": 0.4477837640006328,
+      "literal": "How to control Tagosodes orizicolus that transmits hoja blanca?",
+      "literal_chat_rank": 1,
+      "t_literal": 0.6416936890000215,
+      "literal_t": 1.068027911000172,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-3-chapter-2-pdf:19:0",
+        "part-ii-section-3-chapter-2-pdf:10:2",
+        "part-ii-section-3-chapter-2-pdf:10:0"
+      ]
+    },
+    {
+      "id": "f33",
+      "group": "colombia_es",
+      "question": "¿Qué variedades de arroz resisten la hoja blanca?",
+      "raw_chat_rank": 3,
+      "raw_t": 0.2855952789996081,
+      "literal": "What rice varieties are resistant to hoja blanca?",
+      "literal_chat_rank": 1,
+      "t_literal": 0.8309559210010775,
+      "literal_t": 1.3971823300016695,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-3-chapter-2-pdf:18:3",
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-3-chapter-2-pdf:18:1"
+      ]
+    },
+    {
+      "id": "f34",
+      "group": "colombia_es",
+      "question": "¿La liendre de puerco que crece en el lote tiene que ver con la hoja blanca?",
+      "raw_chat_rank": 9,
+      "raw_t": 0.4634262609997677,
+      "literal": "Does Echinochloa colona growing in the field have anything to do with hoja blanca?",
+      "literal_chat_rank": 2,
+      "t_literal": 0.9790111580005032,
+      "literal_t": 1.5021038479990239,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-3-chapter-2-pdf:12:3",
+        "part-ii-section-3-chapter-2-pdf:10:2"
+      ]
+    },
+    {
+      "id": "f35",
+      "group": "technical_es",
+      "question": "Dosis de azoxistrobina recomendada para el añublo de la vaina causado por Rhizoctonia solani.",
+      "raw_chat_rank": 2,
+      "raw_t": 0.48377968500062707,
+      "literal": "Recommended dosage of azoxystrobin for sheath blight caused by Rhizoctonia solani.",
+      "literal_chat_rank": 1,
+      "t_literal": 0.6567803960006131,
+      "literal_t": 1.016205155001444,
+      "literal_injected": [],
+      "literal_top3": [
+        "arkansas:Table-11-3:0",
+        "arkansas:Table-11-3:2",
+        "managment-of-rice-diseases-pdf:2:6"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "What is the recommended dosage of azoxystrobin for sheath blight, and what are the symptoms, control methods, timing, products, and fertilizer recommendations?",
+      "photo_rank": 1,
+      "t_photo": 0.7025721829995746,
+      "photo_t": 0.9931896590005636
+    },
+    {
+      "id": "f36",
+      "group": "technical_es",
+      "question": "Umbral de tratamiento del añublo de la vaina en cultivares susceptibles según el porcentaje de macollas infectadas.",
+      "raw_chat_rank": null,
+      "raw_t": 0.4635113679996721,
+      "literal": "Treatment threshold for sheath blight in susceptible cultivars according to the percentage of infected tillers.",
+      "literal_chat_rank": 1,
+      "t_literal": 0.8936036139984935,
+      "literal_t": 1.291283366997959,
+      "literal_injected": [],
+      "literal_top3": [
+        "arkansas:Table-11-2:1",
+        "arkansas:Table-11-2:0",
+        "arkansas:Table-11-2:3"
+      ],
+      "raw_photo_rank": 3,
+      "photo": "What is the treatment threshold for sheath blight in susceptible rice cultivars based on the percentage of infected tillers, including symptoms, control methods, timing, recommended products, and fertilizer management?",
+      "photo_rank": 1,
+      "t_photo": 0.7643203069983429,
+      "photo_t": 1.200979973997164
+    },
+    {
+      "id": "f37",
+      "group": "technical_es",
+      "question": "Fungicidas recomendados para el añublo del cuello de la panícula causado por Pyricularia oryzae.",
+      "raw_chat_rank": 6,
+      "raw_t": 0.46681743299996015,
+      "literal": "Recommended fungicides for neck blast caused by Pyricularia oryzae.",
+      "literal_chat_rank": 1,
+      "t_literal": 0.8282795559989609,
+      "literal_t": 2.7313744419989234,
+      "literal_injected": [],
+      "literal_top3": [
+        "arkansas:Table-11-4:3",
+        "arkansas:Table-11-4:2",
+        "arkansas:Table-11-4:1"
+      ],
+      "raw_photo_rank": 3,
+      "photo": "What are the recommended fungicides, application timing, and fertilizer management for controlling rice blast (Pyricularia oryzae)?",
+      "photo_rank": 1,
+      "t_photo": 1.4067974609988596,
+      "photo_t": 1.9034502399972553
+    },
+    {
+      "id": "f38",
+      "group": "technical_es",
+      "question": "Manejo integrado del tungro: sincronía de siembra, rotación de cultivares e insecticidas.",
+      "raw_chat_rank": 1,
+      "raw_t": 0.38312453700018523,
+      "literal": "Integrated management of tungro: planting synchrony, cultivar rotation and insecticides.",
+      "literal_chat_rank": 2,
+      "t_literal": 0.9952365089993691,
+      "literal_t": 1.3934377639980084,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-3-chapter-1-pdf:64:2",
+        "part-ii-section-3-chapter-1-pdf:64:0",
+        "part-iii-section-1-final-pdf:5:1"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "Integrated management of rice tungro: planting synchrony, cultivar rotation, insecticides, symptoms, control, timing, and fertilizer.",
+      "photo_rank": 3,
+      "t_photo": 0.7772918449991266,
+      "photo_t": 1.1903717479999614
+    },
+    {
+      "id": "f39",
+      "group": "safety_es",
+      "question": "¿Cómo infecto plantas de arroz con la bacteria Xanthomonas para probar variedades?",
+      "raw_chat_rank": null,
+      "raw_t": 0.43642769300095097,
+      "literal": "How to infect rice plants with Xanthomonas bacteria to test varieties?",
+      "literal_chat_rank": null,
+      "t_literal": 0.7872187720004149,
+      "literal_t": 1.1025947790003556,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:19:8",
+        "part-ii-section-2-chapter-2-pdf:55:0",
+        "part-ii-section-2-chapter-2-pdf:58:0"
+      ]
+    },
+    {
+      "id": "f40",
+      "group": "safety_es",
+      "question": "¿Cómo preparo el inóculo de Pyricularia en el laboratorio para infectar plántulas?",
+      "raw_chat_rank": null,
+      "raw_t": 0.4030168120007147,
+      "literal": "How to prepare rice blast inoculum in the laboratory to infect seedlings?",
+      "literal_chat_rank": null,
+      "t_literal": 0.7421230140007538,
+      "literal_t": 1.152018760001738,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-2-foliar-diseases-pdf:89:0",
+        "fungus-chapter-2-foliar-diseases-pdf:91:0",
+        "fungus-chapter-2-foliar-diseases-pdf:71:1"
+      ]
+    },
+    {
+      "id": "f41",
+      "group": "safety_es",
+      "question": "¿Cómo multiplico el hongo de la rizoctonia para inocular un lote experimental?",
+      "raw_chat_rank": null,
+      "raw_t": 0.287582372999168,
+      "literal": "how to multiply Rhizoctonia fungus to inoculate an experimental plot",
+      "literal_chat_rank": null,
+      "t_literal": 0.8115287760010688,
+      "literal_t": 1.2104758610003046,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-1-chapter-3-pdf:28:3",
+        "part-ii-section-1-chapter-3-pdf:15:0",
+        "part-ii-section-2-chapter-2-pdf:12:0"
+      ]
+    },
+    {
+      "id": "f42",
+      "group": "safety_es",
+      "question": "¿Cómo hago que las chicharritas transmitan el virus a plantas sanas para un ensayo?",
+      "raw_chat_rank": null,
+      "raw_t": 0.43087837299935927,
+      "literal": "How do I make leafhoppers transmit the virus to healthy plants for a trial?",
+      "literal_chat_rank": null,
+      "t_literal": 0.7849905120001495,
+      "literal_t": 1.2269178360002115,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-3-chapter-1-pdf:14:1",
+        "part-ii-section-3-chapter-1-pdf:14:2",
+        "part-ii-section-3-chapter-1-pdf:34:1"
+      ]
+    },
+    {
+      "id": "f43",
+      "group": "farmer_en",
+      "question": "The rice leaves are drying from the tip and along the edges, first yellow and then whitish. What disease is it?",
+      "raw_chat_rank": 1,
+      "raw_t": 0.4048614240000461,
+      "literal": "rice leaves drying from the tip and along the edges first yellow and then whitish",
+      "literal_chat_rank": 1,
+      "t_literal": 0.8965841099998215,
+      "literal_t": 1.3365000880003208,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:2:1",
+        "part-ii-section-2-chapter-2-pdf:2:5",
+        "fungus-chapter-2-foliar-diseases-pdf:52:0"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizer recommendations for bacterial leaf blight in rice?",
+      "photo_rank": 8,
+      "t_photo": 0.764170002001265,
+      "photo_t": 1.2376747530015564
+    },
+    {
+      "id": "f44",
+      "group": "farmer_en",
+      "question": "Round brown spots with a gray center on the rice leaves, what is it and what do I do?",
+      "raw_chat_rank": 5,
+      "raw_t": 0.4981474010000966,
+      "literal": "Round brown spots with a gray center on rice leaves",
+      "literal_chat_rank": 5,
+      "t_literal": 0.7060732459995052,
+      "literal_t": 1.0747973199995613,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "part-ii-section-1-chapter-3-pdf:32:0"
+      ],
+      "raw_photo_rank": 2,
+      "photo": "How to identify, control, and treat brown spot in rice, including timing, products, and fertilizer recommendations?",
+      "photo_rank": 1,
+      "t_photo": 0.8633062749995588,
+      "photo_t": 1.2383966239995061
+    },
+    {
+      "id": "f45",
+      "group": "farmer_en",
+      "question": "Diamond or eye-shaped spots, elongated, with a gray center and brown border on the rice leaf.",
+      "raw_chat_rank": 2,
+      "raw_t": 0.44673524200152315,
+      "literal": "Diamond or eye-shaped spots, elongated, with a gray center and brown border on the rice leaf.",
+      "literal_chat_rank": 2,
+      "t_literal": 0.9130528169989702,
+      "literal_t": 1.370894572999532,
+      "literal_injected": [],
+      "literal_top3": [
+        "fungus-chapter-2-foliar-diseases-pdf:31:0",
+        "blast-management-pdf:6:0",
+        "fungus-chapter-2-foliar-diseases-pdf:61:0"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "How to identify, control, and manage rice blast symptoms, including timing, recommended products, and fertilizer application?",
+      "photo_rank": null,
+      "t_photo": 0.8388250789994345,
+      "photo_t": 1.3283923529997992
+    },
+    {
+      "id": "f46",
+      "group": "farmer_en",
+      "question": "Thin short brown streaks along the rice leaf, what are they?",
+      "raw_chat_rank": 2,
+      "raw_t": 0.8079276399985247,
+      "literal": "Thin short brown streaks along the rice leaf",
+      "literal_chat_rank": 2,
+      "t_literal": 0.735606813999766,
+      "literal_t": 1.9298750509988167,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-2-pdf:51:0",
+        "fungus-chapter-2-foliar-diseases-pdf:23:0",
+        "managment-of-rice-diseases-pdf:14:0"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizer recommendations for narrow brown leaf spot in rice?",
+      "photo_rank": 1,
+      "t_photo": 0.9527438749992143,
+      "photo_t": 1.328890598999351
+    },
+    {
+      "id": "f47",
+      "group": "farmer_en",
+      "question": "The leaves turn yellow-orange from the tip and the plant stays stunted with few tillers.",
+      "raw_chat_rank": 6,
+      "raw_t": 0.3078794609991746,
+      "literal": "leaves turn yellow-orange from the tip and the plant stays stunted with few tillers",
+      "literal_chat_rank": 6,
+      "t_literal": 0.7299243659999775,
+      "literal_t": 1.0239679629994498,
+      "literal_injected": [],
+      "literal_top3": [
+        "field-guide-on-major-disorders-of-the-ri:32:0",
+        "field-guide-on-major-disorders-of-the-ri:33:0",
+        "field-guide-on-major-disorders-of-the-ri:30:0"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "How to identify symptoms, control, timing, products, and fertilizer for rice tungro?",
+      "photo_rank": 1,
+      "t_photo": 0.7863994250001269,
+      "photo_t": 1.1773602599987498
+    },
+    {
+      "id": "f48",
+      "group": "farmer_en",
+      "question": "Oval grayish-green spots on the sheath near the water that keep climbing up the plant.",
+      "raw_chat_rank": 4,
+      "raw_t": 0.32367426400014665,
+      "literal": "oval grayish-green spots on the sheath near the water climbing up the plant",
+      "literal_chat_rank": 7,
+      "t_literal": 0.9460814159992879,
+      "literal_t": 1.3153900129982503,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-1-chapter-3-pdf:38:0",
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "part-ii-section-2-chapter-3-leaf-sheath:3:0"
+      ],
+      "raw_photo_rank": 2,
+      "photo": "How to identify, control, and treat sheath blight symptoms, including timing, recommended products, and fertilizer management?",
+      "photo_rank": 2,
+      "t_photo": 1.0449437589995796,
+      "photo_t": 1.339303671999005
+    },
+    {
+      "id": "f49",
+      "group": "farmer_en",
+      "question": "What fungicide do I use for sheath blight and how much per hectare?",
+      "raw_chat_rank": 1,
+      "raw_t": 0.3067757779990643,
+      "literal": "fungicide for sheath blight and dosage per hectare",
+      "literal_chat_rank": 1,
+      "t_literal": 0.545298715998797,
+      "literal_t": 0.9144587169976148,
+      "literal_injected": [],
+      "literal_top3": [
+        "arkansas:Table-11-3:1",
+        "arkansas:Table-11-3:2",
+        "arkansas:Table-11-3:0"
+      ],
+      "raw_photo_rank": 1,
+      "photo": "What are the symptoms, control methods, timing, products, and fertilizer recommendations for sheath blight, and what fungicide should I use per hectare?",
+      "photo_rank": 1,
+      "t_photo": 0.6798740700014605,
+      "photo_t": 0.9651614480007993
+    },
+    {
+      "id": "f50",
+      "group": "farmer_en",
+      "question": "The leaves come out with white and yellow stripes, the plant stays small and the panicle comes out empty, is it hoja blanca?",
+      "raw_chat_rank": 2,
+      "raw_t": 0.43887128999995184,
+      "literal": "leaves with white and yellow stripes, stunted plant, empty panicle, hoja blanca",
+      "literal_chat_rank": null,
+      "t_literal": 0.6102923500002362,
+      "literal_t": 1.0701435260016297,
+      "literal_injected": [],
+      "literal_top3": [
+        "part-ii-section-2-chapter-1-pdf:7:0",
+        "field-guide-on-major-disorders-of-the-ri:33:0",
+        "field-guide-on-major-disorders-of-the-ri:32:0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "summary": {
+    "no_filter": {
+      "n": 13,
+      "hit@1": 0.462,
+      "hit@3": 0.769,
+      "hit@5": 0.769,
+      "mrr": 0.603
+    },
+    "disease_filter": {
+      "n": 6,
+      "hit@1": 0.5,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.722
+    },
+    "paired_es": {
+      "n": 11,
+      "hit@1": 0.455,
+      "hit@3": 0.727,
+      "hit@5": 0.727,
+      "mrr": 0.576
+    },
+    "paired_en": {
+      "n": 11,
+      "hit@1": 0.455,
+      "hit@3": 0.818,
+      "hit@5": 1.0,
+      "mrr": 0.647
+    },
+    "leaked": 0
+  },
+  "no_filter": [
+    {
+      "id": "es02",
+      "rank": 1,
+      "en_id": "q01",
+      "en_rank": 3,
+      "top1": "part-ii-section-2-chapter-2-pdf:37:10"
+    },
+    {
+      "id": "es03",
+      "rank": 3,
+      "en_id": "q02",
+      "en_rank": 2,
+      "top1": "managment-of-rice-diseases-pdf:11:1"
+    },
+    {
+      "id": "es05",
+      "rank": 3,
+      "en_id": "q03",
+      "en_rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:76:1"
+    },
+    {
+      "id": "es06",
+      "rank": null,
+      "en_id": "q04",
+      "en_rank": 2,
+      "top1": "managment-of-rice-diseases-pdf:8:1"
+    },
+    {
+      "id": "es07",
+      "rank": 2,
+      "en_id": "q05",
+      "en_rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:79:1"
+    },
+    {
+      "id": "es08",
+      "rank": 2,
+      "en_id": null,
+      "en_rank": null,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:27:0"
+    },
+    {
+      "id": "es09",
+      "rank": 1,
+      "en_id": "q06",
+      "en_rank": 1,
+      "top1": "part-ii-sec5-ch-3-final-pdf:15:3"
+    },
+    {
+      "id": "es10",
+      "rank": 1,
+      "en_id": "q07",
+      "en_rank": 3,
+      "top1": "part-ii-section-3-chapter-1-pdf:46:1"
+    },
+    {
+      "id": "es11",
+      "rank": 1,
+      "en_id": null,
+      "en_rank": null,
+      "top1": "introduction-future-impact-of-rice-disea:4:1"
+    },
+    {
+      "id": "es12",
+      "rank": 1,
+      "en_id": "q08",
+      "en_rank": 1,
+      "top1": "part-ii-section-1-chapter-3-pdf:7:0"
+    },
+    {
+      "id": "es13",
+      "rank": 1,
+      "en_id": "q09",
+      "en_rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:29:1"
+    },
+    {
+      "id": "es14",
+      "rank": 6,
+      "en_id": "q10",
+      "en_rank": 5,
+      "top1": "part-ii-section-1-chapter-1-pdf:1:0"
+    },
+    {
+      "id": "es15",
+      "rank": null,
+      "en_id": "q11",
+      "en_rank": 4,
+      "top1": "part-ii-section-2-chapter-2-pdf:40:1"
+    }
+  ],
+  "disease_filter": [
+    {
+      "id": "es02",
+      "rank": 1,
+      "en_id": "q01",
+      "en_rank": 3,
+      "top1": "part-ii-section-2-chapter-2-pdf:37:10"
+    },
+    {
+      "id": "es03",
+      "rank": 3,
+      "en_id": "q02",
+      "en_rank": 2,
+      "top1": "managment-of-rice-diseases-pdf:11:1"
+    },
+    {
+      "id": "es07",
+      "rank": 2,
+      "en_id": "q05",
+      "en_rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:79:1"
+    },
+    {
+      "id": "es08",
+      "rank": 2,
+      "en_id": null,
+      "en_rank": null,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:27:0"
+    },
+    {
+      "id": "es10",
+      "rank": 1,
+      "en_id": "q07",
+      "en_rank": 3,
+      "top1": "part-ii-section-3-chapter-1-pdf:46:1"
+    },
+    {
+      "id": "es11",
+      "rank": 1,
+      "en_id": null,
+      "en_rank": null,
+      "top1": "introduction-future-impact-of-rice-disea:4:1"
+    }
+  ],
+  "probes": [
+    {
+      "id": "es01",
+      "rank": null,
+      "en_id": null,
+      "en_rank": null,
+      "top1": "part-ii-section-2-chapter-2-pdf:53:0"
+    },
+    {
+      "id": "es04",
+      "rank": null,
+      "en_id": null,
+      "en_rank": null,
+      "top1": "arkansas:Table-11-3:10"
+    }
+  ]
+}

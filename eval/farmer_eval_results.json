@@ -1,0 +1,1910 @@
+{
+  "summary": {
+    "chat_no_filter": {
+      "all": {
+        "n": 46,
+        "hit@1": 0.087,
+        "hit@3": 0.196,
+        "hit@5": 0.261,
+        "mrr": 0.17,
+        "precision@5": 0.083
+      },
+      "colombia_es": {
+        "n": 4,
+        "hit@1": 0.25,
+        "hit@3": 0.5,
+        "hit@5": 0.5,
+        "mrr": 0.361,
+        "precision@5": 0.1
+      },
+      "farmer_en": {
+        "n": 8,
+        "hit@1": 0.25,
+        "hit@3": 0.625,
+        "hit@5": 0.875,
+        "mrr": 0.515,
+        "precision@5": 0.325
+      },
+      "farmer_es": {
+        "n": 24,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.042,
+        "mrr": 0.026,
+        "precision@5": 0.008
+      },
+      "panicle_es": {
+        "n": 6,
+        "hit@1": 0.0,
+        "hit@3": 0.0,
+        "hit@5": 0.0,
+        "mrr": 0.0,
+        "precision@5": 0.0
+      },
+      "technical_es": {
+        "n": 4,
+        "hit@1": 0.25,
+        "hit@3": 0.5,
+        "hit@5": 0.5,
+        "mrr": 0.417,
+        "precision@5": 0.15
+      }
+    },
+    "photo_disease_filter": {
+      "all": {
+        "n": 35,
+        "hit@1": 0.286,
+        "hit@3": 0.429,
+        "hit@5": 0.6,
+        "mrr": 0.399,
+        "precision@5": 0.217
+      },
+      "farmer_en": {
+        "n": 7,
+        "hit@1": 0.714,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.857,
+        "precision@5": 0.514
+      },
+      "farmer_es": {
+        "n": 24,
+        "hit@1": 0.125,
+        "hit@3": 0.167,
+        "hit@5": 0.417,
+        "mrr": 0.221,
+        "precision@5": 0.117
+      },
+      "technical_es": {
+        "n": 4,
+        "hit@1": 0.5,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.667,
+        "precision@5": 0.3
+      }
+    },
+    "paired_es": {
+      "n": 8,
+      "hit@1": 0.125,
+      "hit@3": 0.125,
+      "hit@5": 0.25,
+      "mrr": 0.156,
+      "precision@5": 0.05
+    },
+    "paired_en": {
+      "n": 8,
+      "hit@1": 0.25,
+      "hit@3": 0.625,
+      "hit@5": 0.875,
+      "mrr": 0.515,
+      "precision@5": 0.325
+    },
+    "protocol_like_in_context": [
+      "part-ii-section-2-chapter-2-pdf:16:1"
+    ]
+  },
+  "chat": [
+    {
+      "id": "f01",
+      "group": "farmer_es",
+      "rank": 4,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter4-pdf:12:0",
+        "field-guide-on-major-disorders-of-the-ri:4:0",
+        "part-ii-section-2-chapter-2-pdf:2:2",
+        "fungus-chapter-4-grain-diseases-pdf:27:0"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "BpB symptoms usually first appear at early flowering stage. Initially, light brown, water-soaked lesions occur on the lemma or palea, which later turns dark bro",
+        "• Not spread from diseased to healthy plants • Can be recognized only by symptoms Ex. Drying of leaves - lack of moisture or chemical burn Yellowing of leaves -",
+        "When the ooze dries up, it forms a small yellowish bead. The beads may drop in the paddy water or re-suspend in rain or dew water, thus, become a potential inoc",
+        "The fungus initially causes bleached lesions or discoloration of the glumes. The affected area becomes yellow or salmon to carmine with the production of sporod"
+      ]
+    },
+    {
+      "id": "f02",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-iii-section-2-pdf:3:0",
+        "part-i-sec2-shifty-enemies-final-pdf:9:2",
+        "part-ii-section-2-chapter-2-pdf:19:8",
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "The concept of improving seed health for crop production is rooted in seed pathology. The relationship between seed pathology and seed health must be clarified.",
+        "However, their occurrence may not necessarily be related to planting HYVs, but more to planting methods. The fungal diseases have been reported in the literatur",
+        "This remarkable similarity was observed even though different varieties were grown in Sta. Cruz, and only one variety was grown in Sta. Catalina. The results fu",
+        "Of the 10 tested seeds collected in Pila, five were positive for both expected PCR bands, three were positive for 497-bp band only, and two did not produce any "
+      ]
+    },
+    {
+      "id": "f03",
+      "group": "farmer_es",
+      "rank": 9,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:31:2",
+        "part-ii-section-2-chapter4-pdf:16:0",
+        "part-ii-section-1-chapter-3-pdf:64:0",
+        "part-ii-section-3-chapter-2-pdf:23:0",
+        "field-guide-on-major-disorders-of-the-ri:42:0"
+      ],
+      "top5_preview": [
+        "Is this association similar with what is observed on papilla in Xcv-pepper interaction? Host plant invasion: This is a crucial stage of pathogenesis that likely",
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. ",
+        "Miyake (1910) described the fungus Pyrenochaeta oryzae early last century as the causative agent of ShBl. His description, currently used with no additional inf",
+        "and 0.5% sodium ascorbate (Hibino and Kimura 1982). The homogenate was clarified by emulsifying with 1/3 carbon tetrachloride and then with 1/4 fluorocarbon (Di",
+        "BLAST SHEATH BLIGHT BROWN SPOT BACTERIAL LEAF BLIGHT Spindle-shaped lesions Large, irregular lesions Circular to oval dark brown with brown margin with dark bro"
+      ]
+    },
+    {
+      "id": "f04",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-iii-section-2-pdf:3:0",
+        "part-ii-section-2-chapter-3-leaf-sheath:5:0",
+        "managment-of-rice-diseases-pdf:8:1",
+        "part-ii-section-2-chapter4-pdf:16:0",
+        "field-guide-on-major-disorders-of-the-ri:24:0"
+      ],
+      "top5_preview": [
+        "The concept of improving seed health for crop production is rooted in seed pathology. The relationship between seed pathology and seed health must be clarified.",
+        "Besides rice, pathogenicity has been demonstrated on Hordeum vulgare, Triticum aestivum, Avena sativa, Zea mays, Lolium perenne, Bromus marginatus, Phleum prate",
+        "Combines used to harvest heavily smutted fields often have a black, sooty coating of kernel smut spores (Photo 11-21). spores of the kernel smut fungus in a hea",
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. ",
+        "LOCAL NAME: - nauga nga dahon, nalata nga tanum (Cebuano) - nadurot nga tanum (Waray); naggapula (Ilonggo) CAUSAL ORGANISM: - Xanthomonas oryzae p.v. oryzae (Is"
+      ]
+    },
+    {
+      "id": "f05",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:10:2",
+        "part-ii-section-2-chapter-2-pdf:35:1",
+        "fungus-chapter-2-foliar-diseases-pdf:24:0",
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-2-chapter-2-pdf:41:3"
+      ],
+      "top5_preview": [
+        "In 1957, the Cuban government invited two Japanese scientists for a survey on the RHB problems. They noted that RHB was similar in symptomatology to stripe dise",
+        "In the Philippines, IRRI scientists initially identified four races, and then six, which later expanded to 10 races (Mew 1987, Nelson et al 1994, Vera Cruz et a",
+        "According to Ou (1985), Miyake was the first to describe the causal fungus and named it Cercospora oryzae Miyake. Raciborski (1900) referred to the same fungus ",
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112"
+      ]
+    },
+    {
+      "id": "f06",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-iii-section-1-final-pdf:13:0",
+        "field-guide-on-major-disorders-of-the-ri:47:0",
+        "field-guide-on-major-disorders-of-the-ri:4:0",
+        "part-ii-section-2-chapter-2-pdf:39:1",
+        "fungus-chapter-2-foliar-diseases-pdf:68:0"
+      ],
+      "top5_preview": [
+        "this technology to the farmers? 6. If this staff is not available, do the facilities and personnel exist to adequately train people for this job? 7. If an exten",
+        "can also become abundant in rainfed wetland environments; causes plants to wilt, and transmits grassy stunt and ragged stunt virus diseases (Nilaparvata lugens ",
+        "• Not spread from diseased to healthy plants • Can be recognized only by symptoms Ex. Drying of leaves - lack of moisture or chemical burn Yellowing of leaves -",
+        "Source: Zhang and Mew (1989). 6.0d 3.0b 5.0d 7.0e 1.0a 1.0a 1.0a 1.0a 2.5c 4.0c 1.4a 2.8c 6.8f BS BB Table 14. Adult-plant resistance of rice cultivars showing ",
+        "S. Sakamoto S. Sakamoto N. Nishihara N. Nishihara N. Nishihara N. Nishihara S. Itoi et al. S.Itoi et al. S. Igarashi S. Igarashi Collector H. Kato H. Kato H. Ka"
+      ]
+    },
+    {
+      "id": "f07",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:64:0",
+        "part-ii-section-1-chapter-3-pdf:52:0",
+        "part-ii-section-1-chapter-3-pdf:60:0",
+        "fungus-chapter-4-grain-diseases-pdf:17:0",
+        "field-guide-on-major-disorders-of-the-ri:23:0"
+      ],
+      "top5_preview": [
+        "Miyake (1910) described the fungus Pyrenochaeta oryzae early last century as the causative agent of ShBl. His description, currently used with no additional inf",
+        "Sawada (1922) first named the causal fungus as Acrocylindrium oryzae Sawada. Gaws and Hawksworth (1975) renamed it as Sarocladium oryzae Gaws & Hawksw. Another ",
+        "The fungus is a soilborne pathogen surviving in rice stubble and alternate hosts (Webster and Gunell 1992). However, there is little information about the prima",
+        "A pokeweed isolate of P. sorghina has been shown to produce six nonspecific epoxydon group of toxins in culture capable of causing necrosis on host tissues (Rab",
+        "LOCAL NAME: - nalata nga pal-ak nga naggunit sa bunga (Cebuano) - nadudunot nga pal-ak han humay (Waray) CAUSAL ORGANISM: - Acrocylindrium oryzae Sawada - Anamo"
+      ]
+    },
+    {
+      "id": "f08",
+      "group": "farmer_es",
+      "rank": 9,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "field-guide-on-major-disorders-of-the-ri:59:0",
+        "fungus-chapter-2-foliar-diseases-pdf:70:0",
+        "part-ii-section-1-chapter-3-pdf:64:0",
+        "fungus-chapter-2-foliar-diseases-pdf:68:0",
+        "part-ii-section-1-chapter-3-pdf:18:0"
+      ],
+      "top5_preview": [
+        "AUTHORS Emmanuel R. Tiongco, PhD Ulysses G. Duque Hoai Xuan Troung, PhD Miguel L. Aragon, PhD Ravindra C. Joshi, PhD Jennifer T. Niones, PhD SUBJECT MATTER SPEC",
+        "A.B. Urashima N. Nishihara N. Nishihara N. Nishihara R.J. Williams Y. Iwamoto N. Hayashi N. Hayashi S. Igarashi S. Igarashi S. Igarashi S. Igarashi S. Igarashi ",
+        "Miyake (1910) described the fungus Pyrenochaeta oryzae early last century as the causative agent of ShBl. His description, currently used with no additional inf",
+        "S. Sakamoto S. Sakamoto N. Nishihara N. Nishihara N. Nishihara N. Nishihara S. Itoi et al. S.Itoi et al. S. Igarashi S. Igarashi Collector H. Kato H. Kato H. Ka",
+        "become a major disease after intensification of rice crop production with high-yielding semidwarf varieties. How this change in rice culture has contributed so "
+      ]
+    },
+    {
+      "id": "f09",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter-2-pdf:41:3",
+        "part-iii-section-2-pdf:3:1",
+        "part-ii-section-2-chapter-2-pdf:39:1",
+        "part-ii-section-2-chapter-3-leaf-sheath:5:1"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum",
+        "Source: Zhang and Mew (1989). 6.0d 3.0b 5.0d 7.0e 1.0a 1.0a 1.0a 1.0a 2.5c 4.0c 1.4a 2.8c 6.8f BS BB Table 14. Adult-plant resistance of rice cultivars showing ",
+        "G6 + + + + + + + - y + = positive reaction; - = negative reaction G5 + + + + + + + - G4 + - - - - - - - G3 + + + + + + - - G2 + + + + + + - - G1z + + + - - - - "
+      ]
+    },
+    {
+      "id": "f10",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-1-chapter-3-pdf:63:0",
+        "fungus-chapter-4-grain-diseases-pdf:2:0",
+        "fungus-chapter-4-grain-diseases-pdf:27:0",
+        "fungus-chapter-4-grain-diseases-pdf:16:0"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "The blotches are oblong, about one inch long. At first, the blotches are brownish; gradually, the center becomes grey or grayish brown and is dotted with the bl",
+        "KSm is often found in the field at or shortly before maturity of the rice crop. Only a few grains are infected, with various degrees of infection. Normally, inf",
+        "The fungus initially causes bleached lesions or discoloration of the glumes. The affected area becomes yellow or salmon to carmine with the production of sporod",
+        "Symptoms are variable and usually occur on the glumes 2 to 3 weeks following the emergence of the panicle, that is, from the time of heading to maturity. Initia"
+      ]
+    },
+    {
+      "id": "f11",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "arkansas:Table-11-3:10",
+        "part-ii-section-2-chapter-2-pdf:31:1",
+        "arkansas:Table-11-3:9",
+        "part-ii-section-3-chapter-1-pdf:44:5"
+      ],
+      "top5_preview": [
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Kernel Smut and False Smut: apply Quilt Xcel 2.2 EC (active i",
+        "Incompatible combinations: These combinations of Xoo strains and rice genotypes produce \"fibrillar material (FM)\" (Horino et al 1993). The similarity of FM to t",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Kernel Smut and False Smut: apply Stratego (active ingredient",
+        "Fluorescent band containing virus particles was collected and dialyzed against water for 1 day and centrifuged at a high speed. Purified RTSV fraction obtained "
+      ]
+    },
+    {
+      "id": "f12",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "field-guide-on-major-disorders-of-the-ri:4:0",
+        "part-ii-section-2-chapter4-pdf:16:0",
+        "arkansas:Table-11-3:10",
+        "arkansas:Table-11-3:0",
+        "arkansas:Table-11-4:0"
+      ],
+      "top5_preview": [
+        "• Not spread from diseased to healthy plants • Can be recognized only by symptoms Ex. Drying of leaves - lack of moisture or chemical burn Yellowing of leaves -",
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. ",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Kernel Smut and False Smut: apply Quilt Xcel 2.2 EC (active i",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quadris 2.08 SC (active ingredient azoxy",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties - see notes and comments): apply Quadris 2.08 SC (acti"
+      ]
+    },
+    {
+      "id": "f13",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-3-leaf-sheath:5:1",
+        "part-iii-section-2-pdf:3:1",
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-1-chapter-3-pdf:4:0",
+        "fungus-chapter-2-foliar-diseases-pdf:69:0"
+      ],
+      "top5_preview": [
+        "G6 + + + + + + + - y + = positive reaction; - = negative reaction G5 + + + + + + + - G4 + - - - - - - - G3 + + + + + + - - G2 + + + + + + - - G1z + + + - - - - ",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum",
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "lar in outline, black, with rough surface, measuring at 90-119 x 268-342 μm. Mycelium: The hyphae are white to olivaceous, septate, profusely branched, measurin",
+        "N. Nishihara N. Nishihara N. Nishihara N. Hayashi J. Mukiibi J. Mukiibi M. Iwano M. Iwano M. Iwano H. Kato H. Kato H. Kato H. Kato H. Kato H. Kato H. Kato H. Ka"
+      ]
+    },
+    {
+      "id": "f14",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:30:0",
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-2-chapter4-pdf:16:0",
+        "fungus-chapter-4-grain-diseases-pdf:7:0",
+        "fungus-chapter-2-foliar-diseases-pdf:71:0"
+      ],
+      "top5_preview": [
+        "imize ShB. This method often requires additional labor and cost and must be integrated with other disease management strategies and field operations. Field sani",
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. ",
+        "Because T. horrida is seedborne and seed-transmitted, the use of healthy and clean seed for planting is an important means for preventing the spread of kernel s",
+        "a) Determined by crossing with finger millet strains G10-1 (MAT1-1) and Z2-1 (MAT1-2). Fertility scores: 0, no peroithecia; ±, perithecia were N. Nishihara S. K"
+      ]
+    },
+    {
+      "id": "f15",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter4-pdf:16:0",
+        "fungus-chapter-2-foliar-diseases-pdf:24:0",
+        "part-ii-section-2-chapter-1-pdf:5:0",
+        "part-ii-section-1-chapter-3-pdf:36:0",
+        "fungus-chapter-4-grain-diseases-pdf:7:0"
+      ],
+      "top5_preview": [
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. ",
+        "According to Ou (1985), Miyake was the first to describe the causal fungus and named it Cercospora oryzae Miyake. Raciborski (1900) referred to the same fungus ",
+        "Agrochemicals such as kasugamycin, oxilinic acid, copper bactericide, Ag containing bactericide, and biocontrol agents, such as Trichoderma atroviride, have bee",
+        "The control measures employed for sheath spot and sheath blight are also feasible to control AsS. Straw management may be important to properly control this dis",
+        "Because T. horrida is seedborne and seed-transmitted, the use of healthy and clean seed for planting is an important means for preventing the spread of kernel s"
+      ]
+    },
+    {
+      "id": "f16",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:24:0",
+        "fungus-chapter-4-grain-diseases-pdf:16:0",
+        "fungus-chapter-2-foliar-diseases-pdf:37:1",
+        "part-ii-section-2-chapter-2-pdf:39:1",
+        "part-ii-section-2-chapter-2-pdf:41:3"
+      ],
+      "top5_preview": [
+        "According to Ou (1985), Miyake was the first to describe the causal fungus and named it Cercospora oryzae Miyake. Raciborski (1900) referred to the same fungus ",
+        "Symptoms are variable and usually occur on the glumes 2 to 3 weeks following the emergence of the panicle, that is, from the time of heading to maturity. Initia",
+        "Wei (1934) identified the teleomorph of the LSc fungus as Metasphaeria albescens Thümen and he also provided a full description on the conidial and on the ascog",
+        "Source: Zhang and Mew (1989). 6.0d 3.0b 5.0d 7.0e 1.0a 1.0a 1.0a 1.0a 2.5c 4.0c 1.4a 2.8c 6.8f BS BB Table 14. Adult-plant resistance of rice cultivars showing ",
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112"
+      ]
+    },
+    {
+      "id": "f17",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:41:3",
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter-2-pdf:41:2",
+        "part-iii-section-2-pdf:3:1",
+        "part-ii-section-2-chapter-2-pdf:41:4"
+      ],
+      "top5_preview": [
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112",
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "Source: Zhang (2007). Marker and distance XNpb208 <1.0cM to Close to XNbp396 & 3.ocM to AFLP31-10 2.3 cM to XNbp181 5.3cM to O072000 XNpb264, YO3700 1.7cM to XN",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum",
+        "et al (2003) Lee et al (2003) Lee et al (2003) Tan et al (2004) Reference 2005) Marker and distance 1.3cM to C904-R596 1.47cM to Y6855R ( 0.21cM to RM224, 2.5cM"
+      ]
+    },
+    {
+      "id": "f18",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter4-pdf:16:0",
+        "part-ii-section-1-chapter-3-pdf:36:0",
+        "part-ii-section-3-chapter-1-pdf:44:6",
+        "arkansas:Table-11-4:2",
+        "field-guide-on-major-disorders-of-the-ri:23:0"
+      ],
+      "top5_preview": [
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. ",
+        "The control measures employed for sheath spot and sheath blight are also feasible to control AsS. Straw management may be important to properly control this dis",
+        "RTSV in the band was recovered and CsCl was removed by two cycles of differential centrifugations. The final pellet was suspended in 0.01 M EDTA (pH 6.0), with ",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply Stratego (active ingredient trifloxystrobin + ",
+        "LOCAL NAME: - nalata nga pal-ak nga naggunit sa bunga (Cebuano) - nadudunot nga pal-ak han humay (Waray) CAUSAL ORGANISM: - Acrocylindrium oryzae Sawada - Anamo"
+      ]
+    },
+    {
+      "id": "f19",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:14:0",
+        "part-i-sec2-shifty-enemies-final-pdf:15:2",
+        "part-ii-section-3-chapter-2-pdf:15:0",
+        "part-iii-section-1-final-pdf:5:0",
+        "part-ii-section-3-chapter-1-pdf:55:5"
+      ],
+      "top5_preview": [
+        "RHBV is transmitted in a persistent manner by T. orizicolus (Intro Figure 9) (Malaguti et al 1957, Acuna and Ramos 1957, Galvez 1969). It is also transmitted in",
+        "This finding alarmed researchers and farmers alike that the rice crop may be attacked simultaneously by more than one virus if they are transmitted by the same ",
+        "Diagnosis may be based on the characteristic symptoms. Diagnosis based on the transmission test using T. orizicolus is difficult because the incubation period i",
+        "Synchronous crop establishment has long been considered a key element for RT management (Loevinsohn 1984) because synchronous crop nonrice periods break the \"gr",
+        "In Malaysia, RT a surveillance scheme was implemented after 1983 (Othman et al 1999), which includeed field surveys, light traps, and seedling boxes (mobile nur"
+      ]
+    },
+    {
+      "id": "f20",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:15:0",
+        "part-ii-section-3-chapter-2-pdf:12:3",
+        "field-guide-on-major-disorders-of-the-ri:4:0",
+        "part-ii-section-2-chapter4-pdf:16:0",
+        "fungus-chapter-4-grain-diseases-pdf:34:0"
+      ],
+      "top5_preview": [
+        "Diagnosis may be based on the characteristic symptoms. Diagnosis based on the transmission test using T. orizicolus is difficult because the incubation period i",
+        "The virus agent is named echinochloa hoja blanca virus (EHBV). RHBV and EHBV have 80-85% and 46-53% nucleotide sequence identity in the coding and noncoding reg",
+        "• Not spread from diseased to healthy plants • Can be recognized only by symptoms Ex. Drying of leaves - lack of moisture or chemical burn Yellowing of leaves -",
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. ",
+        "Because the causal agents involve numerous fungi and bacteria, the presence of these pathogens, directly or indirectly and in various combinations, influences E"
+      ]
+    },
+    {
+      "id": "f21",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-iii-section-2-pdf:3:1",
+        "managment-of-rice-diseases-pdf:13:0",
+        "managment-of-rice-diseases-pdf:13:1",
+        "part-ii-section-2-chapter-2-pdf:64:0"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum",
+        "This is another physiological disorder of rice thought to be caused by hydrogen sulfide (H2S) toxicity to rice roots grown in highly anaerobic flooded soils. Ri",
+        "As soon as healthy, white roots appear, a shallow flood can be established. For fields with no histor y, follow rescue strategy. Drain to allow oxygen into the ",
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp"
+      ]
+    },
+    {
+      "id": "f22",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:58:0",
+        "part-ii-section-1-chapter-3-pdf:13:0",
+        "part-ii-section-1-chapter-1-pdf:7:2",
+        "part-ii-section-1-chapter-1-pdf:7:4",
+        "part-iii-section-2-pdf:3:1"
+      ],
+      "top5_preview": [
+        "Saccardo (1916) first described the fungus from specimens of rice straw collected in the Philippines as Ophiobolus oryzinus. Walker (1972), after comparing the ",
+        "[anamorph, teleomorph: Thanatephorus spp. (Frank) Donk]. In the new fungal classification scheme, it belongs to the true fungi under Phylum Basidiomycota, the c",
+        "Methods used in this study included: • Vegetative compatibility groups (VCGs) were used to characterize fungal populations, particularly for species in the genu",
+        "When humidity is low, ascospores oozes out from the ostioles. Inoculum in soil. Inoculum may not survive long in soil; however, if seeds infested with a high de",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum"
+      ]
+    },
+    {
+      "id": "f23",
+      "group": "farmer_es",
+      "rank": 7,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "arkansas:Table-11-4:1",
+        "part-ii-section-3-chapter-4-pdf:9:0",
+        "managment-of-rice-diseases-pdf:2:9",
+        "arkansas:Table-11-4:2",
+        "managment-of-rice-diseases-pdf:2:7"
+      ],
+      "top5_preview": [
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply GEM (active ingredient trifloxystrobin) at 3.1",
+        "The most simple and effective measure to control RNM is to raise rice seedlings in RNM-free nurseries or under flooded or wet-bed conditions (Fujii 1978, 1971; ",
+        "Apply at early to late boot but before heading begins as a preventive treatment for kernel smut and/or to suppress false smut. Propiconazole fungicides can be t",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply Stratego (active ingredient trifloxystrobin + ",
+        "Changes in labels and use recommendations often occur yearly, so you should consult the county extension agent or other knowledgeable person each year for the l"
+      ]
+    },
+    {
+      "id": "f24",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:30:0",
+        "part-ii-section-3-chapter-1-pdf:57:2",
+        "arkansas:Table-11-3:7",
+        "part-ii-section-3-chapter-1-pdf:44:6",
+        "part-ii-section-3-chapter-1-pdf:57:3"
+      ],
+      "top5_preview": [
+        "imize ShB. This method often requires additional labor and cost and must be integrated with other disease management strategies and field operations. Field sani",
+        "When seedlings of susceptible cultivar TN1, intermediate Jaya, and resistant CR 44-955 were inoculated with RT at 30, 45, 60, 75, and 90 days after sowing, yiel",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Kernel Smut and False Smut: apply Tilt 3.6 EC (active ingredi",
+        "RTSV in the band was recovered and CsCl was removed by two cycles of differential centrifugations. The final pellet was suspended in 0.01 M EDTA (pH 6.0), with ",
+        "The reduction in RTBV alone-infected plants was74% in TN1, and 76% in IR54, 19% in Sigadia, and less than 5% in Balimau Putih. The reduction in RTSV alone-infec"
+      ]
+    },
+    {
+      "id": "f25",
+      "group": "panicle_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "fungus-chapter-4-grain-diseases-pdf:11:0",
+        "part-ii-section-5-ch-4-pdf:4:1",
+        "fungus-chapter-4-grain-diseases-pdf:27:0"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp",
+        "The causal fungus of UbD belonging to Ascomycota is Balansia oryzae-sativae Hashioka (anamorph Ephelis oryzae Syd.) and is related to ergot fungi. Sydow (1914) ",
+        "Modified from Lang et al (2010) and described in detail in Vera Cruz et al (2017). internal control that amplified a region of the universal bacterial 16S rDNA ",
+        "The fungus initially causes bleached lesions or discoloration of the glumes. The affected area becomes yellow or salmon to carmine with the production of sporod"
+      ]
+    },
+    {
+      "id": "f26",
+      "group": "panicle_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-3-leaf-sheath:5:1",
+        "fungus-chapter-4-grain-diseases-pdf:16:0",
+        "fungus-chapter-4-grain-diseases-pdf:19:0",
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter4-pdf:12:0"
+      ],
+      "top5_preview": [
+        "G6 + + + + + + + - y + = positive reaction; - = negative reaction G5 + + + + + + + - G4 + - - - - - - - G3 + + + + + + - - G2 + + + + + + - - G1z + + + - - - - ",
+        "Symptoms are variable and usually occur on the glumes 2 to 3 weeks following the emergence of the panicle, that is, from the time of heading to maturity. Initia",
+        "The disease affects the grain filling. Panicle weight losses in three different fields (cv. IAC25) during an epidemic in Brazil (1979-80) were 41, 25, and 45%, ",
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "BpB symptoms usually first appear at early flowering stage. Initially, light brown, water-soaked lesions occur on the lemma or palea, which later turns dark bro"
+      ]
+    },
+    {
+      "id": "f27",
+      "group": "panicle_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "blast-management-pdf:6:0",
+        "part-ii-section-2-chapter-3-leaf-sheath:5:1",
+        "part-ii-section-3-chapter-2-pdf:23:0",
+        "fungus-chapter-2-foliar-diseases-pdf:14:2",
+        "fungus-chapter-4-grain-diseases-pdf:2:0"
+      ],
+      "top5_preview": [
+        "The initial infections occurs on leaves usually around tillering and appear as diamond, football, or spindle shape lesion with pointed ends. Lesions start as sm",
+        "G6 + + + + + + + - y + = positive reaction; - = negative reaction G5 + + + + + + + - G4 + - - - - - - - G3 + + + + + + - - G2 + + + + + + - - G1z + + + - - - - ",
+        "and 0.5% sodium ascorbate (Hibino and Kimura 1982). The homogenate was clarified by emulsifying with 1/3 carbon tetrachloride and then with 1/4 fluorocarbon (Di",
+        "Banu, International Rice Research Institute, 2007, pers. commun.), which were, however, described more in relation to the size rather than the type of the lesio",
+        "KSm is often found in the field at or shortly before maturity of the rice crop. Only a few grains are infected, with various degrees of infection. Normally, inf"
+      ]
+    },
+    {
+      "id": "f28",
+      "group": "panicle_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter-2-pdf:39:1",
+        "part-ii-section-2-chapter-2-pdf:41:3",
+        "managment-of-rice-diseases-pdf:14:1",
+        "fungus-chapter-4-grain-diseases-pdf:16:0"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "Source: Zhang and Mew (1989). 6.0d 3.0b 5.0d 7.0e 1.0a 1.0a 1.0a 1.0a 2.5c 4.0c 1.4a 2.8c 6.8f BS BB Table 14. Adult-plant resistance of rice cultivars showing ",
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112",
+        "Although their appearances are similar, blanking from narrow brown leaf spot is minimal, and the described symptoms usually develop only near the completion of ",
+        "Symptoms are variable and usually occur on the glumes 2 to 3 weeks following the emergence of the panicle, that is, from the time of heading to maturity. Initia"
+      ]
+    },
+    {
+      "id": "f29",
+      "group": "panicle_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter-2-pdf:41:3",
+        "part-ii-section-3-chapter-1-pdf:44:5",
+        "part-ii-section-3-chapter-1-pdf:44:2",
+        "rbsd-srbsd-final-pdf:3:1"
+      ],
+      "top5_preview": [
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112",
+        "Fluorescent band containing virus particles was collected and dialyzed against water for 1 day and centrifuged at a high speed. Purified RTSV fraction obtained ",
+        "The upper band contained RTBV while the lower band contained RTSV and some contaminants. ` To simplify the purification procedure, plants infected with RTBV alo",
+        "RBSDV particles are unstable as other members of the genus Fijivirus, of which the outer shell is degraded after treatment with organic solvent or heating at 60"
+      ]
+    },
+    {
+      "id": "f30",
+      "group": "panicle_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:19:6",
+        "part-iii-section-1-final-pdf:4:1",
+        "part-ii-section-1-chapter-3-pdf:19:1",
+        "part-ii-section-1-chapter-3-pdf:19:5",
+        "part-iii-section-2-pdf:3:0"
+      ],
+      "top5_preview": [
+        "Mycelia on crop residues. Mycelia are another source of primary inoculum (Hori and Anraku 1971, Premalatha Dath 1990, Kobayashi et al 1995, Cu et al 1996). The ",
+        "Fungicide use, therefore, often represents one important element of disease control. The efficiency and relevance of its use strongly depends on the mesoand mic",
+        "These penetration pegs give rise to infection hyphae, which continue to grow in the lumen and form a branch from the point of penetration. Penetration through s",
+        "However, the survival of both sclerotia and mycelia in crop residues can be more difficult in irrigated rice fields in the tropics than in temperate rice-growin",
+        "The concept of improving seed health for crop production is rooted in seed pathology. The relationship between seed pathology and seed health must be clarified."
+      ]
+    },
+    {
+      "id": "f31",
+      "group": "colombia_es",
+      "rank": 1,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "part-ii-section-2-chapter-2-pdf:41:3",
+        "part-ii-section-2-chapter-2-pdf:39:1",
+        "part-ii-section-3-chapter-2-pdf:12:3"
+      ],
+      "top5_preview": [
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112",
+        "Source: Zhang and Mew (1989). 6.0d 3.0b 5.0d 7.0e 1.0a 1.0a 1.0a 1.0a 2.5c 4.0c 1.4a 2.8c 6.8f BS BB Table 14. Adult-plant resistance of rice cultivars showing ",
+        "The virus agent is named echinochloa hoja blanca virus (EHBV). RHBV and EHBV have 80-85% and 46-53% nucleotide sequence identity in the coding and noncoding reg"
+      ]
+    },
+    {
+      "id": "f32",
+      "group": "colombia_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-3-chapter-2-pdf:10:2",
+        "part-ii-section-3-chapter-2-pdf:23:0",
+        "part-ii-section-1-chapter-3-pdf:36:0",
+        "part-ii-section-2-chapter4-pdf:16:0"
+      ],
+      "top5_preview": [
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "In 1957, the Cuban government invited two Japanese scientists for a survey on the RHB problems. They noted that RHB was similar in symptomatology to stripe dise",
+        "and 0.5% sodium ascorbate (Hibino and Kimura 1982). The homogenate was clarified by emulsifying with 1/3 carbon tetrachloride and then with 1/4 fluorocarbon (Di",
+        "The control measures employed for sheath spot and sheath blight are also feasible to control AsS. Straw management may be important to properly control this dis",
+        "Since the causal bacterium is seedborne, the best management option is the use of clean and healthy seeds. Coinoculation of rice plants with a nonpathogenic P. "
+      ]
+    },
+    {
+      "id": "f33",
+      "group": "colombia_es",
+      "rank": 3,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-2-chapter-2-pdf:35:3",
+        "part-ii-section-3-chapter-2-pdf:18:3",
+        "part-ii-section-5-ch-4-pdf:6:4",
+        "part-ii-section-2-chapter-2-pdf:40:0"
+      ],
+      "top5_preview": [
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "It is also possible that the diverse reactions may be because the R genes are broad spectrum. Therefore, it is likely BB Table 11. Interactions of Xanthomonas o",
+        "Many rice cultivars tested showed resistance to the vector T. orizicolus. On resistant cultivars, egg deposition, nymphal hatch rate, and adult longevity were r",
+        "This resistance mechanism is the result of either polymorphisms in the EBE of rice S-gene or polymorphisms in the coding sequence of the S-gene itself, reviewed",
+        "of the race even though these varieties might be similar in seed appearance (Vera Cruz et al 1992). Thus, the \"variety\" tested likely carried a mixture in resis"
+      ]
+    },
+    {
+      "id": "f34",
+      "group": "colombia_es",
+      "rank": 9,
+      "precision@5": 0.0,
+      "protocol_like": [
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "part-ii-section-2-chapter-2-pdf:3:0",
+        "fungus-chapter-4-grain-diseases-pdf:2:0",
+        "part-ii-section-3-chapter-2-pdf:10:2",
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5_preview": [
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "been observed on glumes especially on seeds harvested from fields where the disease is very severe. Although the spots are conspicuous when the grains are still",
+        "KSm is often found in the field at or shortly before maturity of the rice crop. Only a few grains are infected, with various degrees of infection. Normally, inf",
+        "In 1957, the Cuban government invited two Japanese scientists for a survey on the RHB problems. They noted that RHB was similar in symptomatology to stripe dise",
+        "Of the 10 tested seeds collected in Pila, five were positive for both expected PCR bands, three were positive for 497-bp band only, and two did not produce any "
+      ]
+    },
+    {
+      "id": "f35",
+      "group": "technical_es",
+      "rank": 2,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "arkansas:Table-11-3:10",
+        "arkansas:Table-11-3:2",
+        "arkansas:Table-11-3:0",
+        "part-ii-section-1-chapter-3-pdf:28:3",
+        "arkansas:Table-11-4:3"
+      ],
+      "top5_preview": [
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Kernel Smut and False Smut: apply Quilt Xcel 2.2 EC (active i",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quilt Xcel 2.2 EC (active ingredient azo",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quadris 2.08 SC (active ingredient azoxy",
+        "Silicon reduced sheath blight intensity in both indica and tropical japonica varieties (Rodrigues et al 2001). When the rate of silicon in the soil increased, t",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply Quilt Xcel 2.2 EC (active ingredient azoxystro"
+      ]
+    },
+    {
+      "id": "f36",
+      "group": "technical_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-1-pdf:57:2",
+        "part-ii-section-3-chapter-1-pdf:57:1",
+        "part-ii-section-3-chapter-1-pdf:57:0",
+        "part-ii-section-3-chapter-5-pdf:13:1",
+        "part-iii-section-4-pdf:9:3"
+      ],
+      "top5_preview": [
+        "When seedlings of susceptible cultivar TN1, intermediate Jaya, and resistant CR 44-955 were inoculated with RT at 30, 45, 60, 75, and 90 days after sowing, yiel",
+        "When seedlings of 26 high-yielding culivars were inoculated with RT at 30 days after soaking, the range of height reduction in RT-infected plants was between 12",
+        "In many countries in the Asian tropics, RT is endemic in irrigated areas and has caused devastating damage from time to time in RT-prone areas. Major outbreaks ",
+        "The incidence was higher in upland fields than in irrigated fields. Cultivar reaction to the disease was compared by separately exposing seedlings to three meal",
+        "Hence, to prevent vector feeding, it is more effective to use a seed mixture than to interplant resistant and susceptible varieties (GD Table 7). In managing ri"
+      ]
+    },
+    {
+      "id": "f37",
+      "group": "technical_es",
+      "rank": 6,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "field-guide-on-major-disorders-of-the-ri:23:0",
+        "part-iii-section-2-pdf:3:0",
+        "managment-of-rice-diseases-pdf:3:0",
+        "field-guide-on-major-disorders-of-the-ri:21:0",
+        "fungus-chapter-4-grain-diseases-pdf:23:1"
+      ],
+      "top5_preview": [
+        "LOCAL NAME: - nalata nga pal-ak nga naggunit sa bunga (Cebuano) - nadudunot nga pal-ak han humay (Waray) CAUSAL ORGANISM: - Acrocylindrium oryzae Sawada - Anamo",
+        "The concept of improving seed health for crop production is rooted in seed pathology. The relationship between seed pathology and seed health must be clarified.",
+        "Blast is an unpredictable disease which can cause severe yield losses under favorable environmental conditions. An airborne fungus called Pyricularia oryzae cau",
+        "LOCAL NAME: - butik-butik, taguntom (Waray) - tawonton (Cebuano) - puntik-puntik (Cebuano in Mindanao) - putak-putak (Bicolano) CAUSAL ORGANISM: - Cochliobolus ",
+        "Field fungi may be weak or opportunistic pathogens. Table GrD 3 provides a list of fungi that are frequently detected in discolored rice seed. Clearly, they cau"
+      ]
+    },
+    {
+      "id": "f38",
+      "group": "technical_es",
+      "rank": 1,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-1-pdf:64:0",
+        "part-iii-section-4-pdf:9:2",
+        "part-ii-section-2-chapter-2-pdf:41:3",
+        "part-ii-section-3-chapter-1-pdf:58:11",
+        "part-iii-section-1-final-pdf:5:1"
+      ],
+      "top5_preview": [
+        "between two crops has been implemented successfully to manage RT in Indonesia (Manwan et al 1985, Sama et al 1991) and Malaysia (Habibuddin et al 1987, Nozaki e",
+        "A varietal mixture may influence the infection efficiency of an inoculum. If the inoculum is from an outside source, the mixture simply provides a spatial effec",
+        "Sungsong Sigadis, TKM 6, IR20 DV 85, DV 86, DZ78 Kogyoku, Java 14 Kogyoku, Java 14 Semora Mangga Wase Aikoku 3 Donor cultivar IR8, IR944-102 DV 85, BJ1 PI 23112",
+        "However, they were replaced with other cultivars due to the breakdown of the BPH1 gene they carried for brown planthopper resistance. The GLH resistance in IR20",
+        "Insecticide applications, once recommended for RT control, are now poorly grounded. Several options for RT management have been explored. Insecticide use, an op"
+      ]
+    },
+    {
+      "id": "f43",
+      "group": "farmer_en",
+      "rank": 1,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:2:1",
+        "part-ii-section-2-chapter-2-pdf:2:5",
+        "fungus-chapter-2-foliar-diseases-pdf:35:0",
+        "part-ii-section-2-chapter4-pdf:2:1",
+        "fungus-chapter-2-foliar-diseases-pdf:20:1"
+      ],
+      "top5_preview": [
+        "When conditions are favorable, lesions may spread upward as the plants continue to grow. The lesions also expand downward and become yellowish then whitish or g",
+        "A bacterial mass may ooze out. • Alternatively, fellow step 2 for leaf blight diagnosis. Kresek • Shoot portions of rice plants infested with stem borer are eas",
+        "The disease has three different names: leaf tip drying in China by Wei (1934), who was the first to describe the disease; leaf tip blight by Inoue and Takeda (1",
+        "Lesions on infected and developed seedlings show brown, waby the pathogen of rice grain rot showing ter-soaked soft rot of the leaf sheath accompanied water soa",
+        "The disease occurs frequently in flooded fields. Oospores are rarely observed in the early stage of infection but are abundant at later infection stage. 2.3.1. "
+      ]
+    },
+    {
+      "id": "f44",
+      "group": "farmer_en",
+      "rank": 5,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:32:0",
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "blast-management-pdf:6:0",
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "fungus-chapter-2-foliar-diseases-pdf:3:0"
+      ],
+      "top5_preview": [
+        "The AsS symptoms can be easily confused with sheath spot and sheath blight caused by R. oryzae and R. solani, respectively. Initially, the lesions appear near t",
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp",
+        "The initial infections occurs on leaves usually around tillering and appear as diamond, football, or spindle shape lesion with pointed ends. Lesions start as sm",
+        "The blast syndrome produced from natural infection consists of lesions that form on leaves, nodes, panicles, and grains but seldom on the leaf sheath and not on",
+        "The disease is found on all parts and growth stages of the rice plant from seeds to the whole plant, and from seedlings to mature plants (BSp Figure 2). BSp on "
+      ]
+    },
+    {
+      "id": "f45",
+      "group": "farmer_en",
+      "rank": 2,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:31:0",
+        "blast-management-pdf:6:0",
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "fungus-chapter-2-foliar-diseases-pdf:23:0"
+      ],
+      "top5_preview": [
+        "Typical spots on the leaves are large, oval, or circular, with dark brown, narrow but distinct margins. The center of the spot is, at first, pale brown, gradual",
+        "The initial infections occurs on leaves usually around tillering and appear as diamond, football, or spindle shape lesion with pointed ends. Lesions start as sm",
+        "The blast syndrome produced from natural infection consists of lesions that form on leaves, nodes, panicles, and grains but seldom on the leaf sheath and not on",
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp",
+        "The initial symptom involves the presence of short, linear brown lesions, which appear mostly on leaf blades (NBLs Figure 1), although the disease can also occu"
+      ]
+    },
+    {
+      "id": "f46",
+      "group": "farmer_en",
+      "rank": 2,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:51:0",
+        "managment-of-rice-diseases-pdf:14:0",
+        "fungus-chapter-2-foliar-diseases-pdf:23:0",
+        "fungus-chapter-2-foliar-diseases-pdf:29:0",
+        "fungus-chapter-2-foliar-diseases-pdf:52:0"
+      ],
+      "top5_preview": [
+        "BLS is a disease of the parenchymatous tissues of the leaf. The disease usually occurs during the tillering stage under favorable conditions and may persist unt",
+        "Narrow brown leaf spot has been a minor, late-season disease of rice in Arkansas. Traditionally, it has little effect on yield or quality loss, but it caused pr",
+        "The initial symptom involves the presence of short, linear brown lesions, which appear mostly on leaf blades (NBLs Figure 1), although the disease can also occu",
+        "The disease was first reported on rice from Papua New Guinea in the South Pacific (Deighton and Shaw 1960). The causal agent was named Ramularia oryzae. Deighto",
+        "The typical symptoms of RS are yellow-orange spots with streaks advancing toward the leaf tips (RS Figure 1).There is no clear margin on the lesions. Initial le"
+      ]
+    },
+    {
+      "id": "f47",
+      "group": "farmer_en",
+      "rank": 6,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "field-guide-on-major-disorders-of-the-ri:32:0",
+        "field-guide-on-major-disorders-of-the-ri:33:0",
+        "field-guide-on-major-disorders-of-the-ri:30:0",
+        "field-guide-on-major-disorders-of-the-ri:31:0",
+        "field-guide-on-major-disorders-of-the-ri:43:1"
+      ],
+      "top5_preview": [
+        "SYMPTOMS: • stunted plant • slightly reduced tillering • yellowing of interveinal areas of lower leaves starting from the tip then later leaves turn brown and w",
+        "SYMPTOMS: • stunted plant • less tillers • base and midrib of young leaves are yellowish, while old leaves are rusty brown • smaller leaf blades • uneven growth",
+        "SYMPTOMS: • stunted plant • less tillers • small, narrow, erect leaves that turn yellowish-red and brown • old leaves become light straw-colored and wither CORR",
+        "SYMPTOMS: • stunted plant • less tillers • erect stem with small, narrow, erect leaves • young leaves look normal but old ones turn brown and wither CORRECTIVE ",
+        "Apply P at early plant Narrow, erect, dark Intensive cropping and cold weather. Stunted plant; Slender stems growth stage. Phosphorus green leaves Vegetative de"
+      ]
+    },
+    {
+      "id": "f48",
+      "group": "farmer_en",
+      "rank": 4,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:38:0",
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "part-ii-section-1-chapter-3-pdf:45:0",
+        "part-ii-section-1-chapter-3-pdf:12:0",
+        "part-ii-section-2-chapter-3-leaf-sheath:3:0"
+      ],
+      "top5_preview": [
+        "The symptoms are usually found on upper leaf sheaths and midway up the tillers. Typically, sheath spots are oval, 1-3 cm long, and may reach 10 cm and more but ",
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp",
+        "The disease is usually found on the leaf sheath near the water line. Initially, it appears as a small, yellow, water-soaked spot, which gradually enlarges to 1-",
+        "all parts of a rice plant except the roots, but the main target is leaf blades and leaf sheaths (ShB Figure 3). Typical symptoms appear at first as spots on the",
+        "On seedlings, a systemic discoloration of the leaf sheath occurs, which may spread to the midrib or veins of the leaves. On mature plants, symptoms typically oc"
+      ]
+    },
+    {
+      "id": "f49",
+      "group": "farmer_en",
+      "rank": 1,
+      "precision@5": 1.0,
+      "protocol_like": [],
+      "top5": [
+        "arkansas:Table-11-3:2",
+        "arkansas:Table-11-3:1",
+        "arkansas:Table-11-3:6",
+        "arkansas:Table-11-3:0",
+        "arkansas:Table-11-3:4"
+      ],
+      "top5_preview": [
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quilt Xcel 2.2 EC (active ingredient azo",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Stratego (active ingredient trifloxystro",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Artisan (active ingredient flutolanil + ",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quadris 2.08 SC (active ingredient azoxy",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Sercadis (active ingredient fluxapyroxad"
+      ]
+    },
+    {
+      "id": "f50",
+      "group": "farmer_en",
+      "rank": 2,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-4-grain-diseases-pdf:16:0",
+        "part-ii-section-3-chapter-2-pdf:10:0",
+        "fungus-chapter-4-grain-diseases-pdf:10:0",
+        "fungus-chapter-2-foliar-diseases-pdf:18:0",
+        "field-guide-on-major-disorders-of-the-ri:23:0"
+      ],
+      "top5_preview": [
+        "Symptoms are variable and usually occur on the glumes 2 to 3 weeks following the emergence of the panicle, that is, from the time of heading to maturity. Initia",
+        "\"Hoja blanca\" (white leaf) of rice (RHB) (RHB Figure 1) occurs in Central America, Caribbean region, and northern South America (Galvez 1969a, Everett and Lamey",
+        "UbD usually begins before panicle emergence, while the infected panicle is still embedded in the sheath and matted together by mycelium of the fungus. The sympt",
+        "In the earlier stage of the disease, new leaves of infected plants produce chlorotic whitish spots or patches on the leaf blades, sometimes reducing them in siz",
+        "LOCAL NAME: - nalata nga pal-ak nga naggunit sa bunga (Cebuano) - nadudunot nga pal-ak han humay (Waray) CAUSAL ORGANISM: - Acrocylindrium oryzae Sawada - Anamo"
+      ]
+    }
+  ],
+  "photo": [
+    {
+      "id": "f01",
+      "group": "farmer_es",
+      "rank": 1,
+      "precision@5": 0.6,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:2:2",
+        "part-ii-section-2-chapter-2-pdf:15:1",
+        "part-ii-section-2-chapter-2-pdf:2:1",
+        "part-ii-section-2-chapter-2-pdf:39:1",
+        "part-ii-section-2-chapter-2-pdf:2:0"
+      ],
+      "top5_preview": [
+        "When the ooze dries up, it forms a small yellowish bead. The beads may drop in the paddy water or re-suspend in rain or dew water, thus, become a potential inoc",
+        "The technique becomes especially costly when used in large-scale routine screening. BB Table 3. Reactivity of Xanthomonas oryzae (campestris) pv. oryzae strains",
+        "When conditions are favorable, lesions may spread upward as the plants continue to grow. The lesions also expand downward and become yellowish then whitish or g",
+        "Source: Zhang and Mew (1989). 6.0d 3.0b 5.0d 7.0e 1.0a 1.0a 1.0a 1.0a 2.5c 4.0c 1.4a 2.8c 6.8f BS BB Table 14. Adult-plant resistance of rice cultivars showing ",
+        "Bacterial blight syndrome exhibits three types of symptoms: leaf blight, kresek (the seedling blight or wilt phase), and the pale-yellow leaf. The disease has b"
+      ]
+    },
+    {
+      "id": "f02",
+      "group": "farmer_es",
+      "rank": 8,
+      "precision@5": 0.0,
+      "protocol_like": [
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:19:8",
+        "part-ii-section-2-chapter-2-pdf:16:1",
+        "part-ii-section-2-chapter-2-pdf:4:2",
+        "part-ii-section-2-chapter-2-pdf:24:1",
+        "part-ii-section-2-chapter-2-pdf:16:0"
+      ],
+      "top5_preview": [
+        "This remarkable similarity was observed even though different varieties were grown in Sta. Cruz, and only one variety was grown in Sta. Catalina. The results fu",
+        "Of the 10 tested seeds collected in Pila, five were positive for both expected PCR bands, three were positive for 497-bp band only, and two did not produce any ",
+        "(4) The same pathogen characterized in Step 2 must be re-isolated from the inoculated plant. Step 4 was added by E.F. Smitth (1854-1927) who in 1901 established",
+        "The spread of the bacterial cells from the site of inoculation indicates that symptoms do not become visible before the pathogen movement or spread in the host.",
+        "fragments of Xoo (497 and 574 bp), employing polymerase chain reaction (PCR), has been examined for the detection of the bacterial pathogen present in the washi"
+      ]
+    },
+    {
+      "id": "f03",
+      "group": "farmer_es",
+      "rank": 2,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:31:2",
+        "part-ii-section-2-chapter-2-pdf:28:0",
+        "part-ii-section-2-chapter-2-pdf:19:4",
+        "part-ii-section-2-chapter-2-pdf:21:0",
+        "part-ii-section-2-chapter-2-pdf:7:0"
+      ],
+      "top5_preview": [
+        "Is this association similar with what is observed on papilla in Xcv-pepper interaction? Host plant invasion: This is a crucial stage of pathogenesis that likely",
+        "decades ago (Tagami and Mizukami 1962, Ou 1985). The Bordeaux mixture and copper and mercuric compounds did not show any success in controlling BB, not to menti",
+        "However, when the glumes from seeds harvested from severely BB-infected mother plants were cut into small pieces and observed microscopically, a large number of",
+        "rainstorms or typhoons can relate to the development of bacterial blight in two ways: • by causing injury to the rice plant that predisposes the plant to Xoo in",
+        "produces an antibacterial substance called bacteriocin. A monoclonal antibody specific to Xoo has also been produced. These may be of value for use in biologica"
+      ]
+    },
+    {
+      "id": "f04",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5": [
+        "field-guide-on-major-disorders-of-the-ri:24:0",
+        "part-ii-section-2-chapter-2-pdf:16:1",
+        "part-ii-section-2-chapter-2-pdf:21:0",
+        "part-ii-section-2-chapter-2-pdf:4:2",
+        "part-ii-section-5-ch-4-pdf:1:0"
+      ],
+      "top5_preview": [
+        "LOCAL NAME: - nauga nga dahon, nalata nga tanum (Cebuano) - nadurot nga tanum (Waray); naggapula (Ilonggo) CAUSAL ORGANISM: - Xanthomonas oryzae p.v. oryzae (Is",
+        "Of the 10 tested seeds collected in Pila, five were positive for both expected PCR bands, three were positive for 497-bp band only, and two did not produce any ",
+        "rainstorms or typhoons can relate to the development of bacterial blight in two ways: • by causing injury to the rice plant that predisposes the plant to Xoo in",
+        "(4) The same pathogen characterized in Step 2 must be re-isolated from the inoculated plant. Step 4 was added by E.F. Smitth (1854-1927) who in 1901 established",
+        "Xanthomonads cause serious diseases in many economically important crops. Of the genus, Xanthomonas oryzae (Xo) is potentially the most destructive species due "
+      ]
+    },
+    {
+      "id": "f05",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "fungus-chapter-2-foliar-diseases-pdf:14:0",
+        "fungus-chapter-2-foliar-diseases-pdf:4:3",
+        "fungus-chapter-2-foliar-diseases-pdf:14:1",
+        "fungus-chapter-2-foliar-diseases-pdf:14:2"
+      ],
+      "top5_preview": [
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp",
+        "of lesions (S.P. Banu, International Rice Research Institute, 2007, pers. commun.): Dinorado (D type) and IR36 (IR type), both of which appear to be associated ",
+        "Alcorn (1983) demonstrated that the substrate basis for germination affected the manner in which conidia of B. maydis germinated. The anamorph of the fungus thu",
+        "S.P. Banu (International Rice Research Institute, 2007, pers. commun.) thought that the D type of lesions denoted resistance. However, the resistance associated",
+        "Banu, International Rice Research Institute, 2007, pers. commun.), which were, however, described more in relation to the size rather than the type of the lesio"
+      ]
+    },
+    {
+      "id": "f06",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:2:2",
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "part-iii-section-1-final-pdf:18:0",
+        "part-iii-section-1-final-pdf:8:1",
+        "fungus-chapter-2-foliar-diseases-pdf:14:2"
+      ],
+      "top5_preview": [
+        "Nevertheless, we should not ignore the possible damage that can be caused by a rice disease, particularly in some regions where the socioeconomic conditions of ",
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp",
+        "The term 'emerging' is somewhat confusing as it may refer to a disease that already exists, but whose status changes. It may also refer to a disease whose frequ",
+        "However, large expanses of rice agroecosystems are established on very poor soils and face, at increasing frequencies, irregular rainfall patterns. Although the",
+        "Banu, International Rice Research Institute, 2007, pers. commun.), which were, however, described more in relation to the size rather than the type of the lesio"
+      ]
+    },
+    {
+      "id": "f07",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:4:3",
+        "fungus-chapter-2-foliar-diseases-pdf:4:2",
+        "fungus-chapter-4-grain-diseases-pdf:23:1",
+        "fungus-chapter-2-foliar-diseases-pdf:4:0",
+        "part-iii-section-2-pdf:5:4"
+      ],
+      "top5_preview": [
+        "Alcorn (1983) demonstrated that the substrate basis for germination affected the manner in which conidia of B. maydis germinated. The anamorph of the fungus thu",
+        "Drechsler (1934) indicated that the type of conidial germination was affected by the age or the maturity of conidia. Dela Paz et al (2006) showed that conidia o",
+        "Field fungi may be weak or opportunistic pathogens. Table GrD 3 provides a list of fungi that are frequently detected in discolored rice seed. Clearly, they cau",
+        "The fungus causing BSp of rice was first described by Breda de Haan (1900) while Hori (1901) and Kurosawa (1900) of Japan provided the early description of the ",
+        "(49%). In addition, with less than 5% each are Sarocladium oryzae, Pinatubo oryzae (formerly Verticullium cinabarinum), Phoma spp., and Microdochium oryzae (Mer"
+      ]
+    },
+    {
+      "id": "f08",
+      "group": "farmer_es",
+      "rank": 1,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "field-guide-on-major-disorders-of-the-ri:21:0",
+        "part-iii-section-1-final-pdf:18:0",
+        "fungus-chapter-2-foliar-diseases-pdf:36:0",
+        "fungus-chapter-2-foliar-diseases-pdf:14:2",
+        "fungus-chapter-2-foliar-diseases-pdf:4:2"
+      ],
+      "top5_preview": [
+        "LOCAL NAME: - butik-butik, taguntom (Waray) - tawonton (Cebuano) - puntik-puntik (Cebuano in Mindanao) - putak-putak (Bicolano) CAUSAL ORGANISM: - Cochliobolus ",
+        "The term 'emerging' is somewhat confusing as it may refer to a disease that already exists, but whose status changes. It may also refer to a disease whose frequ",
+        "The lesions are characterized by zonation starting from the leaf tip or edges (Hashioka and Ikegami 1955), and usually occur on mature leaves. They are more or ",
+        "Banu, International Rice Research Institute, 2007, pers. commun.), which were, however, described more in relation to the size rather than the type of the lesio",
+        "Drechsler (1934) indicated that the type of conidial germination was affected by the age or the maturity of conidia. Dela Paz et al (2006) showed that conidia o"
+      ]
+    },
+    {
+      "id": "f09",
+      "group": "farmer_es",
+      "rank": 4,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-iii-section-2-pdf:3:1",
+        "fungus-chapter-2-foliar-diseases-pdf:67:0",
+        "fungus-chapter-2-foliar-diseases-pdf:83:6",
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "fungus-chapter-2-foliar-diseases-pdf:80:1"
+      ],
+      "top5_preview": [
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum",
+        "± (MAT1-2 RBl Table 2. Host plants, isolates, and locality of Magnaporthe oryzae, the rice blast pathogen. Source: Kato et al (2000). M. Yamada et al. M. Yamada",
+        "As of 2005, 25 R genes had been incorporated into three recurrent backgrounds that include Lijianxintuangheigu (LTH), CO39, and US-2 (RBl Table 6). RBl Table 6.",
+        "The blast syndrome produced from natural infection consists of lesions that form on leaves, nodes, panicles, and grains but seldom on the leaf sheath and not on",
+        "The gold peaks in E and F came from the gold coating of specimens. Source: Hayasaka et al (2008). at all, by most farmers in many rice growing countries. After "
+      ]
+    },
+    {
+      "id": "f10",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:3:1",
+        "part-iii-section-2-pdf:3:1",
+        "part-ii-section-1-chapter-3-pdf:4:0",
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "part-ii-section-1-chapter-3-pdf:5:0"
+      ],
+      "top5_preview": [
+        "However, it is generally considered that both these varieties of Helminthosporium (var. sigmoideum and var. irregulare) as Nakataea sigmoidea (teleomorph: Magna",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum",
+        "lar in outline, black, with rough surface, measuring at 90-119 x 268-342 μm. Mycelium: The hyphae are white to olivaceous, septate, profusely branched, measurin",
+        "The blast syndrome produced from natural infection consists of lesions that form on leaves, nodes, panicles, and grains but seldom on the leaf sheath and not on",
+        "bose, and embedded in the outer tissues of the leaf sheath, measuring at 202-481 μm, average 381 μm. The perithecia beak is short (30-70 μm), about half the dia"
+      ]
+    },
+    {
+      "id": "f11",
+      "group": "farmer_es",
+      "rank": 5,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:83:12",
+        "part-iii-section-4-pdf:9:0",
+        "part-iii-section-2-pdf:3:1",
+        "managment-of-rice-diseases-pdf:1:0",
+        "blast-management-pdf:16:0"
+      ],
+      "top5_preview": [
+        "Chin (1982). Virulence frequency (%) a a b c Year Seberang Perai during the period 1974-1980. Frequencies followed by the same letters are not significantly dif",
+        "Genetic diversity achieved through multiline varieties or varietal mixtures has been effective against airborne pathogens with host specificity. This has been d",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum",
+        "maintained long enough, then disease will be less severe or nonexistent. An example in rice is where a producer plants Francis (blast-susceptible variety) late ",
+        "is not treated with a fungicide. Fungicide applications are typically applied at boot (2-4 inch panicle in the flag leaf sheath) and 50 70% heading. If only one"
+      ]
+    },
+    {
+      "id": "f12",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "arkansas:Table-11-4:0",
+        "managment-of-rice-diseases-pdf:4:0",
+        "arkansas:Table-11-4:3",
+        "arkansas:Table-11-4:2",
+        "arkansas:Table-11-4:1"
+      ],
+      "top5_preview": [
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties - see notes and comments): apply Quadris 2.08 SC (acti",
+        "the panicle neck is expcsed. application of fungicides to control neck blast. Table 11-4. Fungicides recommended for use in management of rice blast disease. Ac",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply Quilt Xcel 2.2 EC (active ingredient azoxystro",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply Stratego (active ingredient trifloxystrobin + ",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply GEM (active ingredient trifloxystrobin) at 3.1"
+      ]
+    },
+    {
+      "id": "f13",
+      "group": "farmer_es",
+      "rank": 7,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:24:0",
+        "fungus-chapter-2-foliar-diseases-pdf:29:0",
+        "fungus-chapter-2-foliar-diseases-pdf:24:1",
+        "fungus-chapter-2-foliar-diseases-pdf:27:1",
+        "fungus-chapter-2-foliar-diseases-pdf:27:0"
+      ],
+      "top5_preview": [
+        "According to Ou (1985), Miyake was the first to describe the causal fungus and named it Cercospora oryzae Miyake. Raciborski (1900) referred to the same fungus ",
+        "The disease was first reported on rice from Papua New Guinea in the South Pacific (Deighton and Shaw 1960). The causal agent was named Ramularia oryzae. Deighto",
+        "In 1949, S. Yoshida reported Sphaerulina oryzina Hara as the teleomorph of C. janseana (Deighton 1967). Hara (1918) first described the teleomorph but he did no",
+        "These two groups, comprising 20 and 18% of the tested isolates, showed pathogenicity patterns typical of CA-75 and CC-31. The remaining isolates belonged to oth",
+        "tion of the pathogen. Sixteen physiologic races among 36 isolates tested were identified based on variable reactions of eight differential varieties that includ"
+      ]
+    },
+    {
+      "id": "f14",
+      "group": "farmer_es",
+      "rank": 1,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "managment-of-rice-diseases-pdf:14:1",
+        "fungus-chapter-2-foliar-diseases-pdf:27:0",
+        "fungus-chapter-2-foliar-diseases-pdf:24:0",
+        "fungus-chapter-2-foliar-diseases-pdf:29:0",
+        "fungus-chapter-2-foliar-diseases-pdf:22:0"
+      ],
+      "top5_preview": [
+        "Although their appearances are similar, blanking from narrow brown leaf spot is minimal, and the described symptoms usually develop only near the completion of ",
+        "tion of the pathogen. Sixteen physiologic races among 36 isolates tested were identified based on variable reactions of eight differential varieties that includ",
+        "According to Ou (1985), Miyake was the first to describe the causal fungus and named it Cercospora oryzae Miyake. Raciborski (1900) referred to the same fungus ",
+        "The disease was first reported on rice from Papua New Guinea in the South Pacific (Deighton and Shaw 1960). The causal agent was named Ramularia oryzae. Deighto",
+        "The disease was reported in Japan by Miyake (1910) and is today distributed worldwide. In the1930s and 1940s, a great deal of research was done on this disease "
+      ]
+    },
+    {
+      "id": "f15",
+      "group": "farmer_es",
+      "rank": 4,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:24:0",
+        "fungus-chapter-2-foliar-diseases-pdf:27:0",
+        "fungus-chapter-2-foliar-diseases-pdf:27:1",
+        "managment-of-rice-diseases-pdf:14:0",
+        "fungus-chapter-2-foliar-diseases-pdf:29:0"
+      ],
+      "top5_preview": [
+        "According to Ou (1985), Miyake was the first to describe the causal fungus and named it Cercospora oryzae Miyake. Raciborski (1900) referred to the same fungus ",
+        "tion of the pathogen. Sixteen physiologic races among 36 isolates tested were identified based on variable reactions of eight differential varieties that includ",
+        "These two groups, comprising 20 and 18% of the tested isolates, showed pathogenicity patterns typical of CA-75 and CC-31. The remaining isolates belonged to oth",
+        "Narrow brown leaf spot has been a minor, late-season disease of rice in Arkansas. Traditionally, it has little effect on yield or quality loss, but it caused pr",
+        "The disease was first reported on rice from Papua New Guinea in the South Pacific (Deighton and Shaw 1960). The causal agent was named Ramularia oryzae. Deighto"
+      ]
+    },
+    {
+      "id": "f16",
+      "group": "farmer_es",
+      "rank": 5,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:24:0",
+        "fungus-chapter-2-foliar-diseases-pdf:29:0",
+        "managment-of-rice-diseases-pdf:14:1",
+        "fungus-chapter-2-foliar-diseases-pdf:27:0",
+        "part-ii-section-1-chapter-3-pdf:45:0"
+      ],
+      "top5_preview": [
+        "According to Ou (1985), Miyake was the first to describe the causal fungus and named it Cercospora oryzae Miyake. Raciborski (1900) referred to the same fungus ",
+        "The disease was first reported on rice from Papua New Guinea in the South Pacific (Deighton and Shaw 1960). The causal agent was named Ramularia oryzae. Deighto",
+        "Although their appearances are similar, blanking from narrow brown leaf spot is minimal, and the described symptoms usually develop only near the completion of ",
+        "tion of the pathogen. Sixteen physiologic races among 36 isolates tested were identified based on variable reactions of eight differential varieties that includ",
+        "The disease is usually found on the leaf sheath near the water line. Initially, it appears as a small, yellow, water-soaked spot, which gradually enlarges to 1-"
+      ]
+    },
+    {
+      "id": "f17",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-1-pdf:52:2",
+        "part-ii-section-3-chapter-1-pdf:55:5",
+        "part-iii-section-4-pdf:9:2",
+        "part-ii-section-3-chapter-1-pdf:44:5",
+        "part-ii-section-3-chapter-1-pdf:47:6"
+      ],
+      "top5_preview": [
+        "In surveys during 1980-82, GLH was predominant in Central and East Java while Nn was predominant in West Java (Siwi and Roechan 1983). In later surveys, GLH was",
+        "In Malaysia, RT a surveillance scheme was implemented after 1983 (Othman et al 1999), which includeed field surveys, light traps, and seedling boxes (mobile nur",
+        "A varietal mixture may influence the infection efficiency of an inoculum. If the inoculum is from an outside source, the mixture simply provides a spatial effec",
+        "Fluorescent band containing virus particles was collected and dialyzed against water for 1 day and centrifuged at a high speed. Purified RTSV fraction obtained ",
+        "GLH acquired and transmited the RT agent at temperatures ranging from 10 to 38°C. The transmission efficiency increased as the temperature for acquisition and i"
+      ]
+    },
+    {
+      "id": "f18",
+      "group": "farmer_es",
+      "rank": 4,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-1-pdf:44:6",
+        "part-iii-section-4-pdf:9:2",
+        "part-ii-sec5-ch-3-final-pdf:4:0",
+        "part-ii-section-3-chapter-1-pdf:62:0",
+        "part-ii-section-3-chapter-1-pdf:64:0"
+      ],
+      "top5_preview": [
+        "RTSV in the band was recovered and CsCl was removed by two cycles of differential centrifugations. The final pellet was suspended in 0.01 M EDTA (pH 6.0), with ",
+        "A varietal mixture may influence the infection efficiency of an inoculum. If the inoculum is from an outside source, the mixture simply provides a spatial effec",
+        "et al (2008) reviewed the natural and transgenic host resistance against tungro. Efforts to identify the sources of resistance to the two tungro viruses at the ",
+        "have been commonly practiced to check the spread of insect-borne virus diseases since antiviral chemicals are not available (Heinrich 1979). As the tungro virus",
+        "between two crops has been implemented successfully to manage RT in Indonesia (Manwan et al 1985, Sama et al 1991) and Malaysia (Habibuddin et al 1987, Nozaki e"
+      ]
+    },
+    {
+      "id": "f19",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-i-sec2-shifty-enemies-final-pdf:15:2",
+        "part-iii-section-1-final-pdf:5:0",
+        "part-ii-section-3-chapter-1-pdf:55:5",
+        "part-iii-section-4-pdf:9:2",
+        "part-ii-section-3-chapter-1-pdf:54:3"
+      ],
+      "top5_preview": [
+        "This finding alarmed researchers and farmers alike that the rice crop may be attacked simultaneously by more than one virus if they are transmitted by the same ",
+        "Synchronous crop establishment has long been considered a key element for RT management (Loevinsohn 1984) because synchronous crop nonrice periods break the \"gr",
+        "In Malaysia, RT a surveillance scheme was implemented after 1983 (Othman et al 1999), which includeed field surveys, light traps, and seedling boxes (mobile nur",
+        "A varietal mixture may influence the infection efficiency of an inoculum. If the inoculum is from an outside source, the mixture simply provides a spatial effec",
+        "The spread of RT was slower in fields planted with aged seedlings (Ghosh et al 1979, Shukla and Anjaneyulu 1981d). Development of RT was faster in fields where "
+      ]
+    },
+    {
+      "id": "f20",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-i-sec2-shifty-enemies-final-pdf:15:2",
+        "part-ii-section-3-chapter-1-pdf:43:4",
+        "part-ii-section-3-chapter-1-pdf:47:5",
+        "part-ii-section-3-chapter-1-pdf:44:7",
+        "part-ii-section-3-chapter-1-pdf:46:7"
+      ],
+      "top5_preview": [
+        "This finding alarmed researchers and farmers alike that the rice crop may be attacked simultaneously by more than one virus if they are transmitted by the same ",
+        "RTSV particles, 30-33 nm in diameter, are scattered or aggregated in the cytoplasm. Virus particles in the aggregates are often arranged in a crystalline array.",
+        "When RT-viruliferous GLHs were fed on anti-RTSV IgG, the GLHs markedly reduced RTSV infectivity and transmitted mostly RTBV, but retained the ability to acquire",
+        "RWV and RTSV appear serologically identical (Saito 1977b, Yamashita et al 1977). RTSV has a bouyant density of 1.551 g/cm3 (Omura et al 1993) and S20,w value of",
+        "Plants often give a positive ELISA in one test and a negative ELISA in other tests. ELISA is eratic in detecting tungro viruses in infected weeds because virus "
+      ]
+    },
+    {
+      "id": "f21",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "managment-of-rice-diseases-pdf:2:4",
+        "part-ii-section-1-chapter-3-pdf:32:0",
+        "managment-of-rice-diseases-pdf:2:5",
+        "part-i-sec2-shifty-enemies-final-pdf:13:3",
+        "part-ii-section-1-chapter-3-pdf:30:0"
+      ],
+      "top5_preview": [
+        "Light spots are small patches of sheath blight about three feet across. • Use available effective fungicide if sheath blight is widespread in the field and thre",
+        "The AsS symptoms can be easily confused with sheath spot and sheath blight caused by R. oryzae and R. solani, respectively. Initially, the lesions appear near t",
+        "Reactions were determined based on historical and recent observations from test plots and in grower fields across Arkansas and other rice states in southern USA",
+        "The primary lesions expand and often coalesce, giving rise to strands of mycelia that run on the surface of healthy sheaths and leaves where new lesions are est",
+        "imize ShB. This method often requires additional labor and cost and must be integrated with other disease management strategies and field operations. Field sani"
+      ]
+    },
+    {
+      "id": "f22",
+      "group": "farmer_es",
+      "rank": 7,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:13:0",
+        "part-ii-section-1-chapter-3-pdf:19:6",
+        "part-ii-section-1-chapter-3-pdf:10:2",
+        "part-ii-section-1-chapter-3-pdf:19:1",
+        "managment-of-rice-diseases-pdf:7:1"
+      ],
+      "top5_preview": [
+        "[anamorph, teleomorph: Thanatephorus spp. (Frank) Donk]. In the new fungal classification scheme, it belongs to the true fungi under Phylum Basidiomycota, the c",
+        "Mycelia on crop residues. Mycelia are another source of primary inoculum (Hori and Anraku 1971, Premalatha Dath 1990, Kobayashi et al 1995, Cu et al 1996). The ",
+        "Number and distribution frequency of sheath blight-causing fungi in the sclerotial population of a tropical rice field. Source: Yin (1985). Sclerotium hydrophil",
+        "These penetration pegs give rise to infection hyphae, which continue to grow in the lumen and form a branch from the point of penetration. Penetration through s",
+        "The black dots are tiny beaked spheres containing spores of the fungus (Photo 11-18). While yield losses up to 20 percent have been measured in inoculated resea"
+      ]
+    },
+    {
+      "id": "f23",
+      "group": "farmer_es",
+      "rank": 4,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "managment-of-rice-diseases-pdf:2:9",
+        "managment-of-rice-diseases-pdf:2:7",
+        "arkansas:Table-11-3:6",
+        "arkansas:Table-11-2:2",
+        "blast-management-pdf:18:0"
+      ],
+      "top5_preview": [
+        "Apply at early to late boot but before heading begins as a preventive treatment for kernel smut and/or to suppress false smut. Propiconazole fungicides can be t",
+        "Changes in labels and use recommendations often occur yearly, so you should consult the county extension agent or other knowledgeable person each year for the l",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Artisan (active ingredient flutolanil + ",
+        "Sheath blight treatment thresholds. For a cultivar rated MS, the treatment threshold is 50% positive stops and 10-15% infected tillers. Scout from 7 days after ",
+        "Cercospora Blast Sheath Blight GR PD+7 Boot Heading 1 A boot application followed by the heading spray may be necessary if diseases pressure is high and the var"
+      ]
+    },
+    {
+      "id": "f24",
+      "group": "farmer_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:30:0",
+        "managment-of-rice-diseases-pdf:2:5",
+        "part-ii-section-1-chapter-3-pdf:10:2",
+        "part-ii-section-1-chapter-3-pdf:13:0",
+        "part-ii-section-1-chapter-3-pdf:19:7"
+      ],
+      "top5_preview": [
+        "imize ShB. This method often requires additional labor and cost and must be integrated with other disease management strategies and field operations. Field sani",
+        "Reactions were determined based on historical and recent observations from test plots and in grower fields across Arkansas and other rice states in southern USA",
+        "Number and distribution frequency of sheath blight-causing fungi in the sclerotial population of a tropical rice field. Source: Yin (1985). Sclerotium hydrophil",
+        "[anamorph, teleomorph: Thanatephorus spp. (Frank) Donk]. In the new fungal classification scheme, it belongs to the true fungi under Phylum Basidiomycota, the c",
+        "The efficiency of sclerotia as inoculum does not decline with flooding duration (Castilla 1998). By contrast, the efficiency of stubble and rice grain hull mixt"
+      ]
+    },
+    {
+      "id": "f35",
+      "group": "technical_es",
+      "rank": 1,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "arkansas:Table-11-3:2",
+        "arkansas:Table-11-3:0",
+        "part-ii-section-1-chapter-3-pdf:28:3",
+        "part-ii-section-1-chapter-3-pdf:10:3",
+        "part-ii-section-1-chapter-3-pdf:15:0"
+      ],
+      "top5_preview": [
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quilt Xcel 2.2 EC (active ingredient azo",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quadris 2.08 SC (active ingredient azoxy",
+        "Silicon reduced sheath blight intensity in both indica and tropical japonica varieties (Rodrigues et al 2001). When the rate of silicon in the soil increased, t",
+        "Mew and F.A. Elizegui, IRRI, unpublished results). The population structure is determined primarily based on geographic localities. While it is difficult to dif",
+        "when young and turns yellowish brown when older with diameter of 8-12 μm and infrequent septations. It produces three types of specialized mycelium (Ou 1985). T"
+      ]
+    },
+    {
+      "id": "f36",
+      "group": "technical_es",
+      "rank": 3,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:24:5",
+        "part-ii-section-1-chapter-3-pdf:24:4",
+        "arkansas:Table-11-2:0",
+        "part-ii-section-1-chapter-3-pdf:21:1",
+        "arkansas:Table-11-2:2"
+      ],
+      "top5_preview": [
+        "Disease intensity on the noninoculated hills quantifies the effect of plant morphological traits on ShB susceptibility, particularly if lines used carry a homog",
+        "The method has been used to screen germplasm for ShB resistance and to identify QTLs at the seedling stage (Jia et al 2007, Prasad and Eizenga 2008, Liu et al 2",
+        "Sheath blight treatment thresholds. For a cultivar rated VS, the treatment threshold is 35% positive stops and 5-10% infected tillers. Scout early, starting at ",
+        "The number of infection cushions is higher on susceptible varieties than on varieties that appear to be moderately resistant (Shrestha et al 2008) (ShB Table 4)",
+        "Sheath blight treatment thresholds. For a cultivar rated MS, the treatment threshold is 50% positive stops and 10-15% infected tillers. Scout from 7 days after "
+      ]
+    },
+    {
+      "id": "f37",
+      "group": "technical_es",
+      "rank": 3,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "part-iii-section-2-pdf:3:0",
+        "managment-of-rice-diseases-pdf:3:0",
+        "managment-of-rice-diseases-pdf:4:0",
+        "arkansas:Table-11-4:3",
+        "part-iii-section-2-pdf:3:1"
+      ],
+      "top5_preview": [
+        "The concept of improving seed health for crop production is rooted in seed pathology. The relationship between seed pathology and seed health must be clarified.",
+        "Blast is an unpredictable disease which can cause severe yield losses under favorable environmental conditions. An airborne fungus called Pyricularia oryzae cau",
+        "the panicle neck is expcsed. application of fungicides to control neck blast. Table 11-4. Fungicides recommended for use in management of rice blast disease. Ac",
+        "Fungicides recommended for use in management of rice blast disease. For Neck Blast (susceptible varieties): apply Quilt Xcel 2.2 EC (active ingredient azoxystro",
+        "Nigrospora sphaerica + + Botrytis cinerea Papularia sp. + + Cephatosporium sp. Penicillifer fulcer + + Cercospora janseana Periconia sp. + + Chaetomium globosum"
+      ]
+    },
+    {
+      "id": "f38",
+      "group": "technical_es",
+      "rank": 1,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-1-pdf:64:0",
+        "part-iii-section-4-pdf:9:2",
+        "part-ii-section-3-chapter-1-pdf:58:11",
+        "part-iii-section-1-final-pdf:5:1",
+        "part-ii-section-3-chapter-1-pdf:55:3"
+      ],
+      "top5_preview": [
+        "between two crops has been implemented successfully to manage RT in Indonesia (Manwan et al 1985, Sama et al 1991) and Malaysia (Habibuddin et al 1987, Nozaki e",
+        "A varietal mixture may influence the infection efficiency of an inoculum. If the inoculum is from an outside source, the mixture simply provides a spatial effec",
+        "However, they were replaced with other cultivars due to the breakdown of the BPH1 gene they carried for brown planthopper resistance. The GLH resistance in IR20",
+        "Insecticide applications, once recommended for RT control, are now poorly grounded. Several options for RT management have been explored. Insecticide use, an op",
+        "High RT incidence is associated not only infection of both RTBV and RTSV but with a single infection of RTSV. 5.7.6. Disease forecasting. Preliminary studies we"
+      ]
+    },
+    {
+      "id": "f43",
+      "group": "farmer_en",
+      "rank": 1,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:2:1",
+        "part-ii-section-2-chapter-2-pdf:2:5",
+        "fungus-chapter-2-foliar-diseases-pdf:35:0",
+        "part-ii-section-2-introduction-pdf:2:3",
+        "part-ii-section-2-chapter-2-pdf:2:2"
+      ],
+      "top5_preview": [
+        "When conditions are favorable, lesions may spread upward as the plants continue to grow. The lesions also expand downward and become yellowish then whitish or g",
+        "A bacterial mass may ooze out. • Alternatively, fellow step 2 for leaf blight diagnosis. Kresek • Shoot portions of rice plants infested with stem borer are eas",
+        "The disease has three different names: leaf tip drying in China by Wei (1934), who was the first to describe the disease; leaf tip blight by Inoue and Takeda (1",
+        "As a diagnostic procedure, symptoms associated with bacterial diseases are often water-soaked in appearance and bacterial ooze exuding from lesions. When an inf",
+        "When the ooze dries up, it forms a small yellowish bead. The beads may drop in the paddy water or re-suspend in rain or dew water, thus, become a potential inoc"
+      ]
+    },
+    {
+      "id": "f44",
+      "group": "farmer_en",
+      "rank": 2,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:64:0",
+        "fungus-chapter-2-foliar-diseases-pdf:3:0",
+        "managment-of-rice-diseases-pdf:11:0",
+        "managment-of-rice-diseases-pdf:11:1",
+        "part-ii-section-3-chapter-2-pdf:11:0"
+      ],
+      "top5_preview": [
+        "The disease is characterized by circular, pale green to yellowish brown lesions, 2-10 mm in diameter, on leaf blades (HaB distinct halo and have a dark brown sp",
+        "The disease is found on all parts and growth stages of the rice plant from seeds to the whole plant, and from seedlings to mature plants (BSp Figure 2). BSp on ",
+        "Avoid water stress (low) and excessive N rates. Brown spot is a historical rice disease that occasionally causes problems in Arkansas. The fungus Bipolaris oryz",
+        "On most cultivars, severe brown spot indicates a nutritional problem that fungicides cannot correct. Therefore, fungicide application to reduce disease incidenc",
+        "RHB is characterized by leaf chlorosis, chlorotic stripes, mottling on culms, plant stunting, and premature death of plants (RHB Figure 1) (Galvez 1969a, Everet"
+      ]
+    },
+    {
+      "id": "f45",
+      "group": "farmer_en",
+      "rank": 1,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "fungus-chapter-2-foliar-diseases-pdf:61:0",
+        "fungus-chapter-2-foliar-diseases-pdf:92:0",
+        "part-ii-section-3-chapter-4-pdf:1:0",
+        "managment-of-rice-diseases-pdf:3:0",
+        "field-guide-on-major-disorders-of-the-ri:18:0"
+      ],
+      "top5_preview": [
+        "The blast syndrome produced from natural infection consists of lesions that form on leaves, nodes, panicles, and grains but seldom on the leaf sheath and not on",
+        "by either the lesion type or the lesion number. The former has been used extensively to assess qualitative, major gene or race-specific resistance, while the la",
+        "Infection of rice seedlings with RNM occurs about 30 days after seeding in RNM-affected soil (Fujii 1967, Fujikawa et al 1969). Primary symptoms that include fa",
+        "Blast is an unpredictable disease which can cause severe yield losses under favorable environmental conditions. An airborne fungus called Pyricularia oryzae cau",
+        "On leaves (leaf blast) • SYMPTOMS: small to spindle-shaped spots with brown border and gray center; spots join resulting in drying and death of leaves SUSCEPTIB"
+      ]
+    },
+    {
+      "id": "f46",
+      "group": "farmer_en",
+      "rank": 1,
+      "precision@5": 0.4,
+      "protocol_like": [],
+      "top5": [
+        "managment-of-rice-diseases-pdf:14:0",
+        "fungus-chapter-2-foliar-diseases-pdf:23:0",
+        "fungus-chapter-2-foliar-diseases-pdf:29:0",
+        "part-ii-section-1-chapter-3-pdf:45:0",
+        "managment-of-rice-diseases-pdf:14:1"
+      ],
+      "top5_preview": [
+        "Narrow brown leaf spot has been a minor, late-season disease of rice in Arkansas. Traditionally, it has little effect on yield or quality loss, but it caused pr",
+        "The initial symptom involves the presence of short, linear brown lesions, which appear mostly on leaf blades (NBLs Figure 1), although the disease can also occu",
+        "The disease was first reported on rice from Papua New Guinea in the South Pacific (Deighton and Shaw 1960). The causal agent was named Ramularia oryzae. Deighto",
+        "The disease is usually found on the leaf sheath near the water line. Initially, it appears as a small, yellow, water-soaked spot, which gradually enlarges to 1-",
+        "Although their appearances are similar, blanking from narrow brown leaf spot is minimal, and the described symptoms usually develop only near the completion of "
+      ]
+    },
+    {
+      "id": "f47",
+      "group": "farmer_en",
+      "rank": 1,
+      "precision@5": 0.8,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-1-pdf:43:0",
+        "field-guide-on-major-disorders-of-the-ri:26:0",
+        "part-ii-section-3-chapter-1-pdf:57:1",
+        "part-ii-section-3-chapter-1-pdf:43:1",
+        "part-ii-section-3-chapter-1-pdf:43:2"
+      ],
+      "top5_preview": [
+        "RT-infected rice plants show stunting, and yellow or yellow-orange discoloration of leaves (RT Figures 1 and 2; Ling 1966, Rivera and Ou 1965, Ou and Rivera 196",
+        "LOCAL NAME: - tungro (in most local languages) NOTICE CHANGES ON: Plant height and leaves • SYMPTOMS: mottled young leaves; older leaves are yellow to yellow-or",
+        "When seedlings of 26 high-yielding culivars were inoculated with RT at 30 days after soaking, the range of height reduction in RT-infected plants was between 12",
+        "Cultivars having tolerance generally develop discernible symptoms at the early stage of infection, while show little or no symptoms at the later stage. Symptoms",
+        "Generally, rice plants infected with RTBV and RTSV show severe tungro symptoms, those with RTBV alone show milder tungro symptoms, and those with RTSV alone sho"
+      ]
+    },
+    {
+      "id": "f48",
+      "group": "farmer_en",
+      "rank": 2,
+      "precision@5": 0.2,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-1-chapter-3-pdf:38:0",
+        "part-ii-section-1-chapter-3-pdf:12:0",
+        "part-ii-section-1-chapter-3-pdf:32:0",
+        "managment-of-rice-diseases-pdf:2:0",
+        "part-i-sec2-shifty-enemies-final-pdf:13:3"
+      ],
+      "top5_preview": [
+        "The symptoms are usually found on upper leaf sheaths and midway up the tillers. Typically, sheath spots are oval, 1-3 cm long, and may reach 10 cm and more but ",
+        "all parts of a rice plant except the roots, but the main target is leaf blades and leaf sheaths (ShB Figure 3). Typical symptoms appear at first as spots on the",
+        "The AsS symptoms can be easily confused with sheath spot and sheath blight caused by R. oryzae and R. solani, respectively. Initially, the lesions appear near t",
+        "Sheath blight has been the most important rice disease in Arkansas and in the southern United States. Sheath blight is present in nearly every Arkansas rice fie",
+        "The primary lesions expand and often coalesce, giving rise to strands of mycelia that run on the surface of healthy sheaths and leaves where new lesions are est"
+      ]
+    },
+    {
+      "id": "f49",
+      "group": "farmer_en",
+      "rank": 1,
+      "precision@5": 1.0,
+      "protocol_like": [],
+      "top5": [
+        "arkansas:Table-11-3:2",
+        "arkansas:Table-11-3:1",
+        "arkansas:Table-11-3:6",
+        "arkansas:Table-11-3:0",
+        "arkansas:Table-11-3:4"
+      ],
+      "top5_preview": [
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quilt Xcel 2.2 EC (active ingredient azo",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Stratego (active ingredient trifloxystro",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Artisan (active ingredient flutolanil + ",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Quadris 2.08 SC (active ingredient azoxy",
+        "Fungicides recommended for rice sheath blight, kernel smut and false smut control/suppression. For Sheath Blight: apply Sercadis (active ingredient fluxapyroxad"
+      ]
+    }
+  ],
+  "safety": [
+    {
+      "id": "f39",
+      "group": "safety_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:19:8",
+        "part-ii-section-2-chapter-2-pdf:4:2",
+        "part-ii-section-2-chapter-2-pdf:55:0",
+        "part-ii-section-2-chapter-2-pdf:16:1",
+        "part-ii-section-5-ch-4-pdf:9:0"
+      ],
+      "top5_preview": [
+        "This remarkable similarity was observed even though different varieties were grown in Sta. Cruz, and only one variety was grown in Sta. Catalina. The results fu",
+        "(4) The same pathogen characterized in Step 2 must be re-isolated from the inoculated plant. Step 4 was added by E.F. Smitth (1854-1927) who in 1901 established",
+        "In many ways, the disease cycle of BLS is similar to that of BB but, unlike Xoo, Xoc cannot infect the hosts through hydathodes or water pores. It enters the ho",
+        "Of the 10 tested seeds collected in Pila, five were positive for both expected PCR bands, three were positive for 497-bp band only, and two did not produce any ",
+        "The characterization and identification of new sources of resistance in rice is of particular importance in the context of food security and the demand for this"
+      ]
+    },
+    {
+      "id": "f40",
+      "group": "safety_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "blast-management-pdf:6:0",
+        "part-ii-section-2-chapter-2-pdf:12:0",
+        "part-ii-section-2-chapter-2-pdf:55:0",
+        "managment-of-rice-diseases-pdf:14:1",
+        "part-ii-section-2-chapter-2-pdf:31:2"
+      ],
+      "top5_preview": [
+        "The initial infections occurs on leaves usually around tillering and appear as diamond, football, or spindle shape lesion with pointed ends. Lesions start as sm",
+        "enhancement: Screening for varietal resistance may be conducted in the field under the influence of natural conditions that may be conducive to the disease. How",
+        "In many ways, the disease cycle of BLS is similar to that of BB but, unlike Xoo, Xoc cannot infect the hosts through hydathodes or water pores. It enters the ho",
+        "Although their appearances are similar, blanking from narrow brown leaf spot is minimal, and the described symptoms usually develop only near the completion of ",
+        "Is this association similar with what is observed on papilla in Xcv-pepper interaction? Host plant invasion: This is a crucial stage of pathogenesis that likely"
+      ]
+    },
+    {
+      "id": "f41",
+      "group": "safety_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5": [
+        "part-ii-section-2-chapter-3-leaf-sheath:5:1",
+        "fungus-chapter-2-foliar-diseases-pdf:91:0",
+        "part-ii-section-1-chapter-3-pdf:24:4",
+        "part-ii-section-3-chapter-2-pdf:23:0",
+        "part-ii-section-2-chapter-2-pdf:16:1"
+      ],
+      "top5_preview": [
+        "G6 + + + + + + + - y + = positive reaction; - = negative reaction G5 + + + + + + + - G4 + - - - - - - - G3 + + + + + + - - G2 + + + + + + - - G1z + + + - - - - ",
+        "method to evaluate rice materials for durable resistance, especially for those classified with partial or polygenic type of resistance, is always a challenge to",
+        "The method has been used to screen germplasm for ShB resistance and to identify QTLs at the seedling stage (Jia et al 2007, Prasad and Eizenga 2008, Liu et al 2",
+        "and 0.5% sodium ascorbate (Hibino and Kimura 1982). The homogenate was clarified by emulsifying with 1/3 carbon tetrachloride and then with 1/4 fluorocarbon (Di",
+        "Of the 10 tested seeds collected in Pila, five were positive for both expected PCR bands, three were positive for 497-bp band only, and two did not produce any "
+      ]
+    },
+    {
+      "id": "f42",
+      "group": "safety_es",
+      "rank": null,
+      "precision@5": 0.0,
+      "protocol_like": [],
+      "top5": [
+        "part-ii-section-3-chapter-2-pdf:12:2",
+        "part-ii-section-3-chapter-2-pdf:38:0",
+        "part-ii-section-3-chapter-2-pdf:37:0",
+        "rbsd-srbsd-final-pdf:5:0",
+        "part-ii-section-3-chapter-5-pdf:11:0"
+      ],
+      "top5_preview": [
+        "RHB-infected plants produce a large amount of RHBV-specific NCP of 16 kDa (Falk et al 1987). The nucleotide sequence of RHBV has been determined (De Miranda et ",
+        "Mechanical inoculation of rice seedlings with RSV is not achieved. Instead, rice seedlings can be infected at low rates with RSV by thrusting RS-infected rice e",
+        "In artificial inoculation at the seedling stage using RSV-viruliferous SBPHs, RSV infected 31 gramineous species, including rice, barley, wheat, oat, rye, maize",
+        "RBSDV is transmitted in a persistent manner by SBPH (Intro Figure 7) (Kuribayashi and Shinkai 1952) and two other planthopper species, Unkanodes sapporona Matsu",
+        "SuMV occurs widely in sugarcane-growing countries. It is filamentous and 650-750 nm in length. SuMV is transmitted in a non-persistent manner by several aphid s"
+      ]
+    }
+  ]
+}
