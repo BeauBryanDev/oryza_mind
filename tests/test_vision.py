@@ -5,7 +5,13 @@ import pytest
 
 from app.core.config import CLASS_NAMES
 from app.schemas.common import SeverityLevel, severity_from_area
-from app.utils.postprocessing import NUM_MASK_COEFFS, RawDetections, parse_output, xywh_to_xyxy
+from app.utils.postprocessing import (
+    NUM_MASK_COEFFS,
+    RawDetections,
+    limit_classes,
+    parse_output,
+    xywh_to_xyxy,
+)
 from app.utils.preprocessing import PAD_VALUE, letterbox, scale_boxes, to_tensor
 from app.utils.segmentation import build_masks
 
@@ -84,6 +90,48 @@ def _raw_one_box() -> RawDetections:
         class_ids=np.array([0]),
         mask_coeffs=np.full((1, NUM_MASK_COEFFS), 0.5, dtype=np.float32),
     )
+
+
+def _raw_classes(class_ids, scores) -> RawDetections:
+    n = len(class_ids)
+    return RawDetections(
+        boxes=np.tile(np.array([[10.0, 10.0, 50.0, 50.0]], dtype=np.float32), (n, 1)),
+        scores=np.array(scores, dtype=np.float32),
+        class_ids=np.array(class_ids, dtype=np.int64),
+        mask_coeffs=np.zeros((n, NUM_MASK_COEFFS), dtype=np.float32),
+    )
+
+
+def test_limit_classes_drops_a_weak_second_disease():
+    # Leaf_Blast5.jpg in the 2026-10-24 eval: a false Brown_Spot at 0.37.
+    raw = _raw_classes([5, 5, 1], [0.46, 0.39, 0.37])
+    out = limit_classes(raw, max_classes=2, secondary_min=0.5)
+    assert set(out.class_ids.tolist()) == {5}
+    assert len(out.scores) == 2
+
+
+def test_limit_classes_keeps_a_confident_second_disease():
+    raw = _raw_classes([5, 1, 1], [0.9, 0.6, 0.3])
+    out = limit_classes(raw, max_classes=2, secondary_min=0.5)
+    assert set(out.class_ids.tolist()) == {5, 1}
+    assert len(out.scores) == 3  # every detection of a kept class survives
+
+
+def test_limit_classes_never_reports_more_than_two():
+    raw = _raw_classes([0, 1, 2], [0.9, 0.8, 0.7])
+    out = limit_classes(raw, max_classes=2, secondary_min=0.5)
+    assert set(out.class_ids.tolist()) == {0, 1}
+
+
+def test_limit_classes_keeps_a_weak_primary():
+    # The floor applies to the second disease only; a lone weak finding stays.
+    raw = _raw_classes([3], [0.2])
+    assert limit_classes(raw, max_classes=2, secondary_min=0.5).class_ids.tolist() == [3]
+
+
+def test_limit_classes_handles_no_detections():
+    out = limit_classes(_raw_classes([], []), max_classes=2, secondary_min=0.5)
+    assert len(out.scores) == 0
 
 
 def test_build_masks_returns_one_full_resolution_mask_per_detection(bgr_image):
