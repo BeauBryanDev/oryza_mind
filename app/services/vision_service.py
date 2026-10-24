@@ -11,7 +11,7 @@ from app.core.load_vision_model import get_model
 from app.schemas.vision import BoundingBox, Detection, VisionResult
 from app.utils.image_utils import decode_image
 from app.utils.mask import mask_area_px, overlay_masks, to_data_uri
-from app.utils.postprocessing import parse_output
+from app.utils.postprocessing import limit_classes, parse_output
 from app.utils.preprocessing import to_tensor
 from app.utils.segmentation import affected_ratio, union_mask
 
@@ -55,7 +55,11 @@ def analyze_image(
 
     from app.utils.segmentation import build_masks
 
-    raw = parse_output(out0, info, settings)
+    raw = limit_classes(
+        parse_output(out0, info, settings),
+        settings.max_diseases_per_image,
+        settings.secondary_disease_min_confidence,
+    )
     masks = build_masks(raw, out1, info, settings.yolo_mask_threshold)
 
     detections = [

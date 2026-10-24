@@ -81,10 +81,27 @@ def parse_output(
     idx = np.array(kept, dtype=np.int64)
 
     return RawDetections(
-        
+
         boxes=scale_boxes(boxes[idx], info),
         scores=scores[idx],
         class_ids=class_ids[idx],
         mask_coeffs=coeffs[idx],
-        
+
     )
+
+
+def limit_classes(raw: RawDetections, max_classes: int, secondary_min: float) -> RawDetections:
+    """
+    Keep the strongest class always, and up to max_classes - 1 more whose best
+    detection reaches secondary_min. Dropped classes lose every detection, so
+    they never reach the overlay, the lesion count or the severity.
+    """
+    best: dict[int, float] = {}
+    for cid, score in zip(raw.class_ids, raw.scores):
+        best[int(cid)] = max(best.get(int(cid), 0.0), float(score))
+
+    ranked = sorted(best, key=best.get, reverse=True)
+    keep = ranked[:1] + [c for c in ranked[1:max_classes] if best[c] >= secondary_min]
+    sel = np.isin(raw.class_ids, keep)
+
+    return RawDetections(raw.boxes[sel], raw.scores[sel], raw.class_ids[sel], raw.mask_coeffs[sel])

@@ -94,6 +94,11 @@ class Settings(BaseSettings):
     yolo_iou_threshold: float = 0.45
     yolo_mask_threshold: float = 0.5
     yolo_input_size: int = 640
+    # Real co-infection on one leaf is rare; in the 2026-10-24 vision eval every
+    # second class was a false detection at 0.33-0.49. So at most two diseases
+    # per image, and the second only when the model is reasonably sure of it.
+    max_diseases_per_image: int = 2
+    secondary_disease_min_confidence: float = 0.5
 
     # Spike classifier  EfficientNetB0,  TF/Keras -> ONNX via tf2onnx
     spike_model_path: Path = REPO_ROOT / "ml" / "Rice_Spike_Model.onnx"
