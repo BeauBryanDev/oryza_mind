@@ -1,0 +1,250 @@
+{
+  "summary": {
+    "no_filter": {
+      "n": 24,
+      "hit@1": 0.5,
+      "hit@3": 0.75,
+      "hit@5": 0.875,
+      "mrr": 0.631
+    },
+    "disease_filter": {
+      "n": 10,
+      "hit@1": 0.4,
+      "hit@3": 0.9,
+      "hit@5": 0.9,
+      "mrr": 0.617
+    }
+  },
+  "no_filter": [
+    {
+      "id": "q01",
+      "rank": 3,
+      "top1": "part-ii-section-2-chapter-2-pdf:40:2",
+      "label_note": null
+    },
+    {
+      "id": "q02",
+      "rank": 2,
+      "top1": "managment-of-rice-diseases-pdf:11:0",
+      "label_note": null
+    },
+    {
+      "id": "q03",
+      "rank": 1,
+      "top1": "fungus-chapter-5-other-fungal-diseases-p:0:0",
+      "label_note": null
+    },
+    {
+      "id": "q04",
+      "rank": 2,
+      "top1": "fungus-chapter-4-grain-diseases-pdf:7:0",
+      "label_note": null
+    },
+    {
+      "id": "q05",
+      "rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:79:0",
+      "label_note": null
+    },
+    {
+      "id": "q06",
+      "rank": 1,
+      "top1": "part-ii-sec5-ch-3-final-pdf:15:3",
+      "label_note": "Content is about rice dwarf virus (RDV), a different virus from rice black-streaked dwarf."
+    },
+    {
+      "id": "q07",
+      "rank": 3,
+      "top1": "part-ii-section-3-chapter-1-pdf:46:2",
+      "label_note": null
+    },
+    {
+      "id": "q08",
+      "rank": 1,
+      "top1": "part-ii-section-1-chapter-3-pdf:7:0",
+      "label_note": null
+    },
+    {
+      "id": "q09",
+      "rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:29:1",
+      "label_note": null
+    },
+    {
+      "id": "q10",
+      "rank": 5,
+      "top1": "part-ii-section-1-chapter-1-pdf:1:0",
+      "label_note": "disease_name is null in the chunk, so a disease-filtered retrieval cannot find it."
+    },
+    {
+      "id": "q11",
+      "rank": 4,
+      "top1": "field-guide-on-major-disorders-of-the-ri:42:0",
+      "label_note": null
+    },
+    {
+      "id": "q12",
+      "rank": 1,
+      "top1": "part-ii-section-2-chapter-2-pdf:1:1",
+      "label_note": null
+    },
+    {
+      "id": "q13",
+      "rank": null,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:11:2",
+      "label_note": null
+    },
+    {
+      "id": "q14",
+      "rank": null,
+      "top1": "fungus-chapter-4-grain-diseases-pdf:27:0",
+      "label_note": "Content is about glume blight, not false smut."
+    },
+    {
+      "id": "q15",
+      "rank": 1,
+      "top1": "part-ii-section-2-chapter-3-leaf-sheath:0:0",
+      "label_note": null
+    },
+    {
+      "id": "q16",
+      "rank": 1,
+      "top1": "fungus-chapter-4-grain-diseases-pdf:6:1",
+      "label_note": null
+    },
+    {
+      "id": "q17",
+      "rank": 1,
+      "top1": "part-ii-section-1-chapter-3-pdf:45:0",
+      "label_note": "Chunk mixes sheath net blotch symptoms with narrow brown leaf spot; the label covers only the second."
+    },
+    {
+      "id": "q18",
+      "rank": null,
+      "top1": "part-ii-section-3-chapter-2-pdf:20:2",
+      "label_note": "Content is about rice ragged stunt virus, a different virus from rice black-streaked dwarf."
+    },
+    {
+      "id": "q19",
+      "rank": 1,
+      "top1": "part-ii-section-3-chapter-1-pdf:41:5",
+      "label_note": null
+    },
+    {
+      "id": "q20",
+      "rank": 1,
+      "top1": "part-ii-section-1-chapter-1-pdf:3:3",
+      "label_note": "Content is about bakanae, not stem rot."
+    },
+    {
+      "id": "q21",
+      "rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:45:0",
+      "label_note": "disease_name is null in the chunk, so a disease-filtered retrieval cannot find it."
+    },
+    {
+      "id": "q22",
+      "rank": 5,
+      "top1": "part-ii-section-2-chapter-2-pdf:26:1",
+      "label_note": null
+    },
+    {
+      "id": "q23",
+      "rank": 2,
+      "top1": "part-ii-section-2-chapter-2-pdf:53:0",
+      "label_note": null
+    },
+    {
+      "id": "q24",
+      "rank": 3,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:0:1",
+      "label_note": null
+    }
+  ],
+  "disease_filter": [
+    {
+      "id": "q01",
+      "rank": 3,
+      "top1": "part-ii-section-2-chapter-2-pdf:40:2",
+      "label_note": null
+    },
+    {
+      "id": "q02",
+      "rank": 2,
+      "top1": "managment-of-rice-diseases-pdf:11:0",
+      "label_note": null
+    },
+    {
+      "id": "q05",
+      "rank": 1,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:79:0",
+      "label_note": null
+    },
+    {
+      "id": "q07",
+      "rank": 3,
+      "top1": "part-ii-section-3-chapter-1-pdf:46:2",
+      "label_note": null
+    },
+    {
+      "id": "q12",
+      "rank": 1,
+      "top1": "part-ii-section-2-chapter-2-pdf:1:1",
+      "label_note": null
+    },
+    {
+      "id": "q13",
+      "rank": null,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:11:2",
+      "label_note": null
+    },
+    {
+      "id": "q17",
+      "rank": 1,
+      "top1": "part-ii-section-1-chapter-3-pdf:45:0",
+      "label_note": "Chunk mixes sheath net blotch symptoms with narrow brown leaf spot; the label covers only the second."
+    },
+    {
+      "id": "q19",
+      "rank": 1,
+      "top1": "part-ii-section-3-chapter-1-pdf:41:5",
+      "label_note": null
+    },
+    {
+      "id": "q23",
+      "rank": 2,
+      "top1": "part-ii-section-2-chapter-2-pdf:53:0",
+      "label_note": null
+    },
+    {
+      "id": "q24",
+      "rank": 2,
+      "top1": "fungus-chapter-2-foliar-diseases-pdf:0:1",
+      "label_note": null
+    }
+  ],
+  "probes": [
+    {
+      "query": "How do I inoculate rice leaves with Xanthomonas oryzae pv. oryzicola?",
+      "top5": [
+        "part-ii-section-2-chapter-2-pdf:55:0",
+        "part-ii-section-2-chapter-2-pdf:19:8",
+        "part-ii-section-2-chapter-2-pdf:2:4",
+        "part-ii-section-2-chapter-2-pdf:20:2",
+        "part-ii-section-2-chapter-2-pdf:21:0"
+      ],
+      "leaked": []
+    },
+    {
+      "query": "How do I culture the false smut fungus on PSA plates for stock culture?",
+      "top5": [
+        "managment-of-rice-diseases-pdf:9:0",
+        "managment-of-rice-diseases-pdf:9:1",
+        "arkansas:Table-11-3:9",
+        "arkansas:Table-11-3:7",
+        "arkansas:Table-11-3:10"
+      ],
+      "leaked": []
+    }
+  ]
+}
